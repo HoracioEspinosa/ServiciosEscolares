@@ -1,0 +1,205 @@
+@media (max-width: 768px) {
+  .button-tools-add .btn-group {
+    width: 100%;
+    margin-bottom: 5px; }
+    .button-tools-add .btn-group .btn {
+      width: 100%; }
+  .button-tools-add .btn-group.open > .dropdown-menu {
+    width: 100% !important; }
+  .button-tools-add .addDepartment {
+    width: 100% !important; }
+  .sub-menu {
+    margin: -1px !important; }
+  .page-sidebar.navbar-collapse.collapsing {
+    margin: 0 !important; }
+  table.dataTable.dtr-column > tbody > tr > td.control:before, table.dataTable.dtr-column > tbody > tr > th.control:before, table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before, table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
+    box-shadow: none !important;
+    background-color: #b0c1d2;
+    font-weight: 300;
+    vertical-align: middle;
+    line-height: 14px;
+    border: 0;
+    padding-right: 1px; }
+  .page-sidebar.navbar-collapse.in {
+    border-top: 0 !important;
+    margin: 20px;
+    position: relative;
+    overflow: hidden !important;
+    overflow-y: auto !important;
+    display: block !important;
+    margin: 0 !important; }
+  .page-sidebar.navbar-collapse .collapsing {
+    margin: 0 !important; } }
+
+@media (max-width: 991px) {
+  .button-tools-add .btn-group {
+    width: 100%;
+    margin-bottom: 5px; }
+  .addDepartment {
+    width: 100% !important; }
+  .page-sidebar.navbar-collapse.in {
+    margin: 0 !important; } }
+
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+  z-index: 3;
+  color: #fff;
+  background-color: #3598dc !important;
+  border-color: #2e83be !important;
+  cursor: default; }
+
+.pagination > li > a, .pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  line-height: 1.42857;
+  text-decoration: none;
+  color: #818181;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-left: -1px; }
+
+div.dataTables_wrapper div.dataTables_filter input, #sample_Departments_length select,
+div.dataTables_wrapper div.dataTables_filter input, #TableBranchOffices_length select {
+  outline: none;
+  width: auto;
+  height: 36px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555555;
+  background: #fff none;
+  border: 1px solid #ccd0d2;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
+
+.selected td.sorting_1 {
+  background: red !important; }
+
+table.dataTable tr.selected td.sorting_1, table.dataTable tr.selected td.sorting_2, table.dataTable tr.selected td.sorting_3, table.dataTable tr.selected th.sorting_1, table.dataTable tr.selected th.sorting_2, table.dataTable tr.selected th.sorting_3 {
+  background: #bfcad1 !important; }
+
+table.dataTable tbody > tr.selected, table.dataTable tbody > tr > .selected {
+  background: #bfcad1 !important; }
+
+.addDepartmentPorlet {
+  -webkit-transition: all 1.5s;
+  -moz-transition: all 1.5s;
+  -ms-transition: all 1.5s;
+  -o-transition: all 1.5s;
+  transition: all 1.5s; }
+
+.allform {
+  position: absolute;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.47);
+  width: 100%;
+  z-index: 5; }
+
+.page-loading {
+  z-index: 99; }
+
+.deletedRow {
+  background: #f8cbce !important; }
+  .deletedRow td.sorting_1 {
+    background: #f8cbce !important; }
+
+.deletedRowColumn {
+  background: red !important; }
+
+@media (min-width: 768px) {
+  #sample_Departments td:nth-child(5) .btn-group, #TableBranchOffices td:nth-child(6) .btn-group {
+    width: 100% !important; }
+    #sample_Departments td:nth-child(5) .btn-group button, #TableBranchOffices td:nth-child(6) .btn-group button {
+      width: 100% !important; } }
+
+.alert-deleted {
+  background: #ed6b75;
+  color: white; }
+  .alert-deleted button {
+    margin-top: -5px; }
+
+#sample_Departments tbody tr, #TableBranchOffices tbody tr {
+  cursor: pointer; }
+
+.mt-element-ribbon {
+  margin-bottom: 0 !important; }
+
+#modules-view .thumbnail {
+  background-color: #26344b;
+  border-color: #26344b; }
+  #modules-view .thumbnail .caption {
+    background: #26344b;
+    color: white; }
+
+#modules-view .mt-element-ribbon .ribbon.ribbon-color-success > .ribbon-sub {
+  background-color: #26344b; }
+  #modules-view .mt-element-ribbon .ribbon.ribbon-color-success > .ribbon-sub ::after {
+    border-color: #26344b #26344b !important; }
+
+#modules-view .mt-element-ribbon .ribbon.ribbon-color-success > .ribbon-sub:after {
+  border-color: #26344b; }
+
+#modules-view .mt-element-ribbon .ribbon.ribbon-color-success:after {
+  border-color: white !important; }
+
+.userModule .addUserLine {
+  display: none;
+  background: #d3d7dd;
+  height: 15px;
+  text-align: center; }
+  .userModule .addUserLine span {
+    text-align: center;
+    color: white;
+    height: 10px;
+    margin-top: -5px !important;
+    position: absolute; }
+    .userModule .addUserLine span img {
+      height: 13px;
+      cursor: pointer;
+      margin-left: -20px; }
+
+.userModule #sample_Users .userImage {
+  max-height: 35px;
+  border-radius: 50%;
+  margin-right: 10px; }
+
+.userModule #sample_3_wrapper #sample_Users_filter, .userModule #sample_3_wrapper #sample_Users_length {
+  display: none !important; }
+
+@media (max-width: 767px) {
+  .page-content-wrapper .page-content .page-title {
+    padding-left: 10px; } }
+
+body {
+  overflow-x: hidden !important; }
+
+.tableBodyOdd {
+  background: red !important;
+  text-align: center; }
+
+.inbox-content .table-toolbar {
+  margin-bottom: 0 !important; }
+
+.inbox-content .addUserForm {
+  display: none;
+  background: #eef1f5;
+  padding: 10px;
+  border: 5px solid #d3d7dd; }
+  .inbox-content .addUserForm .col-sm-12:first-child {
+    padding-left: 0px;
+    padding-right: 0px; }
+  .inbox-content .addUserForm .row {
+    margin-top: 5px; }
+
+#form_sample_user .col-sm-12:first-child {
+  padding: 0 15px; }
+
+.inbox .table th {
+  background: #eef4f7;
+  border-bottom: solid 5px #d3d7dd !important; }
+
+.dataTable, table.dataTable.no-footer {
+  border: 2px solid #d3d7dd;
+  border-radius: 5px; }

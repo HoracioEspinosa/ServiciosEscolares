@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,WAAW,CACT,OAAO,CAAE,IAAI,CAGb,mCAAiB,CACf,KAAK,CAAE,IAAI",
+"sources": ["../../../resources/assets/sass/layouts/layout2/custom.scss"],
+"names": [],
+"file": "custom.css"
+}

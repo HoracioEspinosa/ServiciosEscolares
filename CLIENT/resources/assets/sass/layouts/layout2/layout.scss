@@ -1,0 +1,72 @@
+//## Main Layout CSS Builder
+
+@import '../../global/_variables'; // global metronic framework variables
+@import '../../global/components/_mixins'; // global metronic framework mixings
+
+@import 'variables'; // theme level variables
+  
+@import 'layout/_print'; // print layout   
+
+@import 'layout/_header'; // page header 
+@import 'layout/_page-container'; // page main container  
+@import 'layout/_sidebar';  // page sidebar     
+@import 'layout/_content'; // page consnde                        
+@import 'layout/_footer';   // page footer                                  
+@import 'layout/_theme-panel';  // theme customizer panel
+
+@import '../quick-sidebar/_quick-sidebar';  // quick sidebar content
+@import '../quick-sidebar/_quick-nav';  // quick navigation                   
+
+/***     
+Page Loading    
+***/     
+
+.page-on-load {
+	background: #fefefe;
+
+	.page-header,
+	.page-container,   
+	.page-footer,
+	> .clearfix {
+		display: none;
+		transition: all 2s;
+	}
+}
+.dataTables_processing{
+	z-index:999 !important;
+}
+.without-padding{
+	.col-sm-12 {
+		padding: 0 !important;
+		padding-left: 5px !important;
+	}
+	.col-sm-6 {
+		padding: 0 !important;
+		:first-child {
+			margin-right: 5px;
+		}
+		:last-child {
+			margin-left: 5px;
+		}
+	}
+	input[type=button], input[type=submit], button {
+		width: 100% !important;
+	}
+	padding: 0 !important;
+	padding-right: 15px !important;
+}
+.deletedRow{
+	td.sorting_1 {
+		background: #f8cbce !important;
+		background-color: #f8cbce !important;
+	}
+	background: #f8cbce !important;
+}
+/**.slimScrollDiv {
+	height: auto !important;
+	max-height: 275px !important;
+	ul {
+		height: auto !important;
+		max-height: 275px !important;
+	}
+}**/

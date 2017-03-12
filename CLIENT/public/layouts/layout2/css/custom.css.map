@@ -1,0 +1,1 @@
+{"version":3,"sources":["custom.scss"],"names":[],"mappings":"AAAA,uEAAuE;AACvE;EACE,cAAc;CACf;;AACD;EAEI,YAAY;CACb","file":"custom.css","sourcesContent":["/* here you can put your own css to customize and override the theme */\r\n.dt-buttons{\r\n  display: none;\r\n}\r\n.button-tools-add {\r\n  .btn-group button{\r\n    width: 100%;\r\n  }\r\n}"]}
