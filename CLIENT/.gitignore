@@ -10,3 +10,4 @@ public/apps/img/
 public/global/plugins/angularjs/plugins/angular-file-upload/uploads/
 .env
 npm-debug.log
+composer.lock
