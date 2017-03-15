@@ -22,6 +22,7 @@ Route::post('/login', 'Modules\ModulesController@login');
 Route::get('/password/reset', 'Modules\ModulesController@reset');
 Route::post('/password/reset', 'Modules\ModulesController@resetForm');
 Route::post('/password/email', 'Modules\ModulesController@sendMail');
+
 /**
  * Auth module
  */
