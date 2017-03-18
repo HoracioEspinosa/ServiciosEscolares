@@ -93,8 +93,10 @@ Tutorial para hacer todo el pedo del Horacio.
 11.4	Find - Replace / BindShared - singleton
 11.5	Guardar.
 12	Esto se hace tanto en CLIENT como en API
-	composer key:generate
-	composer config:clear
+	php artisan key:generate
+
+	"composer key:generate"
+	"composer config:clear"
 13	Con esto ya debería poder entrar utilizando su dirección de VHOST en su navegador por ejemplo: serviciosmivhost.dev y entra al login, para probar que todo esté bien deberían poder loggearse utilizando lo siguiente, user: Horacio, pass: horacio123x
 
 14 Cualquier cosa, antes de perder el control, apagar y encender su wampp o xampp.

@@ -28,3 +28,9 @@ Route::post('/password/email', 'Modules\ModulesController@sendMail');
 
 Route::get('/logout', 'Auth\LoginController@logout');
 Route::post('/setToken', 'Auth\LoginController@setToken');
+
+/*Route::get('/horarios', function(){
+	return view('horario');
+});*/
+
+Route::resource('/horarios', 'Modules\Horarios\HorariosController');
