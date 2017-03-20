@@ -387,6 +387,7 @@
 <!-- END CONTENT -->
 @extends('/templates/footer')
 @section('scripts_per_page')
+
     {!! HTML::script("/public/global/plugins/fancybox/source/jquery.fancybox.pack.js") !!}
     {!! HTML::script("/public/global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js") !!}
     {!! HTML::script("/public/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js") !!}

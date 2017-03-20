@@ -1,4 +1,4 @@
-@include('/templates/header')
+8@include('/templates/header')
 <input type="hidden" id="uname" value="{{ $result['uname'] }}">
 <div class="page-content-wrapper">
     <!-- BEGIN CONTENT BODY -->

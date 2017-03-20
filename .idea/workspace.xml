@@ -4,10 +4,85 @@
     <list default="true" id="162274ac-d07f-4406-a048-0edc34f4b1e0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/CaribbeanConnection.iml" afterPath="$PROJECT_DIR$/.idea/CaribbeanConnection.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/.gitignore" afterPath="$PROJECT_DIR$/API/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/composer.lock" afterPath="$PROJECT_DIR$/API/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/.gitignore" afterPath="$PROJECT_DIR$/CLIENT/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/composer.lock" afterPath="$PROJECT_DIR$/CLIENT/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/storage/logs/laravel.log" afterPath="$PROJECT_DIR$/API/storage/logs/laravel.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/composer.json" afterPath="$PROJECT_DIR$/CLIENT/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/gulpfile.js" afterPath="$PROJECT_DIR$/CLIENT/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/apps/css/inbox.css" afterPath="$PROJECT_DIR$/CLIENT/public/apps/css/inbox.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/apps/css/ticket.css" afterPath="$PROJECT_DIR$/CLIENT/public/apps/css/ticket.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/apps/css/todo-2.css" afterPath="$PROJECT_DIR$/CLIENT/public/apps/css/todo-2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/apps/css/todo.css" afterPath="$PROJECT_DIR$/CLIENT/public/apps/css/todo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/css/app.css" afterPath="$PROJECT_DIR$/CLIENT/public/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/css/bootstrap.css" afterPath="$PROJECT_DIR$/CLIENT/public/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/css/modules/users/users.css" afterPath="$PROJECT_DIR$/CLIENT/public/css/modules/users/users.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/global/css/components-md.css" afterPath="$PROJECT_DIR$/CLIENT/public/global/css/components-md.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/global/css/components-rounded.css" afterPath="$PROJECT_DIR$/CLIENT/public/global/css/components-rounded.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/global/css/components.css" afterPath="$PROJECT_DIR$/CLIENT/public/global/css/components.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/global/css/plugins-md.css" afterPath="$PROJECT_DIR$/CLIENT/public/global/css/plugins-md.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/global/css/plugins.css" afterPath="$PROJECT_DIR$/CLIENT/public/global/css/plugins.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/custom.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/layout.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/blue.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/blue.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/darkblue.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/darkblue.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/default.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/grey.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/grey.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/light.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/light.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/light2.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/light2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/custom.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/layout.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/themes/blue.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/themes/blue.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/themes/dark.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/themes/dark.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/themes/default.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/themes/default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/themes/grey.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/themes/grey.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/themes/light.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/themes/light.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/custom.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/layout.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/blue-hoki.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/blue-hoki.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/blue-steel.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/blue-steel.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/default.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/green-haze.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/green-haze.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/purple-plum.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/purple-plum.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/purple-studio.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/purple-studio.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/red-intense.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/red-intense.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/red-sunglo.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/red-sunglo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/yellow-crusta.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/yellow-crusta.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/yellow-orange.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/yellow-orange.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout4/css/custom.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout4/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout4/css/layout.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout4/css/layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout4/css/themes/default.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout4/css/themes/default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout4/css/themes/light.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout4/css/themes/light.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout5/css/custom.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout5/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout5/css/layout.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout5/css/layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout6/css/custom.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout6/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout6/css/layout.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout6/css/layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout7/css/custom.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout7/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout7/css/layout.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout7/css/layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/about.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/about.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/blog.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/blog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/coming-soon.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/coming-soon.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/contact.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/contact.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/error.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/error.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/faq.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/faq.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/image-crop.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/image-crop.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/invoice-2.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/invoice-2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/invoice.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/invoice.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/lock-2.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/lock-2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/lock.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/lock.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/login-2.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/login-2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/login-3.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/login-3.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/login-4.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/login-4.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/login-5.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/login-5.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/login.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/login.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/portfolio.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/portfolio.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/pricing.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/pricing.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/profile-2.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/profile-2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/profile.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/profile.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/search.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/search.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/tasks.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/tasks.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/resources/assets/sass/global/plugins/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/CLIENT/resources/assets/sass/global/plugins/bootstrap/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/resources/views/modules/users/index.blade.php" afterPath="$PROJECT_DIR$/CLIENT/resources/views/modules/users/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/resources/views/modules/users/profile.blade.php" afterPath="$PROJECT_DIR$/CLIENT/resources/views/modules/users/profile.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/routes/web.php" afterPath="$PROJECT_DIR$/CLIENT/routes/web.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial.txt" afterPath="$PROJECT_DIR$/tutorial.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,82 +97,67 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CLIENT/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/routes/api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="36" column="20" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/Api/AuthController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/routes/console.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ModulesController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/ModulesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="41" />
+            <state relative-caret-position="-2577">
+              <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/index.blade.php">
+      <file leaf-file-name="ModuleGradesController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Grades/ModuleGradesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="344">
+              <caret line="59" column="36" lean-forward="false" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/templates/header.blade.php">
+      <file leaf-file-name="ModuleUsersController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/ModuleUsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+            <state relative-caret-position="289">
+              <caret line="44" column="7" lean-forward="true" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+              <folding>
+                <marker date="1489636278308" expanded="true" signature="1236:1391" ph="SELECT * FRO... users" />
+                <marker date="1489636278308" expanded="true" signature="5840:5893" ph="SELECT passw... users" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calif.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/modules/grades/calif.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/modules/users/profile.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17323">
+              <caret line="1019" column="55" lean-forward="false" selection-start-line="1019" selection-start-column="55" selection-end-line="1019" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModuleUsersController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Users/ModuleUsersController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2431">
+              <caret line="148" column="34" lean-forward="false" selection-start-line="127" selection-start-column="4" selection-end-line="151" selection-end-column="5" />
+              <folding>
+                <element signature="e#60#102#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,7 +167,13 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>view</find>
+      <find>BindShared</find>
+      <find>Inicio</find>
+      <find>una</find>
     </findStrings>
+    <replaceStrings>
+      <replace>singleton</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -118,6 +184,19 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/CLIENT/.gitignore" />
+        <option value="$PROJECT_DIR$/CLIENT/storage/logs/laravel.log" />
+        <option value="$PROJECT_DIR$/CLIENT/vendor/illuminate/html/HtmlServiceProvider.php" />
+        <option value="$PROJECT_DIR$/tutorial.txt" />
+        <option value="$PROJECT_DIR$/API/.env" />
+        <option value="$PROJECT_DIR$/CLIENT/.env" />
+        <option value="$PROJECT_DIR$/CLIENT/gulpfile.js" />
+        <option value="$PROJECT_DIR$/CLIENT/routes/web.php" />
+        <option value="$PROJECT_DIR$/CLIENT/resources/views/modules/users/profile.blade.php" />
+        <option value="$PROJECT_DIR$/CLIENT/resources/views/modules/grades/index.blade.php" />
+        <option value="$PROJECT_DIR$/CLIENT/resources/views/modules/users/index.blade.php" />
+        <option value="$PROJECT_DIR$/CLIENT/resources/views/modules/grades/calif.blade.php" />
+        <option value="$PROJECT_DIR$/CLIENT/composer.json" />
+        <option value="$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Grades/ModuleGradesController.php" />
       </list>
     </option>
   </component>
@@ -125,14 +204,51 @@
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+    <gulpfiles>
+      <GulpfileState>
+        <gulpfile-path>$PROJECT_DIR$/CLIENT/gulpfile.js</gulpfile-path>
+        <tasks>
+          <GulpTaskState>
+            <task-name>localhost</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>localhost-live</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>sass</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>minify</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>sass:watch</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>rtlcss</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>prettify</task-name>
+          </GulpTaskState>
+        </tasks>
+      </GulpfileState>
+    </gulpfiles>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/CLIENT/node_modules" />
+    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1932" />
-    <option name="height" value="1066" />
+    <option name="width" value="1378" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectStartupLocalConfiguration">
+    <configurations>
+      <configuration id="Gulp.js.SASS" name="SASS" />
+    </configurations>
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -149,7 +265,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -177,14 +292,231 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ServiciosEscolares" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ServiciosEscolares" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CLIENT" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ServiciosEscolares" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ServiciosEscolares" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CLIENT" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ServiciosEscolares" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ServiciosEscolares" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CLIENT" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grades" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ServiciosEscolares" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ServiciosEscolares" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CLIENT" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="preferences.startup.tasks" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/CLIENT" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="javascript.nodejs.core.library.configured.version" value="7.7.3" />
+    <property name="js.buildTools.gulp.gulp_package_dir" value="C:\xampp\htdocs\ServiciosEscolares\CLIENT\node_modules\gulp" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ServiciosEscolares\CLIENT\app\Http\Controllers\Modules\Grades" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gulp.js.SASS">
+    <configuration default="false" name="minify" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/CLIENT/gulpfile.js</gulpfile>
+      <tasks>
+        <task>minify</task>
+      </tasks>
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <configuration default="false" name="SASS" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/CLIENT/gulpfile.js</gulpfile>
+      <tasks>
+        <task>sass:watch</task>
+      </tasks>
+      <arguments />
+      <envs />
+      <method>
+        <option name="GulpBeforeRunTask" enabled="true">
+          <node-interpreter>project</node-interpreter>
+          <node-options />
+          <gulpfile>$PROJECT_DIR$/CLIENT/gulpfile.js</gulpfile>
+          <tasks>
+            <task>sass</task>
+          </tasks>
+          <arguments />
+          <envs />
+        </option>
+        <option name="GulpBeforeRunTask" enabled="true">
+          <node-interpreter>project</node-interpreter>
+          <node-options />
+          <gulpfile>$PROJECT_DIR$/CLIENT/gulpfile.js</gulpfile>
+          <tasks>
+            <task>minify</task>
+          </tasks>
+          <arguments />
+          <envs />
+        </option>
+      </method>
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Gulp.js.SASS" />
+      <item index="1" class="java.lang.String" itemvalue="Gulp.js.minify" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Gulp.js.minify" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -202,31 +534,43 @@
       <workItem from="1487344946004" duration="1048000" />
       <workItem from="1487977752839" duration="711000" />
       <workItem from="1489600313892" duration="26000" />
+      <workItem from="1489636704274" duration="4490000" />
+      <workItem from="1489644238744" duration="382000" />
+      <workItem from="1489644957540" duration="949000" />
+      <workItem from="1489645930263" duration="4182000" />
+      <workItem from="1489651183521" duration="464000" />
+      <workItem from="1489761285783" duration="7475000" />
+      <workItem from="1489805201054" duration="2620000" />
+      <workItem from="1489818994942" duration="376000" />
+      <workItem from="1489974382656" duration="3016000" />
+      <workItem from="1489983439807" duration="751000" />
+      <workItem from="1490030811886" duration="1494000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2619000" />
+    <option name="totallyTimeSpent" value="28818000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1932" height="1066" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="1" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26018807" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.292868" sideWeight="0.5538462" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.292868" sideWeight="0.44615385" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24102564" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2837607" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -242,75 +586,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/API/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="36" column="20" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/Api/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/routes/console.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/ModulesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/templates/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/API/routes/api.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="45" column="20" lean-forward="true" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -325,7 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
           <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -333,7 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -342,7 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -351,7 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -359,7 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -381,20 +655,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/ModuleDepartmentsController.php" />
-    <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/ModuleUsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="21" column="71" lean-forward="true" selection-start-line="21" selection-start-column="71" selection-end-line="21" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/Auth/ForgotPasswordController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -402,11 +662,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/API/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/ModuleBranchOfficesController.php" />
+    <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Users/ModuleBranchOfficesController.php" />
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/CLIENT/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="36" column="20" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/Api/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
+        <state relative-caret-position="493">
           <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -414,57 +697,202 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="36" column="20" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/ModuleBranchOfficesController.php" />
-    <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/ModulesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Users/ModuleBranchOfficesController.php" />
-    <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/templates/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
+        <state relative-caret-position="391">
           <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLIENT/vendor/illuminate/html/HtmlServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="20" lean-forward="false" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="92" column="25" lean-forward="false" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLIENT/storage/logs/laravel.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="175" lean-forward="false" selection-start-line="0" selection-start-column="175" selection-end-line="0" selection-end-column="175" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLIENT/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLIENT/resources/assets/sass/modules/users/users.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLIENT/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="20" column="3" lean-forward="false" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Grades/ModuleGradeController.php" />
+    <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/modules/users/profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17323">
+          <caret line="1019" column="55" lean-forward="false" selection-start-line="1019" selection-start-column="55" selection-end-line="1019" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md" />
-    <entry file="file://$PROJECT_DIR$/CLIENT/.gitignore">
+    <entry file="file://$PROJECT_DIR$/CLIENT/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="204">
+          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/modules/users/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="379" column="18" lean-forward="false" selection-start-line="379" selection-start-column="18" selection-end-line="379" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Users/ModuleUsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2431">
+          <caret line="148" column="34" lean-forward="false" selection-start-line="127" selection-start-column="4" selection-end-line="151" selection-end-column="5" />
+          <folding>
+            <element signature="e#60#102#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-217">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/Auth/RegisterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-663">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/Auth/ResetPasswordController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-217">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="62" lean-forward="true" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLIENT/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="17" column="51" lean-forward="true" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLIENT/routes/console.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLIENT/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/ModulesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2577">
+          <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Grades/ModuleGradesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="59" column="36" lean-forward="false" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/ModuleUsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="44" column="7" lean-forward="true" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+          <folding>
+            <marker date="1489636278308" expanded="true" signature="1236:1391" ph="SELECT * FRO... users" />
+            <marker date="1489636278308" expanded="true" signature="5840:5893" ph="SELECT passw... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/modules/grades/calif.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
           <folding />
         </state>
       </provider>

@@ -90,12 +90,12 @@ Tutorial para hacer todo el pedo del Horacio.
 	composer update
 11.2	Abrir proyecto CLIENT.
 11.3	Buscar Vendor/Illuminate/HTMLServiceProvider.php
-11.4	Find - Replace / BindShared - singleton
+11.4	Find - Replace / singleton - singleton
 11.5	Guardar.
 12	Esto se hace tanto en CLIENT como en API
 	php artisan key:generate
 	php artisan config:clear
-13	Con esto ya debería poder entrar utilizando su dirección de VHOST en su navegador por ejemplo: serviciosmivhost.dev y entra al login, para probar que todo esté bien deberían poder loggearse utilizando lo siguiente, user: Horacio, pass: horacio123x
+13	Con esto ya deberï¿½a poder entrar utilizando su direcciï¿½n de VHOST en su navegador por ejemplo: serviciosmivhost.dev y entra al login, para probar que todo estï¿½ bien deberï¿½an poder loggearse utilizando lo siguiente, user: Horacio, pass: horacio123x
 
 14 Cualquier cosa, antes de perder el control, apagar y encender su wampp o xampp.
 

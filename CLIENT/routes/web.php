@@ -29,3 +29,10 @@ Route::post('/password/email', 'Modules\ModulesController@sendMail');
 
 Route::get('/logout', 'Auth\LoginController@logout');
 Route::post('/setToken', 'Auth\LoginController@setToken');
+
+
+/**
+ * Calificaciones
+ */
+
+Route::get('/calificaciones','Modules\Grades\ModuleGradesController@index');
