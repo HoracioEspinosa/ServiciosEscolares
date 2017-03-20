@@ -145,7 +145,6 @@ class ModuleUsersController extends Controller
     public function getDepartmentsByBranch(Request $request) {
         $id = DB::table('departments')->where('Branch_offices_id_branch_offices', $request->input('id'))->get();
         return $id;
-
     }
 
     /**

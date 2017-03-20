@@ -93,10 +93,10 @@ Contact: admin@cloudftog.com.mx
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Buscar..." name="query" id="searchByPage">
                     <span class="input-group-btn">
-                                <a href="javascript:;" class="btn submit">
-                                    <i class="icon-magnifier"></i>
-                                </a>
-                            </span>
+                        <a href="javascript:;" class="btn submit">
+                            <i class="icon-magnifier"></i>
+                        </a>
+                    </span>
                 </div>
             </form>
             <!-- END HEADER SEARCH BOX -->
@@ -231,6 +231,26 @@ Contact: admin@cloudftog.com.mx
                         <span class="title">Inicio</span>
                         <span class="selected"></span>
                     </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/Alumnos" class="nav-link nav-toggle">
+                        <i class="icon-user"></i>
+                        <span class="title">Alumno</span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item start active open">
+                            <a href="/Alumnos" class="nav-link ">
+                                <i class="icon-bar-chart"></i>
+                                <span class="title">Buscar</span>
+                            </a>
+                        </li>
+                        <li class="nav-item start ">
+                            <a href="/Alumnos/Create" class="nav-link ">
+                                <i class="icon-bulb"></i>
+                                <span class="title">Agregar</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
             <!-- END SIDEBAR MENU -->
