@@ -31,3 +31,8 @@ Route::get('/logout', 'Auth\LoginController@logout');
 Route::post('/setToken', 'Auth\LoginController@setToken');
 
 Route::resource('/groups', 'Modules\Groups\GroupsController');
+/*Route::get('/horarios', function(){
+	return view('horario');
+});*/
+
+Route::resource('/horarios', 'Modules\Horarios\HorariosController');
