@@ -38,6 +38,7 @@ class ProfesorsController extends Controller
         return view('agregarProfesor', compact('result', 'users'));
     }
 
+<<<<<<< HEAD:CLIENT/app/Http/Controllers/Modules/Profesors/ProfesorsController.php
     public function modify()
     {
         $this->setUserHeader();
@@ -46,6 +47,8 @@ class ProfesorsController extends Controller
         return view('modificarProfesor', compact('result', 'users'));
     }
 
+=======
+>>>>>>> 4ae839e13358e20c25b204ffd130d9aaf8d7b9b0:CLIENT/app/Http/Controllers/Modules/Profesors/ProfesorsController.php
     public function setUserHeader(){
         if (cookie::get('token') == "" || cookie::get('token')  == null) {
             return redirect('/login');
