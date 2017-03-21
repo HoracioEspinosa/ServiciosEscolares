@@ -232,6 +232,15 @@ Contact: admin@cloudftog.com.mx
                         <span class="selected"></span>
                     </a>
                 </li>
+                <li class="nav-item active">
+                    <a href="/" class="nav-link nav-toggle">
+                        <i class="icon-briefcase"></i>
+                        <a href="profesores" class="title">Profesores</a>
+                        <span class="selected"></span>
+                        <span class="title">Inicio2</span>
+                        <span class="selected"></span>
+                    </a>
+                </li>
             </ul>
             <!-- END SIDEBAR MENU -->
         </div>

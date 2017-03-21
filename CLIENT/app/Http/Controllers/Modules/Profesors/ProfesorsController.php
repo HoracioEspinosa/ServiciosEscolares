@@ -3,6 +3,7 @@
 namespace Caribbean\Http\Controllers\Modules\Profesors;
 
 use Caribbean\Http\Controllers\Modules\Users\ModuleUsersController;
+use Caribbean\Http\Controllers\Modules\Users\UsersController;
 use Illuminate\Http\Request;
 use Caribbean\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Cookie;
@@ -17,7 +18,7 @@ use GuzzleHttp;
 
 
 
-class ModuleProfesorsController extends Controller
+class ProfesorsController extends Controller
 {
     private $result = "";
 
@@ -27,6 +28,22 @@ class ModuleProfesorsController extends Controller
         $users = ModuleUsersController::getAllUsersINformation();
         $result = $this->result;
         return view('profesores', compact('result', 'users'));
+    }
+
+    public function create()
+    {
+        $this->setUserHeader();
+        $users = ModuleUsersController::getAllUsersINformation();
+        $result = $this->result;
+        return view('agregarProfesor', compact('result', 'users'));
+    }
+
+    public function modify()
+    {
+        $this->setUserHeader();
+        $users = ModuleUsersController::getAllUsersINformation();
+        $result = $this->result;
+        return view('modificarProfesor', compact('result', 'users'));
     }
 
     public function setUserHeader(){
@@ -42,7 +59,7 @@ class ModuleProfesorsController extends Controller
                     ];
                     $result = $client->get( 'api/auth/me', [ 'headers' => $headers ] );
                     $resultado= json_decode($result->getBody()->getContents(), JSON_PRETTY_PRINT)["user"];
-                    return $resultado;
+                    $this->result=$resultado;
                 }catch (ClientException $exception){;
                     return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
                 }
