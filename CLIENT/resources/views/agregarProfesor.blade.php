@@ -38,24 +38,24 @@
 
                 <div class="portlet-body form">
                     <!-- BEGIN FORM-->
-                    <form action="#" class="form-horizontal">
+                    <form method="post" action="/profesores/create" class="form-horizontal">
                         <div class="form-body">
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Nombre</label>
                                 <div class="col-md-4">
-                                    <input type="text" class="form-control input-circle" placeholder="Ingrese Nombre o nombres">
+                                    <input name="name" type="text" class="form-control input-circle" placeholder="Ingrese Nombre o nombres">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Apellido</label>
                                 <div class="col-md-4">
-                                    <input type="text" class="form-control input-circle" placeholder="Apellido Paterno">
+                                    <input name="plname" type="text" class="form-control input-circle" placeholder="Apellido Paterno">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Apellido</label>
                                 <div class="col-md-4">
-                                    <input type="text" class="form-control input-circle" placeholder="Apellido Materno">
+                                    <input name="mlname" type="text" class="form-control input-circle" placeholder="Apellido Materno">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -65,7 +65,7 @@
                                                                     <span class="input-group-addon input-circle-left">
                                                                         <i class="fa fa-credit-card"></i>
                                                                     </span>
-                                        <input type="text" class="form-control input-circle-right" placeholder="Ingrese Cédula Profesional"> </div>
+                                        <input name="cedula" type="text" class="form-control input-circle-right" placeholder="Ingrese Cédula Profesional"> </div>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -75,7 +75,7 @@
                                                                     <span class="input-group-addon input-circle-left">
                                                                         <i class="fa fa-envelope"></i>
                                                                     </span>
-                                        <input type="email" class="form-control input-circle-right" placeholder="Correo electrónico"> </div>
+                                        <input name="email" type="email" class="form-control input-circle-right" placeholder="Correo electrónico"> </div>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -85,7 +85,7 @@
                                                                     <span class="input-group-addon input-circle-left">
                                                                         <i class="fa fa-phone"></i>
                                                                     </span>
-                                        <input type="text" class="form-control input-circle-right" placeholder="Número de Teléfono"> </div>
+                                        <input name="phone" type="text" class="form-control input-circle-right" placeholder="Número de Teléfono"> </div>
                                 </div>
                             </div>
                             <div class="form-group">

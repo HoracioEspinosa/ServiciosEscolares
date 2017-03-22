@@ -29,5 +29,5 @@ Route::post('/password/email', 'Modules\ModulesController@sendMail');
 Route::get('/logout', 'Auth\LoginController@logout');
 Route::post('/setToken', 'Auth\LoginController@setToken');
 
-Route::resource('/profesores', 'Modules\Profesors\ProfesorsController@index');
-Route::resource('/profesores/create', 'Modules\Profesors\ProfesorsController@create');
+Route::resource('/profesores', 'Modules\Profesors\ProfesorsController');
+Route::post('/profesores/create', 'Modules\Profesors\ModulesStudentController@createProfesor');

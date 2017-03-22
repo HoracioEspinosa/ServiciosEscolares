@@ -625,6 +625,158 @@ var TableDatatablesManaged = function () {
         });
     }
 
+    var initTableProfesores = function () {
+        var token = $("#api-token").val();
+        var deleted = $("#checkDeleted .active").data("value");
+        var table = $('#initTableProfesores').DataTable({
+            processing: true,
+            //sProcessing: 'Procesando...',
+            bProcessing: true,
+            bPaginate: true,
+            bLengthChange: true,
+            bInfo: true,
+            bAutoWidth: false ,
+            //bStateSave: true,
+            sPaginationType: "full_numbers",
+            serverSide: true,
+            bJQueryUI: true,
+            "bDestroy": true,
+            ajax: {
+                "type"   : "GET",
+                "url"    : 'http://servicioseduapi.dev/api/users/get/table',
+                "data"   : {
+                    "token" : token,
+                    "deleted" : deleted
+                },
+            },
+            columns: [
+                {
+                    width: '15%',
+                    data : 'usuario',
+                    searchable: true,
+                    sortable: true
+                },
+                {
+                    data : 'nombre',
+                    searchable: true,
+                    sortable: true,
+                    render: function (status, type, full, meta) {
+                        return full.nombre;
+                    }
+                },
+
+                {
+                    width: '15%',
+                    data: 'apellido',
+                    visible: true,
+                    render: function (type, type, full, meta) {
+                        return full.apellido;
+                    }
+                },
+
+                {
+                    data: 'usuario',
+                    render: function (type, type, full, meta) {
+                        return '<div class="actions"><a class="btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Ver" href="#view" data-toggle="modal"><i class="fa fa-eye"></i></a><a class="btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Modificar" href="#modify" data-toggle="modal"><i class="fa fa-edit"></i></a><a class="btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Eliminar" href="#delete" data-toggle="modal"><i class="fa fa-trash-o"></i></a></div>';
+                    }
+                }
+
+            ],
+            "bSortClasses": false,
+            sDom: "lBfrtip",
+            buttons: [
+                {
+                    extend: 'copy',
+                    exportOptions: {
+                        columns: [0,1,2,3]
+                    }
+                },
+                {
+                    extend: 'excel',
+                    orientation: 'landscape',
+                    pageSize: 'LEGAL',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3]
+                    }
+                },
+                {
+                    extend: 'csv',
+                    orientation: 'landscape',
+                    pageSize: 'LEGAL',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3]
+                    }
+                },
+                {
+                    extend: 'pdf',
+                    pageSize: 'LEGAL',
+                    title: "Listado de sucursales",
+                    exportOptions: {
+                        columns: [0, 1, 2, 3]
+                    },
+                    customize: function (doc) {
+                        doc.content[1].table.widths =
+                            Array(doc.content[1].table.body[0].length + 1).join('*').split('');
+                    }
+                },
+                {
+                    extend: 'print',
+                    orientation: 'landscape',
+                    title: "Listado de sucursales",
+                    message: "Listado de sucursales generales de Caribbean Connection",
+                    pageSize: 'LEGAL',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3]
+                    },
+                    className: 'printDepartment',
+                }
+            ],
+            language: {
+                aria: {
+                    sortAscending: ": activate to sort column ascending",
+                    sortDescending: ": activate to sort column descending"
+                },
+                emptyTable: "No se han encontrado registros",
+                info: "Mostrando del _START_ al _END_ de _TOTAL_ registros",
+                infoEmpty: "No se han encontrado resultados",
+                infoFiltered: "(Filtrado de _MAX_ registros)",
+                lengthMenu: "Número de sucursales &nbsp; _MENU_",
+                search: "Buscar: &nbsp;",
+                zeroRecords: "No se han encontrado resultados",
+                paginate: {
+                    previous:"Anterior",
+                    next: "Siguiente",
+                    last: "Último",
+                    first: "Primero"
+                },
+                select: {
+                    info: false
+                }
+            },
+            lengthMenu: [
+                [2, 5, 15, 20, -1],
+                [2, 5, 15, 20, "Todos"]
+            ],
+
+            pageLength: 5,
+            columnDefs: [
+                { width: "10%", targets: 2 }
+            ],
+            iDisplayLength: 2
+        });
+        table.columns.adjust().draw();
+        table.select.info( false );
+        $('#initTableProfesores tbody').on( 'click', 'tr', function () {
+            if ( $(this).hasClass('selected') ) {
+                $(this).removeClass('selected');
+            }
+            else {
+                table.$('tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+            }
+        } );
+    }
+
     var initTableDepartments = function () {
         var token = $("#api-token").val();
         var deleted = $("#checkDeleted .active").data("value");
@@ -1243,6 +1395,9 @@ var TableDatatablesManaged = function () {
         },
         users: function () {
             initTableUsers();
+        },
+        profesores:function(){
+            initTableProfesores();
         }
     };
 }();

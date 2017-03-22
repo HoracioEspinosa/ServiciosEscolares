@@ -25,117 +25,86 @@
                     <a href="/profesores/create" class="btn btn-lg btn-primary"> Registro Nuevo
                         <i class="fa fa-edit"></i>
                     </a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li>
-                            <a href="/profesores/create"> Agregar </a>
-                        </li>
-                        <li>
-                            <a href="/profesores/update"> Modificar </a>
-                        </li>
-                        <li>
-                        <li class="divider"> </li>
-                        <li>
-                            <a href="javascript:;"> Eliminar </a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
 
-        <div class="clearfix">
-            <div class="panel panel-primary">
-                <!-- Default panel contents -->
-                <div class="panel-heading">
-                    <h3 class="panel-title">Profesores</h3>
+        <div class="inbox userModule">
+            <div class="row">
+                <div class="col-sm-12">
+
+                    <div class="inbox-body">
+                        <div class="inbox-content">
+                            <div class="table-toolbar">
+                                <div class="row button-tools-add">
+
+                                    <div class="col-md-5">
+                                        <div class="caption font-blue-sharp">
+                                            <i class="icon-settings font-blue-sharp"></i>
+                                            <span class="caption-subject bold uppercase"> Listado de Profesores </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="btn-group pull-right">
+                                            <button class="btn blue  btn-outline dropdown-toggle" data-toggle="dropdown">
+                                                <i class="fa fa-cogs"></i>
+                                                Herramientas
+                                                <i class="fa fa-angle-down"></i>
+                                            </button>
+                                            <ul class="dropdown-menu pull-right" aria-controls="initTableProfesores">
+                                                <li class="printContent">
+                                                    <a><i class="fa fa-print printDepartment"></i> Imprimir </a>
+                                                </li>
+                                                <li class="pdfContent">
+                                                    <a href="javascript:;"><i class="fa fa-file-pdf-o"></i> Guardar como PDF</a>
+                                                </li>
+                                                <li class="excelContent">
+                                                    <a href="javascript:;"><i class="fa fa-file-excel-o"></i> Exportar a Excel </a>
+                                                </li>
+                                                <li class="csvContent">
+                                                    <a href="javascript:;"><i class="fa fa-file-o"></i> Exportar a CSV </a>
+                                                </li>
+                                                <li class="copyContent">
+                                                    <a href="javascript:;"><i class="fa fa-copy"></i> Copiar contenido </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 table-alerts">
+                                <div class="alert alert-danger display-hide">
+                                    <button class="close" data-close="alert"></button> <span>Se ha producido un error al intentar mover el departamento a la papelera, intente nuevamente más tatde. </span>
+                                </div>
+                                <div class="alert alert-success display-hide">
+                                    <button class="close" data-close="alert"></button> <span>Se ha mandado el departamento a la papelera.</span>
+                                </div>
+                            </div>
+                            <div id="sample_3_wrapper" class="dataTables_wrapper no-footer">
+                                <div class="table">
+                                    <table class="table table-striped table-advance table-hover display responsive nowrap dataTable dtr-inline" id="initTableProfesores" width="100%" role="grid" aria-describedby="initTableProfesores_info">
+                                        <thead>
+                                        <tr role="row">
+                                            <td class="sorting" tabindex="0" aria-controls="initTableProfesores" rowspan="1" colspan="1" aria-label=" Start : activate to sort column ascending" style="width: 162px;">Alumno</td>
+                                            <td class="sorting" tabindex="0" aria-controls="initTableProfesores" rowspan="1" colspan="1" aria-label=" End : activate to sort column ascending" style="width: 162px;">Matricula</td>
+                                            <td class="sorting" tabindex="0" aria-controls="initTableProfesores" rowspan="1" colspan="1" aria-label=" Status : activate to sort column ascending" style="width: 131px;">Estado</td>
+                                            <th class="sorting_disabled" tabindex="0" aria-controls="initTableProfesores" rowspan="1" colspan="1" aria-label=" Actions : activate to sort column ascending" style="width: 80px;">Acciones</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <!-- Table -->
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th> # </th>
-                        <th> Nombre </th>
-                        <th> Paterno </th>
-                        <th> Materno </th>
-                        <th> Status </th>
-                        <th> Teléfono </th>
-                        <th> E-mail </th>
-                        <th> Acciones </th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td> 1 </td>
-                        <td> Mark </td>
-                        <td> Otto </td>
-                        <td> Sánchez </td>
-                        <td> Activo </td>
-                        <td> 999888555 </td>
-                        <td> ejemplo1@gmail.com </td>
-                        <td>
-                            <div class="actions">
-                                <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                                <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                                    <i class="fa fa-edit"></i>
-                                </a>
-                                <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                                    <i class="fa fa-trash-o"></i>
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td> 2 </td>
-                        <td> Jacob </td>
-                        <td> Thornton </td>
-                        <td> Pérez </td>
-                        <td> Inactivo </td>
-                        <td> 999777666 </td>
-                        <td> ejemplo2@gmail.com </td>
-                        <td>
-                            <div class="actions">
-                                <a class="btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom"
-                                   data-original-title="Ver" href="#view" data-toggle="modal">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                                <a class="btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom"
-                                   data-original-title="Modificar" href="#modify" data-toggle="modal">
-                                    <i class="fa fa-edit"></i>
-                                </a>
-                                <a class="btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom"
-                                   data-original-title="Eliminar" href="#delete" data-toggle="modal">
-                                    <i class="fa fa-trash-o"></i>
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td> 3 </td>
-                        <td> Larry </td>
-                        <td> the Bird </td>
-                        <td> Hernández </td>
-                        <td> Activo </td>
-                        <td> 999222333 </td>
-                        <td> ejemplo3@gmail.com </td>
-                        <td>
-                            <div class="actions">
-                                <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                                <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                                    <i class="fa fa-edit"></i>
-                                </a>
-                                <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                                    <i class="fa fa-trash-o"></i>
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
+
+
+
+
+
 
         <div id="view" class="modal fade" role="dialog" aria-labelledby="myModalLabel10" aria-hidden="true">
             <div class="modal-dialog">
@@ -343,3 +312,12 @@
 <!-- END CONTENT -->
 
 @extends('/templates/footer')
+@section('scripts_per_page')
+    {!! HTML::script('/public/global/scripts/modules/profesores/profesores.js') !!}
+@endsection
+@section('styles_per_page')
+    {!! HTML::style('/public/global/css/components-md.min.css') !!}
+    {!! HTML::style('/public/apps/css/inbox.min.css') !!}
+    {!! HTML::style('/public/css/modules/users/users.css') !!}
+
+@endsection

@@ -23,6 +23,9 @@ Route::put('/users/update', 'ModuleUsersController@update');
 Route::delete('/users/delete', 'ModuleUsersController@delete');
 Route::put('/users/restore', 'ModuleUsersController@restore');
 
+Route::get('/users/get/all', 'ModuleUsersController@getAllUsersInformation')->middleware('jwt.auth');
+Route::get('/users/get/table', 'ModuleUsersController@getAllProfesorsInformation')->middleware('jwt.auth');
+
 Route::post('/login', 'ModuleUsersController@login')->middleware('jwt.auth');
 
 Route::post('auth', 'Api\AuthController@authenticate');
