@@ -1,0 +1,105 @@
+Upqroo Cursos
+upqroo.cursos@gmail.com
+cursos1234
+20/03/1990
+
+
+ <table class="table table-striped table-bordered table-hover table-checkable order-column dataTable no-footer" id="sample_1" role="grid" aria-describedby="sample_1_info">
+                <thead>
+                <tr role="row">
+                    <th class="sorting_disabled" rowspan="1" colspan="1" aria-label="" style="width: 72px;">
+                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                            <input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes">
+                            <span></span>
+                        </label>
+                    </th>
+                    <td class="sorting" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label=" Start : activate to sort column ascending" style="width: 162px;">Alumno</td>
+                    <td class="sorting" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label=" End : activate to sort column ascending" style="width: 162px;">Matricula</td>
+                    <td class="sorting" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label=" Status : activate to sort column ascending" style="width: 131px;">Estado</td>
+                    <th class="sorting_disabled" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label=" Actions : activate to sort column ascending" style="width: 80px;">Acciones</th>
+                </tr>
+                </thead>
+                <tbody id="cuerpoTablaStudents">
+                @foreach($allUsuarios as $objeto)
+                    <tr>
+                        <td>
+                            <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                                <input data-set="#sample_1" type="checkbox" class="checkboxes" value="1">
+                                <span></span>
+                            </label>
+                        </td>
+                        <td>{{ucfirst($objeto['nombre'])}} {{ucfirst($objeto['apellido'])}}</td>
+                        <td>{{$objeto['matricula']}}</td>
+                        <td>{{$objeto['estado']}}</td>
+                        <td>
+                            <div class="btn-group" style="margin-top: 1px">
+                                <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Acciones
+                                    <i class="fa fa-angle-down"></i>
+                                </button>
+                                <ul class="dropdown-menu pull-left" role="menu">
+                                    <li>
+                                        <a href="/students/update/{{$objeto['idAlumnos']}}">
+                                            <i class="fa fa-pencil"></i> Editar
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-trash-o"></i> Eliminar
+                                        </a>
+                                    </li>
+                                    <li class="divider"> </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-ban"></i> Desactivar
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                @endforeach
+                </tbody>
+                </table>
+
+
+esto es para busqueda, paginacion y ordena
+
+
+
+BEGIN
+    DECLARE `_rollback` BOOL DEFAULT 0;
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET `_rollback` = 1;
+    START TRANSACTION;
+    BEGIN
+      INSERT INTO informacion
+      (nombre,apellido,genero,edad,curp,fecha_ingreso,foto) VALUES (_nombre,_apellido,_genero,_edad,_curp,now(),'foto');
+     
+     INSERT INTO alumnos
+     (estado,matricula,turno,idInformacionFK,idGrupos,idGeneraciones) VALUES ('Activo',_matricula,_turno,(SELECT MAX(idInformacion) FROM informacion ), _idGrupos,_idGeneraciones);
+      IF `_rollback` THEN
+        ROLLBACK;
+        SELECT 'ERROR' AS 'MESSAGE';
+      ELSE
+        COMMIT;
+        SELECT 'OK' AS 'MESSAGE';
+      END IF;
+  END;
+END
+
+
+CREATE PROCEDURE `INSERT_DEPARTMENTS` ( IN DE_NAME VARCHAR(50), IN DE_STATUS BOOLEAN, IN DE_OBSERVATION_ID INT)
+  BEGIN
+    DECLARE `_rollback` BOOL DEFAULT 0;
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET `_rollback` = 1;
+    START TRANSACTION;
+    BEGIN
+      INSERT INTO departments (name, status, Departments_Observations_id_observations) VALUES (DE_NAME, DE_STATUS, DE_OBSERVATION_ID);
+      IF `_rollback` THEN
+        ROLLBACK;
+        SELECT 'ERROR' AS 'MESSAGE';
+      ELSE
+        COMMIT;
+        SELECT 'OK' AS 'MESSAGE';
+      END IF;
+  END ;
+END $$
