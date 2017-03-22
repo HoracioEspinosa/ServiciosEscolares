@@ -233,13 +233,21 @@ Contact: admin@cloudftog.com.mx
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a href="/" class="nav-link nav-toggle">
+                    <a href="/profesores" class="nav-link nav-toggle">
                         <i class="icon-briefcase"></i>
-                        <a href="profesores" class="title">Profesores</a>
+                        <span class="title">Profesores</span>
                         <span class="selected"></span>
-                        <span class="title">Inicio2</span>
-                        <span class="selected"></span>
+                        <span class="arrow open"></span>
                     </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item start">
+                            <a href="/profesores/create" class="nav-link ">
+                                <i class="fa fa-plus-circle"></i>
+                                <span class="title">Agregar</span>
+                                <span class="selected"></span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
             <!-- END SIDEBAR MENU -->

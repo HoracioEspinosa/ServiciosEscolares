@@ -16,11 +16,7 @@
                     <i class="fa fa-angle-right"></i>
                 </li>
                 <li>
-<<<<<<< HEAD
                     <a href="/profesores">Lista de Profesores</a>
-=======
-                    <a href="/">Lista de Profesores</a>
->>>>>>> 4ae839e13358e20c25b204ffd130d9aaf8d7b9b0
                     <i class="fa fa-angle-right"></i>
                 </li>
                 <li>
@@ -34,7 +30,6 @@
             <div class="panel panel-primary">
                 <!-- Default panel contents -->
                 <div class="panel-heading">
-<<<<<<< HEAD
                     <h3 class="panel-title">Profesores - Nuevo Registro</h3>
 
                 </div>
@@ -94,8 +89,14 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-3">Status</label>
+                                <label class="col-md-3 control-label">Notas</label>
                                 <div class="col-md-4">
+                                    <textarea class="form-control rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Status</label>
+                                <div class="col-md-2">
                                     <select class="bs-select form-control" data-style="blue">
                                         <option>Activo</option>
                                         <option>Inactivo</option>
@@ -118,15 +119,8 @@
                 </div>
 
                 <!--##################-->
-=======
-                    <h3 class="panel-title">Profesores</h3>
-
-
-
                 </div>
                 <!-- Table -->
->>>>>>> 4ae839e13358e20c25b204ffd130d9aaf8d7b9b0
-
             </div>
         </div>
 
