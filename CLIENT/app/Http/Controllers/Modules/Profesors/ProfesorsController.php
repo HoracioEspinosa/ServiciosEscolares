@@ -38,13 +38,6 @@ class ProfesorsController extends Controller
         return view('agregarProfesor', compact('result', 'users'));
     }
 
-    public function update()
-    {
-        $this->setUserHeader();
-        $users = ModuleUsersController::getAllUsersINformation();
-        $result = $this->result;
-        return view('modificarProfesor', compact('result', 'users'));
-    }
 
     public function setUserHeader(){
         if (cookie::get('token') == "" || cookie::get('token')  == null) {

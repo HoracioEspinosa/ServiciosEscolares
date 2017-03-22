@@ -31,4 +31,3 @@ Route::post('/setToken', 'Auth\LoginController@setToken');
 
 Route::resource('/profesores', 'Modules\Profesors\ProfesorsController@index');
 Route::resource('/profesores/create', 'Modules\Profesors\ProfesorsController@create');
-Route::resource('/profesores/update', 'Modules\Profesors\ProfesorsController@update');

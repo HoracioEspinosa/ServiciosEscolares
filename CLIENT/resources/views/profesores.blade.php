@@ -22,7 +22,7 @@
             <div class="page-toolbar">
                 <!-- Large button group -->
                 <div class="btn-group">
-                    <a href="/profesores/create" class="btn btn-lg blue"> Registro Nuevo
+                    <a href="/profesores/create" class="btn btn-lg btn-primary"> Registro Nuevo
                         <i class="fa fa-edit"></i>
                     </a>
                     <ul class="dropdown-menu" role="menu">
@@ -95,13 +95,16 @@
                         <td> ejemplo2@gmail.com </td>
                         <td>
                             <div class="actions">
-                                <a class="btn btn-circle btn-icon-only btn-default" href="#form_modal11" data-toggle="modal">
+                                <a class="btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom"
+                                   data-original-title="Ver" href="#view" data-toggle="modal">
                                     <i class="fa fa-eye"></i>
                                 </a>
-                                <a class="btn btn-circle btn-icon-only btn-default" href="#form_moda222" data-toggle="modal">
+                                <a class="btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom"
+                                   data-original-title="Modificar" href="#modify" data-toggle="modal">
                                     <i class="fa fa-edit"></i>
                                 </a>
-                                <a class="btn btn-circle btn-icon-only btn-default" href="#form_moda333" data-toggle="modal">
+                                <a class="btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom"
+                                   data-original-title="Eliminar" href="#delete" data-toggle="modal">
                                     <i class="fa fa-trash-o"></i>
                                 </a>
                             </div>
@@ -134,7 +137,7 @@
             </div>
         </div>
 
-        <div id="form_modal11" class="modal fade" role="dialog" aria-labelledby="myModalLabel10" aria-hidden="true">
+        <div id="view" class="modal fade" role="dialog" aria-labelledby="myModalLabel10" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -220,13 +223,13 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button class="btn blue" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+                        <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Cerrar</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="form_moda222" class="modal fade" role="dialog" aria-labelledby="myModalLabel10" aria-hidden="true">
+        <div id="modify" class="modal fade" role="dialog" aria-labelledby="myModalLabel10" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -301,14 +304,14 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button class="btn red" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+                        <button class="btn btn-warning" data-dismiss="modal" aria-hidden="true">Cancelar</button>
                         <button class="btn green" data-dismiss="modal">Guardar Cambios</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="form_moda333" class="modal fade" role="dialog" aria-labelledby="myModalLabel10" aria-hidden="true">
+        <div id="delete" class="modal fade" role="dialog" aria-labelledby="myModalLabel10" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -324,7 +327,7 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button class="btn green" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+                        <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Cancelar</button>
                         <button class="btn red" data-dismiss="modal">Eliminar</button>
                     </div>
                 </div>
