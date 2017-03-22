@@ -28,6 +28,7 @@ Contact: admin@cloudftog.com.mx
     {!! HTML::style('/public/global/plugins/bootstrap-select/css/bootstrap-select.min.css') !!}
     {!! HTML::style('/public/global/css/components-md.min.css') !!}
     {!! HTML::style('/public/global/css/plugins-md.min.css') !!}
+    {!! HTML::style('/public/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css') !!}
     {!! HTML::style('/public/layouts/layout2/css/layout.min.css') !!}
     {!! HTML::style('/public/layouts/layout2/css/themes/blue.min.css') !!}
     {!! HTML::style('/public/layouts/layout2/css/custom.min.css') !!}
@@ -233,19 +234,19 @@ Contact: admin@cloudftog.com.mx
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/Alumnos" class="nav-link nav-toggle">
+                    <a href="/students" class="nav-link nav-toggle">
                         <i class="icon-user"></i>
                         <span class="title">Alumno</span>
                     </a>
                     <ul class="sub-menu">
                         <li class="nav-item start active open">
-                            <a href="/Alumnos" class="nav-link ">
+                            <a href="/students" class="nav-link ">
                                 <i class="icon-bar-chart"></i>
                                 <span class="title">Buscar</span>
                             </a>
                         </li>
                         <li class="nav-item start ">
-                            <a href="/Alumnos/Create" class="nav-link ">
+                            <a href="/students/create" class="nav-link ">
                                 <i class="icon-bulb"></i>
                                 <span class="title">Agregar</span>
                             </a>

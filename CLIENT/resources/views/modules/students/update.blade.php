@@ -53,28 +53,36 @@
                             <div class="form-body">
                                 <div class="form-group">
                                     <label>Nombre</label>
-                                    <input name="name" class="form-control spinner" type="text" placeholder="John" />
+                                    <input name="name" class="form-control spinner" type="text" placeholder="John" value="{{$alumno['nombre']}}"/>
                                 </div>
                                 <div class="form-group">
                                     <label>Apellido</label>
-                                    <input name="lastname" class="form-control spinner" type="text" placeholder="Doe" />
+                                    <input name="lastname" class="form-control spinner" type="text" placeholder="Doe" value="{{$alumno['apellido']}}"/>
                                 </div>
                                 <div class="form-group">
                                     <label>Género</label>
                                     <div class="mt-radio-inline">
                                         <label class="mt-radio">
-                                            <input type="radio" name="genero" id="idmasculino" value="Masculino" checked>Masculino
+                                            @if ($alumno['genero'] == 'Masculino')
+                                                <input type="radio" name="genero" id="idmasculino" value="Masculino" checked>Masculino
+                                            @else
+                                                <input type="radio" name="genero" id="idmasculino" value="Masculino">Masculino
+                                            @endif
                                             <span></span>
                                         </label>
                                         <label class="mt-radio">
-                                            <input type="radio" name="genero" id="idfemenino" value="Femenino">Femenino
+                                            @if ($alumno['genero'] == 'Femenino')
+                                                <input type="radio" name="genero" id="idfemenino" value="Femenino" checked>Femenino
+                                            @else
+                                                <input type="radio" name="genero" id="idfemenino" value="Femenino">Femenino
+                                            @endif
                                             <span></span>
                                         </label>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label>Edad</label>
-                                    <input name="age" class="form-control spinner" type="text" placeholder="18" />
+                                    <input name="age" class="form-control spinner" type="text" placeholder="18" value="{{$alumno['edad']}}"/>
                                 </div>
                             </div>
                         </div>
@@ -84,24 +92,39 @@
                             <div class="form-body">
                                 <div class="form-group">
                                     <label>Curp</label>
-                                    <input name="curp" class="form-control spinner" type="text" placeholder="VIMD960706VNNHQR02" />
+                                    <input name="curp" class="form-control spinner" type="text" placeholder="VIMD960706VNNHQR02" value="{{$alumno['curp']}}"/>
                                 </div>
                                 <div class="form-group">
                                     <label>Matricula</label>
-                                    <input name="matricula" class="form-control spinner" type="text" placeholder="Doe" />
+                                    <input name="matricula" class="form-control spinner" type="text" placeholder="Doe" value="{{$alumno['matricula']}}"/>
                                 </div>
                                 <div class="form-group">
                                     <label>Turno</label>
                                     <div class="mt-radio-inline">
                                         <label class="mt-radio">
-                                            <input type="radio" name="turno" id="optionsRadios4" value="Matutino" checked>Matutino
+                                            @if ($alumno['turno'] == 'Matutino')
+                                                <input type="radio" name="turno" id="optionsRadios4" value="Matutino" checked>Matutino
+                                            @else
+                                                <input type="radio" name="turno" id="optionsRadios4" value="Matutino" >Matutino
+                                            @endif
                                             <span></span>
                                         </label>
                                         <label class="mt-radio">
-                                            <input type="radio" name="turno" id="optionsRadios5" value="Vespertino">Vespertino
+                                            @if ($alumno['turno'] == 'Vespertino')
+                                                <input type="radio" name="turno" id="optionsRadios5" value="Vespertino" checked>Vespertino
+                                            @else
+                                                <input type="radio" name="turno" id="optionsRadios5" value="Vespertino">Vespertino
+                                            @endif
                                             <span></span>
                                         </label>
                                     </div>
+                                </div>
+                                <div class="form-group">
+                                    @if ($alumno['estado'] == 'Activo')
+                                        <input type="checkbox" data-on-text="Activo"  data-off-text="Inactivo" checked class="make-switch" data-size="normal">
+                                    @else
+                                        <input type="checkbox" data-on-text="Activo" data-off-text="Inactivo"  class="make-switch" data-size="normal">
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -121,7 +144,12 @@
                                     <label>Grupo</label>
                                     <select class="form-control" name="grupo" id="">
                                         @foreach($grupos as $grupo)
-                                            <option value="{{$grupo['idGrupos']}}">{{$grupo['nombre']}}</option>
+                                            @if ($alumno['idGruposa
+                                            '] == $grupo['idGrupos'])
+                                                <option value="{{$grupo['idGrupos']}}" selected>{{$grupo['nombre']}}</option>
+                                            @else
+                                                <option value="{{$grupo['idGrupos']}}" >{{$grupo['nombre']}}</option>
+                                            @endif
                                         @endforeach
                                     </select>
                                 </div>

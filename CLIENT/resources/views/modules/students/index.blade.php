@@ -25,12 +25,12 @@
                     </button>
                     <ul class="dropdown-menu pull-right" role="menu">
                         <li>
-                            <a href="/Alumnos">
+                            <a href="/students">
                                 <i class="fa fa-list"></i> Listar usuarios
                             </a>
                         </li>
                         <li>
-                            <a href="/Alumnos/Create">
+                            <a href="/students/create">
                                 <i class="fa fa-plus"></i> Agregar usuario
                             </a>
                         </li>
@@ -46,7 +46,7 @@
         <div class="inbox userModule">
             <input type="hidden" id="typeTABLE" value="1">
             <div class="row">
-                <table class="table table-striped table-bordered table-hover table-checkable order-column dataTable no-footer" id="tabla_periodos" role="grid" aria-describedby="sample_1_info">
+                <table class="table table-striped table-bordered table-hover table-checkable order-column dataTable no-footer" id="sample_1" role="grid" aria-describedby="sample_1_info">
                 <thead>
                 <tr role="row">
                     <th class="sorting_disabled" rowspan="1" colspan="1" aria-label="" style="width: 72px;">
@@ -61,15 +61,15 @@
                     <th class="sorting_disabled" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label=" Actions : activate to sort column ascending" style="width: 80px;">Acciones</th>
                 </tr>
                 </thead>
-                <tbody id="cuerpoTablaPeriodos">
+                <tbody id="cuerpoTablaStudents">
                 @foreach($allUsuarios as $objeto)
                     <tr>
-                    <td>
-                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                            <input type="checkbox" class="checkboxes" value="1">
-                            <span></span>
-                        </label>
-                    </td>
+                        <td>
+                            <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                                <input data-set="#sample_1" type="checkbox" class="checkboxes" value="1">
+                                <span></span>
+                            </label>
+                        </td>
                         <td>{{ucfirst($objeto['nombre'])}} {{ucfirst($objeto['apellido'])}}</td>
                         <td>{{$objeto['matricula']}}</td>
                         <td>{{$objeto['estado']}}</td>
@@ -80,7 +80,7 @@
                                 </button>
                                 <ul class="dropdown-menu pull-left" role="menu">
                                     <li>
-                                        <a href="javascript:;">
+                                        <a href="/students/update/{{$objeto['idAlumnos']}}">
                                             <i class="fa fa-pencil"></i> Editar
                                         </a>
                                     </li>

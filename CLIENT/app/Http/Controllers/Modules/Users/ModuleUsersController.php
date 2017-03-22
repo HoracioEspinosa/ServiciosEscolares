@@ -16,8 +16,7 @@ class ModuleUsersController extends Controller
 {
     public $result = "";
 
-    public function profile($username = null)
-    {
+    public function profile($username = null) {
        try {
            $this->setUserHeader();
            $result = $this->result;
@@ -125,8 +124,7 @@ class ModuleUsersController extends Controller
         }
     }
 
-    public static function getUserInformatioByUsername($username)
-    {
+    public static function getUserInformatioByUsername($username){
          if (cookie::get('token') == "" || cookie::get('token')  == null) {
              return redirect('/login');
          }else{

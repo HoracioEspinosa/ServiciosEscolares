@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use League\Flysystem\Exception;
 use Yajra\Datatables\Facades\Datatables;
 use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
@@ -45,8 +46,33 @@ class ModulesStudentController extends Controller
         return json_decode($carreras, JSON_PRETTY_PRINT);
     }
 
+    public function getGeneraciones(){
+        $generaciones = DB::table('generaciones')->get();
+        $generaciones = json_encode($generaciones, true);
+        return json_decode($generaciones, JSON_PRETTY_PRINT);
+    }
+
     public function create(Request $request){
-        $nombre = $request->input('name');
+        $name = $request->input('name');
+        $lastname = $request->input('lastname');
+        $genero = $request->input('genero');
+        $age = $request->input('age');
+        $curp = $request->input('curp');
+        $matricula = $request->input('matricula');
+        $turno = $request->input('turno');
+        $carrera = $request->input('carrera');
+        $grupo = $request->input('grupo');
+        $generacion = $request->input('generacion');
+        $data = array($name, $lastname, $genero, $age, $curp, $matricula, $turno, $grupo, $generacion);
+        $user = json_encode($data, true);
+        //dd(json_decode($user, JSON_PRETTY_PRINT));
+        try{
+            $user = DB::select("CALL InsertAlumno(?,?,?,?,?,?,?,?,?)", $data);
+            $user = json_encode($user, true);
+            return json_decode($user, JSON_PRETTY_PRINT);
+        }catch (Exception $ex){
+            return $ex;
+        }
     }
 
     public function getInformationByIdAlumno(Request $request){

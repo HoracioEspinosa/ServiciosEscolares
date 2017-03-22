@@ -15,8 +15,10 @@ use Illuminate\Support\Facades\Cookie;
  * Login & Index modules
  */
 
-Route::get('/Alumnos/Create', 'Modules\Students\ModulesStudentController@Create');
-Route::get('/Alumnos/', 'Modules\Students\ModulesStudentController@index');
+Route::get('/students/create', 'Modules\Students\ModulesStudentController@create');
+Route::get('/students/update/{id}', 'Modules\Students\ModulesStudentController@update');
+Route::post('/students/create', 'Modules\Students\ModulesStudentController@createStudent');
+Route::get('/students/', 'Modules\Students\ModulesStudentController@index');
 
 Route::get('/', 'Modules\ModulesController@index');
 Route::get('/login', 'Modules\ModulesController@checkLogin');
