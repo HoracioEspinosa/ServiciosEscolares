@@ -74,7 +74,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Edad</label>
-                                    <input name="age" class="form-control spinner" type="text" placeholder="18" />
+                                    <input name="age" class="form-control spinner" type="number" min="15" max="100" step="1" placeholder="18" />
                                 </div>
                             </div>
                         </div>

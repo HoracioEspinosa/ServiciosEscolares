@@ -20,6 +20,7 @@ Route::get('/user', function (Request $request) {
 Route::get('/students', 'Modules\Students\ModulesStudentController@getInformation');
 Route::post('/students/create', 'Modules\Students\ModulesStudentController@create');
 Route::post('/students/update', 'Modules\Students\ModulesStudentController@getInformationByIdAlumno');
+Route::post('/students/updateAlumno', 'Modules\Students\ModulesStudentController@update');
 Route::get('/students/getGrupos', 'Modules\Students\ModulesStudentController@getGrupos');
 Route::get('/students/getCarreras', 'Modules\Students\ModulesStudentController@getCarreras');
 Route::get('/students/getGeneraciones', 'Modules\Students\ModulesStudentController@getGeneraciones');

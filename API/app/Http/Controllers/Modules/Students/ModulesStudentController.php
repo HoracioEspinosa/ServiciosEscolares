@@ -23,7 +23,7 @@ use Tymon\JWTAuth\Exceptions\JWTException;
 class ModulesStudentController extends Controller
 {
     public function getInformation(){
-        $info = DB::select('SELECT * FROM alumnos INNER JOIN informacion ON alumnos.idInformacionFK=informacion.idInformacion');
+        $info = DB::select('SELECT * FROM alumnos INNER JOIN informacion ON alumnos.idInformacionFK=informacion.idInformacion ORDER BY estado,nombre');
         $info = json_encode($info, true);
         return json_decode($info, JSON_PRETTY_PRINT);
     }
@@ -75,11 +75,44 @@ class ModulesStudentController extends Controller
         }
     }
 
+    public function update(Request $request){
+        $idInformacion = $request->input('idInformacion');
+        $name = $request->input('name');
+        $lastname = $request->input('lastname');
+        $genero = $request->input('genero');
+        $age = $request->input('age');
+        $curp = $request->input('curp');
+        $foto = $request->input('foto');
+        $estado = $request->input('estado');
+        $matricula = $request->input('matricula');
+        $turno = $request->input('turno');
+        $carrera = $request->input('carrera');
+        $grupo = $request->input('grupo');
+        $generacion = $request->input('generacion');
+        $data = array($name, $lastname, $genero, $age, $curp, $foto, $estado, $matricula, $turno, $grupo, $generacion, $idInformacion);
+        $user = json_encode($data, true);
+        try{
+            $user = DB::select("CALL UpdateAlumno(?,?,?,?,?,?,?,?,?,?,?,?)", $data);
+            $user = json_encode($user, true);
+            return json_decode($user, JSON_PRETTY_PRINT);
+        }catch (Exception $ex){
+            return $ex;
+        }
+    }
+
     public function getInformationByIdAlumno(Request $request){
         $idAlumno = $request->input('idAlumnos');
+        $query = DB::table('alumnos')
+            ->join('informacion', 'alumnos.idInformacionFK', '=', 'informacion.idInformacion')
+            ->join('grupos', 'alumnos.idGrupos','=','grupos.idGrupos')
+            ->select('idAlumnos','estado', 'matricula','turno', 'alumnos.idGrupos', 'idGeneraciones','idInformacion','informacion.nombre','apellido','genero','edad','curp','foto','Carreras_idCarreras')
+            ->where('alumnos.idAlumnos', '=', $idAlumno)
+            ->get();
+
+
         //dd($idAlumno);
-        $info = DB::select('SELECT * FROM alumnos INNER JOIN informacion ON alumnos.idInformacionFK=informacion.idInformacion WHERE alumnos.idAlumnos='.$idAlumno);
-        $info = json_encode($info, true);
+        //$info = DB::select('SELECT * FROM alumnos INNER JOIN informacion ON alumnos.idInformacionFK=informacion.idInformacion WHERE alumnos.idAlumnos='.$idAlumno);
+        $info = json_encode($query, true);
         return json_decode($info, JSON_PRETTY_PRINT);
     }
 }

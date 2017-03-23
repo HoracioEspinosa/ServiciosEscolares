@@ -175,6 +175,74 @@ class ModulesStudentController
         }
     }
 
+    public  function updateStudent(Request $request){
+        if (cookie::get('token') == "" || cookie::get('token')  == null) {
+            return redirect('/login');
+        }
+        else{
+            try{
+                try{
+                    $idInformacion = $request->id;
+                    $name = $request->input('name');
+                    $lastname = $request->input('lastname');
+                    $genero = $request->input('genero');
+                    $age = $request->input('age');
+                    $curp = $request->input('curp');
+                    $foto = 'Foto cambiada';
+                    if ($request->input('estado') == 'on')
+                        $estado = 'Activo';
+                    else
+                        $estado = 'Inactivo';
+                    $matricula = $request->input('matricula');
+                    $turno = $request->input('turno');
+                    $carrera = $request->input('carrera');
+                    $grupo = $request->input('grupo');
+                    $generacion = $request->input('generacion');
+                    $client = new GuzzleHttp\Client( ['base_uri' => env('SERVER_API')] );
+                    $headers = [
+                        'Content-Type' => 'application/x-www-form-urlencoded',
+                        'Authorization' => 'Bearer '. cookie::get('token'),
+                    ];
+                    $my_request = $client->request('POST', '/api/students/updateAlumno', [
+                        'form_params' => [
+                            'name' => $name,
+                            'lastname' => $lastname,
+                            'genero' => $genero,
+                            'age' => $age,
+                            'curp' => $curp,
+                            'foto' => $foto,
+                            'estado' => $estado,
+                            'matricula' => $matricula,
+                            'turno' => $turno,
+                            'carrera' => $carrera,
+                            'grupo' => $grupo,
+                            'generacion' => $generacion,
+                            'idInformacion' => $idInformacion,
+                        ],
+                        'headers' => $headers
+                    ]);
+                    $result = $my_request->getBody()->getContents();
+                    //dd ($result);
+                    $result = json_decode($result, JSON_PRETTY_PRINT);
+                    $result = $result[0];
+                    if ($result['MESSAGE'] == 'OK') {
+                        return redirect('/students?2');
+                    }
+                    else{
+
+                    }
+                    //return $result;
+                }catch (ClientException $exception){
+                    //dd($exception->getResponse()->getBody()->getContents());
+                    return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
+                }
+            } catch (ServerException $serverException) {
+                //dd($serverException);
+                return redirect('/login');
+            }
+        }
+    }
+
     public function createStudent(Request $request){
         if (cookie::get('token') == "" || cookie::get('token')  == null) {
             return redirect('/login');

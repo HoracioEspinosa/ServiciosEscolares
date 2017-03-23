@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Cookie;
 
 Route::get('/students/create', 'Modules\Students\ModulesStudentController@create');
 Route::get('/students/update/{id}', 'Modules\Students\ModulesStudentController@update');
+Route::post('/students/update/{id}', 'Modules\Students\ModulesStudentController@updateStudent');
 Route::post('/students/create', 'Modules\Students\ModulesStudentController@createStudent');
 Route::get('/students/', 'Modules\Students\ModulesStudentController@index');
 

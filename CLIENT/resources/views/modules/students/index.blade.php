@@ -55,10 +55,10 @@
                             <span></span>
                         </label>
                     </th>
-                    <td class="sorting" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label=" Start : activate to sort column ascending" style="width: 162px;">Alumno</td>
+                    <th class="sorting" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label=" Start : activate to sort column ascending" style="width: 162px;">Alumno</tf>
                     <td class="sorting" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label=" End : activate to sort column ascending" style="width: 162px;">Matricula</td>
                     <td class="sorting" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label=" Status : activate to sort column ascending" style="width: 131px;">Estado</td>
-                    <th class="sorting_disabled" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label=" Actions : activate to sort column ascending" style="width: 80px;">Acciones</th>
+                    <td class="sorting_disabled" tabindex="0"  rowspan="1" colspan="1" style="width: 80px;">Acciones</td>
                 </tr>
                 </thead>
                 <tbody id="cuerpoTablaStudents">

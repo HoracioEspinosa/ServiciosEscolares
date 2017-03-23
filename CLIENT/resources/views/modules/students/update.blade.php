@@ -47,7 +47,7 @@
         <div class="inbox userModule">
             <input type="hidden" id="typeTABLE" value="1">
             <div class="row">
-                <form method="post" action="/students/create">
+                <form method="post" action="/students/update/{{$alumno['idInformacion']}}">
                     <div class="col-md-4">
                         <div class="portlet light bordered">
                             <div class="form-body">
@@ -82,7 +82,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Edad</label>
-                                    <input name="age" class="form-control spinner" type="text" placeholder="18" value="{{$alumno['edad']}}"/>
+                                    <input name="age" class="form-control spinner" type="number" min="15" max="100" step="1" placeholder="18" value="{{$alumno['edad']}}"/>
                                 </div>
                             </div>
                         </div>
@@ -121,9 +121,9 @@
                                 </div>
                                 <div class="form-group">
                                     @if ($alumno['estado'] == 'Activo')
-                                        <input type="checkbox" data-on-text="Activo"  data-off-text="Inactivo" checked class="make-switch" data-size="normal">
+                                        <input name="estado" type="checkbox" data-on-text="Activo"  data-off-text="Inactivo" checked class="make-switch" data-size="normal">
                                     @else
-                                        <input type="checkbox" data-on-text="Activo" data-off-text="Inactivo"  class="make-switch" data-size="normal">
+                                        <input name="estado" type="checkbox" data-on-text="Activo" data-off-text="Inactivo"  class="make-switch" data-size="normal">
                                     @endif
                                 </div>
                             </div>
@@ -136,7 +136,11 @@
                                     <label>Carreras</label>
                                     <select class="form-control" name="carrera" id="">
                                         @foreach($carreras as $carrera)
-                                            <option value="{{$carrera['idCarreras']}}">{{$carrera['nombreCarrera']}}</option>
+                                            @if ($alumno['Carreras_idCarreras'] == $carrera['idCarreras'])
+                                                <option value="{{$carrera['idCarreras']}}" selected>{{$carrera['nombreCarrera']}}</option>
+                                            @else
+                                                <option value="{{$carrera['idCarreras']}}">{{$carrera['nombreCarrera']}}</option>
+                                            @endif
                                         @endforeach
                                     </select>
                                 </div>
@@ -144,8 +148,7 @@
                                     <label>Grupo</label>
                                     <select class="form-control" name="grupo" id="">
                                         @foreach($grupos as $grupo)
-                                            @if ($alumno['idGruposa
-                                            '] == $grupo['idGrupos'])
+                                            @if ($alumno['idGrupos'] == $grupo['idGrupos'])
                                                 <option value="{{$grupo['idGrupos']}}" selected>{{$grupo['nombre']}}</option>
                                             @else
                                                 <option value="{{$grupo['idGrupos']}}" >{{$grupo['nombre']}}</option>
@@ -157,7 +160,11 @@
                                     <label>Generaciones</label>
                                     <select class="form-control" name="generacion" id="">
                                         @foreach($generaciones as $generacion)
-                                            <option value="{{$generacion['idGeneraciones']}}">{{$generacion['generacion']}}</option>
+                                            @if ($alumno['idGeneraciones'] == $generacion['idGeneraciones'])
+                                                <option value="{{$generacion['idGeneraciones']}}" selected>{{$generacion['generacion']}}</option>
+                                            @else
+                                                <option value="{{$generacion['idGeneraciones']}}">{{$generacion['generacion']}}</option>
+                                            @endif
                                         @endforeach
                                     </select>
                                 </div>
