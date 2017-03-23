@@ -70,7 +70,8 @@ class ProfesorsController extends Controller
             try{
                 try{
                     $name = $request->input('name');
-                    $lastname = $request->input('lastname');
+                    $lastname = $request->input('plname' + ' ' + 'mlname');
+                    $cedula = $request->input('cedula');
                     $genero = $request->input('genero');
                     $age = $request->input('age');
                     $curp = $request->input('curp');

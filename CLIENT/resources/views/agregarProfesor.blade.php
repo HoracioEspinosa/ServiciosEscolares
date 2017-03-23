@@ -91,13 +91,13 @@
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Notas</label>
                                 <div class="col-md-4">
-                                    <textarea class="form-control rows="3"></textarea>
+                                    <textarea name="notes" class="form-control rows="3"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-md-3">Status</label>
                                 <div class="col-md-2">
-                                    <select class="bs-select form-control" data-style="blue">
+                                    <select name="estatus" class="bs-select form-control" data-style="blue">
                                         <option>Activo</option>
                                         <option>Inactivo</option>
                                     </select>
