@@ -98,8 +98,8 @@
                                 <label class="control-label col-md-3">Status</label>
                                 <div class="col-md-2">
                                     <select name="estatus" class="bs-select form-control" data-style="blue">
-                                        <option>Activo</option>
-                                        <option>Inactivo</option>
+                                        <option value="ACTIVO">Activo</option>
+                                        <option value="INACTIVO">Inactivo</option>
                                     </select>
                                 </div>
                             </div>
@@ -119,16 +119,16 @@
                 </div>
 
                 <!--##################-->
-                </div>
-                <!-- Table -->
             </div>
-        </div>
-
-        <!-- END PAGE HEADER-->
-        <div class="row">
+            <!-- Table -->
         </div>
     </div>
-    <!-- END CONTENT BODY -->
+
+    <!-- END PAGE HEADER-->
+    <div class="row">
+    </div>
+</div>
+<!-- END CONTENT BODY -->
 </div>
 <!-- END CONTENT -->
 

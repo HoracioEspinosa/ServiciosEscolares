@@ -70,33 +70,26 @@ class ProfesorsController extends Controller
             try{
                 try{
                     $name = $request->input('name');
-                    $lastname = $request->input('plname' + ' ' + 'mlname');
+                    $lastname = $request->input('plname') .' '. $request->input('mlname');
                     $cedula = $request->input('cedula');
-                    $genero = $request->input('genero');
-                    $age = $request->input('age');
-                    $curp = $request->input('curp');
-                    $matricula = $request->input('matricula');
-                    $turno = $request->input('turno');
-                    $carrera = $request->input('carrera');
-                    $grupo = $request->input('grupo');
-                    $generacion = $request->input('generacion');
+                    $email = $request->input('email');
+                    $phone = $request->input('phone');
+                    $notes = $request->input('notes');
+                    $estatus = $request->input('estatus');
                     $client = new GuzzleHttp\Client( ['base_uri' => env('SERVER_API')] );
                     $headers = [
                         'Content-Type' => 'application/x-www-form-urlencoded',
                         'Authorization' => 'Bearer '. cookie::get('token'),
                     ];
-                    $my_request = $client->request('POST', '/api/students/create', [
+                    $my_request = $client->request('POST', '/api/profesor/create', [
                         'form_params' => [
                             'name' => $name,
                             'lastname' => $lastname,
-                            'genero' => $genero,
-                            'age' => $age,
-                            'curp' => $curp,
-                            'matricula' => $matricula,
-                            'turno' => $turno,
-                            'carrera' => $carrera,
-                            'grupo' => $grupo,
-                            'generacion' => $generacion,
+                            'cedula' => $cedula,
+                            'email' => $email,
+                            'phone' => $phone,
+                            'notes' => $notes,
+                            'estatus' => $estatus
                         ],
                         'headers' => $headers
                     ]);
@@ -105,7 +98,7 @@ class ProfesorsController extends Controller
                     $result = json_decode($result, JSON_PRETTY_PRINT);
                     $result = $result[0];
                     if ($result['MESSAGE'] == 'OK') {
-                        return redirect('/students?1');
+                        return redirect('/profesores');
                     }
                     else{
                     }

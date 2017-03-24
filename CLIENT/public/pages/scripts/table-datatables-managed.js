@@ -643,7 +643,7 @@ var TableDatatablesManaged = function () {
             "bDestroy": true,
             ajax: {
                 "type"   : "GET",
-                "url"    : 'http://servicioseduapi.dev/api/users/get/table',
+                "url"    : 'http://servicioseduapi.dev/api/profesors/get/table',
                 "data"   : {
                     "token" : token,
                     "deleted" : deleted
@@ -651,13 +651,12 @@ var TableDatatablesManaged = function () {
             },
             columns: [
                 {
-                    width: '15%',
-                    data : 'usuario',
+                    data : 'nombre',
                     searchable: true,
                     sortable: true
                 },
                 {
-                    data : 'nombre',
+                    data : 'apellido',
                     searchable: true,
                     sortable: true,
                     render: function (status, type, full, meta) {
@@ -666,11 +665,18 @@ var TableDatatablesManaged = function () {
                 },
 
                 {
-                    width: '15%',
-                    data: 'apellido',
+                    data: 'estatus',
                     visible: true,
                     render: function (type, type, full, meta) {
                         return full.apellido;
+                    }
+                },
+
+                {
+                    data: 'email',
+                    visible: true,
+                    render: function (type, type, full, meta) {
+                        return full.email;
                     }
                 },
 
