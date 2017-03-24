@@ -115,4 +115,31 @@ class ProfesorsController extends Controller
             }
         }
     }
+
+    public function getInformationByIdProfesor($idProfesor) {
+        if (cookie::get('token') == "" || cookie::get('token') == null){
+            return redirect('/login');
+        }
+        else{
+            try{
+                try{
+                    $client = new GuzzleHttp\Client( ['base_uri' => env('SERVER_API')]  );
+                    $my_request = $client->request('POST', '/api/profesor/update', [
+                        'form_params' => [
+                            'idProfesor' => $idProfesor,
+                        ],
+                    ]);
+                    $result = $my_request->getBody()->getContents();
+                    $result = json_decode($result, JSON_PRETTY_PRINT);
+                    //dd($result);
+                    return $result;
+                }catch (ClientException $exception){
+                    return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
+                }
+            }catch (ServerException $serverException) {
+                return redirect('/logout');
+            }
+        }
+    }
+
 }

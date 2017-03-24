@@ -275,35 +275,14 @@
                 </div>
             </div>
         </div>
-
-        <div id="delete" class="modal fade" role="dialog" aria-labelledby="myModalLabel10" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                        <h4 class="modal-title">Eliminar Registro</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form action="#" class="form-horizontal" role="form">
-                            <div class="form-group">
-                                <div class="alert alert-danger">
-                                    Se va a <strong>ELIMINAR</strong> el registro de la Base de datos, está seguro?  </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Cancelar</button>
-                        <button class="btn red" data-dismiss="modal">Eliminar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- END PAGE HEADER-->
         <div class="row">
+
         </div>
     </div>
     <!-- END CONTENT BODY -->
+
+
 </div>
 <!-- END CONTENT -->
 

@@ -691,7 +691,7 @@ var TableDatatablesManaged = function () {
                 {
                     data: 'usuario',
                     render: function (type, type, full, meta) {
-                        return '<div class="actions"><a class="btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Ver" href="#view" data-toggle="modal"><i class="fa fa-eye"></i></a><a class="btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Modificar" href="#modify" data-toggle="modal"><i class="fa fa-edit"></i></a><a class="btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Eliminar" href="#delete" data-toggle="modal"><i class="fa fa-trash-o"></i></a></div>';
+                        return '<div class="actions"><a class="btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Ver" href="#view" data-toggle="modal"><i class="fa fa-eye"></i></a><a class="btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Modificar" href="#modify" data-toggle="modal"><i class="fa fa-edit"></i></a></div>';
                     }
                 }
 
