@@ -6,7 +6,6 @@
     <div class="page-content">
         <!-- BEGIN PAGE HEADER-->
         <h1 class="page-title"> Nuevo Registro
-            <small>Profesores</small>
         </h1>
         <div class="page-bar">
             <ul class="page-breadcrumb">
@@ -43,7 +42,7 @@
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Nombre</label>
                                 <div class="col-md-4">
-                                    <input name="name" type="text" class="form-control input-circle" placeholder="Ingrese Nombre o nombres">
+                                    <input name="name" type="text" class="form-control input-circle" placeholder="Ingrese nombre o nombres">
                                 </div>
                             </div>
                             <div class="form-group">

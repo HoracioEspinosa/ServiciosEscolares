@@ -30,4 +30,4 @@ Route::get('/logout', 'Auth\LoginController@logout');
 Route::post('/setToken', 'Auth\LoginController@setToken');
 
 Route::resource('/profesores', 'Modules\Profesors\ProfesorsController');
-Route::post('/profesores/create', 'Modules\Profesors\ModulesStudentController@createProfesor');
+Route::post('/profesores/create', 'Modules\Profesors\ProfesorsController@createProfesor');

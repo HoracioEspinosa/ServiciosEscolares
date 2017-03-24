@@ -660,15 +660,15 @@ var TableDatatablesManaged = function () {
                     searchable: true,
                     sortable: true,
                     render: function (status, type, full, meta) {
-                        return full.nombre;
+                        return full.apellido;
                     }
                 },
 
                 {
-                    data: 'estatus',
+                    data: 'telefono',
                     visible: true,
                     render: function (type, type, full, meta) {
-                        return full.apellido;
+                        return full.telefono;
                     }
                 },
 
@@ -677,6 +677,14 @@ var TableDatatablesManaged = function () {
                     visible: true,
                     render: function (type, type, full, meta) {
                         return full.email;
+                    }
+                },
+
+                {
+                    data: 'estatus',
+                    visible: true,
+                    render: function (type, type, full, meta) {
+                        return full.estatus;
                     }
                 },
 
@@ -694,7 +702,7 @@ var TableDatatablesManaged = function () {
                 {
                     extend: 'copy',
                     exportOptions: {
-                        columns: [0,1,2,3]
+                        columns: [0,1,2,3,4,5]
                     }
                 },
                 {
@@ -702,7 +710,7 @@ var TableDatatablesManaged = function () {
                     orientation: 'landscape',
                     pageSize: 'LEGAL',
                     exportOptions: {
-                        columns: [0, 1, 2, 3]
+                        columns: [0, 1, 2, 3,4,5]
                     }
                 },
                 {
@@ -710,15 +718,15 @@ var TableDatatablesManaged = function () {
                     orientation: 'landscape',
                     pageSize: 'LEGAL',
                     exportOptions: {
-                        columns: [0, 1, 2, 3]
+                        columns: [0, 1, 2, 3,4,5]
                     }
                 },
                 {
                     extend: 'pdf',
                     pageSize: 'LEGAL',
-                    title: "Listado de sucursales",
+                    title: "Número de filas",
                     exportOptions: {
-                        columns: [0, 1, 2, 3]
+                        columns: [0, 1, 2, 3,4,5]
                     },
                     customize: function (doc) {
                         doc.content[1].table.widths =

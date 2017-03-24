@@ -70,7 +70,8 @@ class ProfesorsController extends Controller
             try{
                 try{
                     $name = $request->input('name');
-                    $lastname = $request->input('plname') .' '. $request->input('mlname');
+                    $plname = $request->input('plname');
+                    $mlname = $request->input('mlname');
                     $cedula = $request->input('cedula');
                     $email = $request->input('email');
                     $phone = $request->input('phone');
@@ -84,7 +85,8 @@ class ProfesorsController extends Controller
                     $my_request = $client->request('POST', '/api/profesor/create', [
                         'form_params' => [
                             'name' => $name,
-                            'lastname' => $lastname,
+                            'plname' => $plname,
+                            'mlname' => $mlname,
                             'cedula' => $cedula,
                             'email' => $email,
                             'phone' => $phone,

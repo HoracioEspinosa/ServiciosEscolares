@@ -84,9 +84,10 @@
                                     <table class="table table-striped table-advance table-hover display responsive nowrap dataTable dtr-inline" id="initTableProfesores" width="100%" role="grid" aria-describedby="initTableProfesores_info">
                                         <thead>
                                         <tr role="row">
-                                            <th class="sorting" tabindex="0" aria-controls="initTableProfesores" rowspan="1" colspan="1" aria-label=" Start : activate to sort column ascending" style="width: 162px;">Alumno</th>
-                                            <th class="sorting" tabindex="0" aria-controls="initTableProfesores" rowspan="1" colspan="1" aria-label=" End : activate to sort column ascending" style="width: 162px;">Matricula</th>
-                                            <th class="sorting" tabindex="0" aria-controls="initTableProfesores" rowspan="1" colspan="1" aria-label=" Status : activate to sort column ascending" style="width: 131px;">Estado</th>
+                                            <th class="sorting" tabindex="0" aria-controls="initTableProfesores" rowspan="1" colspan="1" aria-label=" Start : activate to sort column ascending" style="width: 162px;">Nombre</th>
+                                            <th class="sorting" tabindex="0" aria-controls="initTableProfesores" rowspan="1" colspan="1" aria-label=" End : activate to sort column ascending" style="width: 162px;">Apellido</th>
+                                            <th class="sorting" tabindex="0" aria-controls="initTableProfesores" rowspan="1" colspan="1" aria-label=" Status : activate to sort column ascending" style="width: 131px;">Teléfono</th>
+                                            <th class="sorting" tabindex="0" aria-controls="initTableProfesores" rowspan="1" colspan="1" aria-label=" Status : activate to sort column ascending" style="width: 131px;">Correo</th>
                                             <th class="sorting" tabindex="0" aria-controls="initTableProfesores" rowspan="1" colspan="1" aria-label=" Status : activate to sort column ascending" style="width: 131px;">Estado</th>
                                             <th class="sorting_disabled" tabindex="0" aria-controls="initTableProfesores" rowspan="1" colspan="1" aria-label=" Actions : activate to sort column ascending" style="width: 80px;">Acciones</th>
                                         </tr>
