@@ -1,17 +1,10 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: jepe_
- * Date: 17/03/2017
- * Time: 11:52 AM
- */@include('/templates/header')
+@include('/templates/header')
 <!-- BEGIN CONTENT -->
 <div class="page-content-wrapper">
     <!-- BEGIN CONTENT BODY -->
     <div class="page-content">
         <!-- BEGIN PAGE HEADER-->
-        <h1 class="page-title"> Inicio
-            <small>Resultados generales</small>
+        <h1 class="page-title"> Grupos
         </h1>
         <div class="page-bar">
             <ul class="page-breadcrumb">
@@ -21,7 +14,7 @@
                     <i class="fa fa-angle-right"></i>
                 </li>
                 <li>
-                    <span>Resultados generales</span>
+                    <span>grupos</span>
                 </li>
             </ul>
             <div class="page-toolbar">

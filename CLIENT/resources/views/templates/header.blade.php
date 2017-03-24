@@ -1,10 +1,4 @@
 <!DOCTYPE html>
-<!--
-Version: 1.0
-Author: Horacio Darinel Espinosa Barceló
-Website: http://www.cloudfrog.com.mx/
-Contact: admin@cloudftog.com.mx
--->
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
 <!--[if !IE]><!-->
