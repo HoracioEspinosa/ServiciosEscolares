@@ -687,11 +687,11 @@ var TableDatatablesManaged = function () {
                         return full.estatus;
                     }
                 },
-
                 {
-                    data: 'usuario',
+                    data: 'idInformacion',
                     render: function (type, type, full, meta) {
-                        return '<div class="actions"><a class="btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Ver" href="#view" data-toggle="modal"><i class="fa fa-eye"></i></a><a class="btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Modificar" href="#modify" data-toggle="modal"><i class="fa fa-edit"></i></a></div>';
+                        var id = full.idInformacion;
+                        return '<div class="actions"><a class="mybutton btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Ver" data-llave='+id+' href="#view" data-toggle="modal"><i class="fa fa-eye"></i></a><a  class="mybutton btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Modificar" data-llave='+id+' href="#modify" data-toggle="modal"><i class="fa fa-edit"></i></a></div>';
                     }
                 }
 
@@ -736,8 +736,8 @@ var TableDatatablesManaged = function () {
                 {
                     extend: 'print',
                     orientation: 'landscape',
-                    title: "Listado de sucursales",
-                    message: "Listado de sucursales generales de Caribbean Connection",
+                    title: "Listado de Profesores",
+                    message: "Listado de profes.",
                     pageSize: 'LEGAL',
                     exportOptions: {
                         columns: [0, 1, 2, 3]

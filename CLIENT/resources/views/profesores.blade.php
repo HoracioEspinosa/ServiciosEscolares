@@ -114,74 +114,63 @@
                             <div class="form-group">
                                 <label class="control-label col-md-4">Nombre</label>
                                 <div class="col-md-8">
-                                    <p class="form-control-static">
-                                        Jacob Thornton Pérez
+                                    <p name="panombre" class="form-control-static">
                                     </p>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-md-4">Cédula</label>
                                 <div class="col-md-8">
-                                    <p class="form-control-static">
-                                        098554648656
+                                    <p name="pacedula" class="form-control-static">
                                     </p>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-md-4">Especialidad</label>
                                 <div class="col-md-8">
-                                    <p class="form-control-static">
-                                        Maestría en Historia. Doctorado en Lengua española.
+                                    <p name="paespecialidad" class="form-control-static">
                                     </p>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-md-4">Status</label>
                                 <div class="col-md-8">
-                                    <p class="form-control-static">
-                                        Inactivo
+                                    <p name="paestatus" class="form-control-static">
                                     </p>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-md-4">Materias</label>
                                 <div class="col-md-8">
-                                    <p class="form-control-static">
-                                        Historia, Español
+                                    <p name="pamaterias" class="form-control-static">
                                     </p>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-md-4">Grupos</label>
                                 <div class="col-md-8">
-                                    <p class="form-control-static">
-                                        A410, B810, A411
+                                    <p name="pagrupos" class="form-control-static">
                                     </p>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-md-4">Turnos</label>
                                 <div class="col-md-8">
-                                    <p class="form-control-static">
-                                        Matutino, Vespertino
+                                    <p name="paturnos" class="form-control-static">
                                     </p>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-md-4">Horarios</label>
                                 <div class="col-md-8">
-                                    <p class="form-control-static">
-                                        Lunes, 07:00 - 9:40 / 11:30 - 12:20 / 17:45 - 19:30
-                                    <p></p>
-                                        Martes, 07:00 - 9:40 / 11:30 - 12:20 / 17:45 - 19:30
+                                    <p name="pahorarios" class="form-control-static">
                                     </p>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-md-4">Notas</label>
                                 <div class="col-md-8">
-                                    <p class="form-control-static">
-                                        Se encuentra de licencia trabajando en investigación para universidad.
+                                    <p name="panotas" class="form-control-static">
                                     </p>
                                 </div>
                             </div>
@@ -194,7 +183,8 @@
             </div>
         </div>
 
-        <div id="modify" class="modal fade" role="dialog" aria-labelledby="myModalLabel10" aria-hidden="true">
+        <form method="post" action="/profesores/update" class="form-horizontal">
+        <div id="modify" method="post" action="/profesores/get/update" class="modal fade" role="dialog" aria-labelledby="myModalLabel10" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -202,23 +192,23 @@
                         <h4 class="modal-title">Datos Profesor</h4>
                     </div>
                     <div class="modal-body">
-                        <form action="#" class="form-horizontal" role="form">
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Nombre</label>
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control input-circle" placeholder="Ingrese Nombre o nombres">
+                                    <input name="modname" type="text" class="form-control input-circle" placeholder="Ingrese Nombre o nombres">
+                                </div>
+                            </div>
+                            <input name="idInformacion" type="hidden" class="form-control input-circle" placeholder="Apellido Paterno">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Apellido</label>
+                                <div class="col-md-6">
+                                    <input name="modplname" type="text" class="form-control input-circle" placeholder="Apellido Paterno">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Apellido</label>
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control input-circle" placeholder="Apellido Paterno">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-3 control-label">Apellido</label>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control input-circle" placeholder="Apellido Materno">
+                                    <input name="modmlname" type="text" class="form-control input-circle" placeholder="Apellido Materno">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -228,7 +218,7 @@
                                                                     <span class="input-group-addon input-circle-left">
                                                                         <i class="fa fa-credit-card"></i>
                                                                     </span>
-                                        <input type="text" class="form-control input-circle-right" placeholder="Ingrese Cédula Profesional"> </div>
+                                        <input name="modcedula" type="text" class="form-control input-circle-right" placeholder="Ingrese Cédula Profesional"> </div>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -238,7 +228,7 @@
                                                                     <span class="input-group-addon input-circle-left">
                                                                         <i class="fa fa-envelope"></i>
                                                                     </span>
-                                        <input type="email" class="form-control input-circle-right" placeholder="Correo elctrónico"> </div>
+                                        <input name="modemail" type="email" class="form-control input-circle-right" placeholder="Correo elctrónico"> </div>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -248,33 +238,34 @@
                                                                     <span class="input-group-addon input-circle-left">
                                                                         <i class="fa fa-phone"></i>
                                                                     </span>
-                                        <input type="text" class="form-control input-circle-right" placeholder="Número de Teléfono"> </div>
+                                        <input name="modphone" type="text" class="form-control input-circle-right" placeholder="Número de Teléfono"> </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Notas</label>
                                 <div class="col-md-6">
-                                    <textarea class="form-control rows="3"></textarea>
+                                    <textarea name="modnotes" class="form-control rows="3"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-md-3">Status</label>
                                 <div class="col-md-6">
-                                    <select class="bs-select form-control" data-style="blue">
-                                        <option>Activo</option>
-                                        <option>Inactivo</option>
+                                    <select name="modestatus" class="bs-select form-control" data-style="blue">
+                                        <option value="ACTIVO">Activo</option>
+                                        <option value="INACTIVO">Inactivo</option>
                                     </select>
                                 </div>
                             </div>
-                        </form>
+                        {{--</form>--}}
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-warning" data-dismiss="modal" aria-hidden="true">Cancelar</button>
-                        <button class="btn green" data-dismiss="modal">Guardar Cambios</button>
+                        <button type="submit" class="btn green" >Guardar Cambios</button>
                     </div>
                 </div>
             </div>
         </div>
+        </form>
         <!-- END PAGE HEADER-->
         <div class="row">
 

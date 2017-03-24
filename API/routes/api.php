@@ -25,6 +25,8 @@ Route::put('/users/restore', 'ModuleUsersController@restore');
 
 Route::get('/users/get/all', 'ModuleUsersController@getAllUsersInformation')->middleware('jwt.auth');
 Route::get('/profesors/get/table', 'modules\profesores\ProfesorController@getAllProfesorsInformation');
+Route::get('/profesors/get/tablebyid/{idProfesor}', 'modules\profesores\ProfesorController@getInformationByIdProfesor');
+Route::post('/profesors/get/update', 'modules\profesores\ProfesorController@update');
 
 Route::post('/login', 'ModuleUsersController@login')->middleware('jwt.auth');
 

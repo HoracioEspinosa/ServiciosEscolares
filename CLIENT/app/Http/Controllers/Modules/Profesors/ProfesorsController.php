@@ -29,12 +29,13 @@ class ProfesorsController extends Controller
         return view('profesores', compact('result', 'users'));
     }
 
-    public function create()
+    public function create(Request $request)
     {
         $this->setUserHeader();
         $users = ModuleUsersController::getAllUsersInformation();
         $result = $this->result;
         return view('agregarProfesor', compact('result', 'users'));
+        createProfesor($request);
     }
 
 
@@ -124,7 +125,7 @@ class ProfesorsController extends Controller
             try{
                 try{
                     $client = new GuzzleHttp\Client( ['base_uri' => env('SERVER_API')]  );
-                    $my_request = $client->request('POST', '/api/profesor/update', [
+                    $my_request = $client->request('POST', '/profesors/get/tablebyid', [
                         'form_params' => [
                             'idProfesor' => $idProfesor,
                         ],
@@ -142,4 +143,60 @@ class ProfesorsController extends Controller
         }
     }
 
+    public function updateProfesor (Request $request){
+        if (cookie::get('token') == "" || cookie::get('token')  == null) {
+            return redirect('/login');
+        }
+        else{
+            try{
+                try{
+
+                    $idInformacion = $request->input('idInformacion');
+                    $name = $request->input('modname');
+                    $plname = $request->input('modplname');
+                    $mlname = $request->input('modmlname');
+                    $cedula = $request->input('modcedula');
+                    $email = $request->input('modemail');
+                    $phone = $request->input('modphone');
+                    $notes = $request->input('modnotes');
+                    $estatus = $request->input('modestatus');
+                    $client = new GuzzleHttp\Client( ['base_uri' => env('SERVER_API')] );
+                    $headers = [
+                        'Content-Type' => 'application/x-www-form-urlencoded',
+                        'Authorization' => 'Bearer '. cookie::get('token'),
+                    ];
+                    $my_request = $client->request('POST', '/api/profesors/get/update', [
+                        'form_params' => [
+                            'modname' => $name,
+                            'modplname' => $plname,
+                            'modmlname' => $mlname,
+                            'modcedula' => $cedula,
+                            'modemail' => $email,
+                            'modphone' => $phone,
+                            'modnotes' => $notes,
+                            'modestatus' => $estatus,
+                            'idInformacion' => $idInformacion
+                        ],
+                        'headers' => $headers
+                    ]);
+                    $result = $my_request->getBody()->getContents();
+                    //dd ($result);
+                    $result = json_decode($result, JSON_PRETTY_PRINT);
+                    $result = $result[0];
+                    if ($result['MESSAGE'] == 'OK') {
+                        return redirect('/profesores');
+                    }
+                    else{
+                    }
+                    //return $result;
+                }catch (ClientException $exception){
+                    //dd($exception->getResponse()->getBody()->getContents());
+                    return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
+                }
+            } catch (ServerException $serverException) {
+                //dd($serverException);
+                return redirect('/login');
+            }
+        }
+    }
 }

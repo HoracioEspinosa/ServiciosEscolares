@@ -46,11 +46,31 @@ class ProfesorController extends Controller
         }
     }
 
-    public function getInformationByIdProfesor(Request $request){
-        $idProfesor = $request->input('idProfesores');
+    public function getInformationByIdProfesor($idProfesor, Request $request){
+        //$idProfesor = $request->input('idProfesores');
         //dd($idAlumno);
-        $info = DB::select('SELECT * FROM Profesores INNER JOIN informacion ON profesores.idInformacion=informacion.idInformacion WHERE profesores.idProfesores='.$idProfesor);
+        $info = DB::select('SELECT * FROM profesores INNER JOIN informacion ON profesores.idInformacion=informacion.idInformacion WHERE profesores.idInformacion='.$idProfesor);
         $info = json_encode($info, true);
         return json_decode($info, JSON_PRETTY_PRINT);
+    }
+
+    public function update(Request $request){
+        $idInformacion = $request->input('idInformacion');
+        $name = $request->input('modname');
+        $lastname = $request->input('modplname')  . ' ' .  $request->input('modmlname');
+        $cedula = $request->input('modcedula');
+        $email = $request->input('modemail');
+        $phone = $request->input('modphone');
+        $notes = $request->input('modnotes');
+        $estatus = $request->input('modestatus');
+        $data = array($name, $lastname, $cedula,  $email, $phone, $notes,  $estatus, $idInformacion);
+        $profesor = json_encode($data, true);
+        try{
+            $profesor = DB::select("CALL UPDATEPROF(?,?,?,?,?,?,?,?)", $data);
+            $profesor = json_encode($profesor, true);
+            return json_decode($profesor, JSON_PRETTY_PRINT);
+        }catch (Exception $ex){
+            return $ex;
+        }
     }
 }
