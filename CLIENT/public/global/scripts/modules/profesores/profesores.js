@@ -17,13 +17,10 @@ $(document).on('click', '.mybutton', function(e) {
 
         $(e.currentTarget).find('p[name="panombre"]').text(data[0].nombre + " " + apellido[0] + " " +apellido[1]);
         $(e.currentTarget).find('p[name="pacedula"]').text(data[0].cedulas);
-        $(e.currentTarget).find('p[name="paespecialidad"]').text();
-        $(e.currentTarget).find('p[name="paestatus"]').text(data[0].estatus);
-        $(e.currentTarget).find('p[name="pamaterias"]').text();
-        $(e.currentTarget).find('p[name="pagrupos"]').text();
-        $(e.currentTarget).find('p[name="paturnos"]').text();
-        $(e.currentTarget).find('p[name="pahorarios"]').text();
+        $(e.currentTarget).find('p[name="paemail"]').text(data[0].email);
+        $(e.currentTarget).find('p[name="patelefono"]').text(data[0].telefono);
         $(e.currentTarget).find('p[name="panotas"]').text(data[0].notas);
+        $(e.currentTarget).find('p[name="paestatus"]').text(data[0].estatus);
     });
 });
 

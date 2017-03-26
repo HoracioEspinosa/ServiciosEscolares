@@ -665,22 +665,6 @@ var TableDatatablesManaged = function () {
                 },
 
                 {
-                    data: 'telefono',
-                    visible: true,
-                    render: function (type, type, full, meta) {
-                        return full.telefono;
-                    }
-                },
-
-                {
-                    data: 'email',
-                    visible: true,
-                    render: function (type, type, full, meta) {
-                        return full.email;
-                    }
-                },
-
-                {
                     data: 'estatus',
                     visible: true,
                     render: function (type, type, full, meta) {
@@ -690,7 +674,7 @@ var TableDatatablesManaged = function () {
                 {
                     data: 'idInformacion',
                     render: function (type, type, full, meta) {
-                        var id = full.idInformacion;
+                        var id = full.idProfesores;
                         return '<div class="actions"><a class="mybutton btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Ver" data-llave='+id+' href="#view" data-toggle="modal"><i class="fa fa-eye"></i></a><a  class="mybutton btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Modificar" data-llave='+id+' href="#modify" data-toggle="modal"><i class="fa fa-edit"></i></a></div>';
                     }
                 }
@@ -702,7 +686,7 @@ var TableDatatablesManaged = function () {
                 {
                     extend: 'copy',
                     exportOptions: {
-                        columns: [0,1,2,3,4,5]
+                        columns: [0,1,2,3]
                     }
                 },
                 {
@@ -710,7 +694,7 @@ var TableDatatablesManaged = function () {
                     orientation: 'landscape',
                     pageSize: 'LEGAL',
                     exportOptions: {
-                        columns: [0, 1, 2, 3,4,5]
+                        columns: [0, 1, 2, 3]
                     }
                 },
                 {
@@ -718,7 +702,7 @@ var TableDatatablesManaged = function () {
                     orientation: 'landscape',
                     pageSize: 'LEGAL',
                     exportOptions: {
-                        columns: [0, 1, 2, 3,4,5]
+                        columns: [0, 1, 2, 3]
                     }
                 },
                 {
@@ -726,7 +710,7 @@ var TableDatatablesManaged = function () {
                     pageSize: 'LEGAL',
                     title: "Número de filas",
                     exportOptions: {
-                        columns: [0, 1, 2, 3,4,5]
+                        columns: [0, 1, 2, 3]
                     },
                     customize: function (doc) {
                         doc.content[1].table.widths =

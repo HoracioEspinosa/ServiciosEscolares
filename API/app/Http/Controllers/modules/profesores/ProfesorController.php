@@ -47,9 +47,7 @@ class ProfesorController extends Controller
     }
 
     public function getInformationByIdProfesor($idProfesor, Request $request){
-        //$idProfesor = $request->input('idProfesores');
-        //dd($idAlumno);
-        $info = DB::select('SELECT * FROM profesores INNER JOIN informacion ON profesores.idInformacion=informacion.idInformacion WHERE profesores.idInformacion='.$idProfesor);
+        $info = DB::select('SELECT * FROM profesores INNER JOIN informacion ON profesores.idInformacion=informacion.idInformacion WHERE profesores.idProfesores='.$idProfesor);
         $info = json_encode($info, true);
         return json_decode($info, JSON_PRETTY_PRINT);
     }

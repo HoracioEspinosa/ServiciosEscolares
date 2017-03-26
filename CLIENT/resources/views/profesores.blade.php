@@ -73,10 +73,10 @@
                             </div>
                             <div class="col-sm-12 table-alerts">
                                 <div class="alert alert-danger display-hide">
-                                    <button class="close" data-close="alert"></button> <span>Se ha producido un error al intentar mover el departamento a la papelera, intente nuevamente más tatde. </span>
+                                    <button class="close" data-close="alert"></button> <span>Se ha producido un error al intentar mover el recurso a la papelera, intente nuevamente más tatde. </span>
                                 </div>
                                 <div class="alert alert-success display-hide">
-                                    <button class="close" data-close="alert"></button> <span>Se ha mandado el departamento a la papelera.</span>
+                                    <button class="close" data-close="alert"></button> <span>Se ha mandado el recurso a la papelera.</span>
                                 </div>
                             </div>
                             <div id="sample_3_wrapper" class="dataTables_wrapper no-footer">
@@ -86,8 +86,6 @@
                                         <tr role="row">
                                             <th class="sorting" tabindex="0" aria-controls="initTableProfesores" rowspan="1" colspan="1" aria-label=" Start : activate to sort column ascending" style="width: 162px;">Nombre</th>
                                             <th class="sorting" tabindex="0" aria-controls="initTableProfesores" rowspan="1" colspan="1" aria-label=" End : activate to sort column ascending" style="width: 162px;">Apellido</th>
-                                            <th class="sorting" tabindex="0" aria-controls="initTableProfesores" rowspan="1" colspan="1" aria-label=" Status : activate to sort column ascending" style="width: 131px;">Teléfono</th>
-                                            <th class="sorting" tabindex="0" aria-controls="initTableProfesores" rowspan="1" colspan="1" aria-label=" Status : activate to sort column ascending" style="width: 131px;">Correo</th>
                                             <th class="sorting" tabindex="0" aria-controls="initTableProfesores" rowspan="1" colspan="1" aria-label=" Status : activate to sort column ascending" style="width: 131px;">Estado</th>
                                             <th class="sorting_disabled" tabindex="0" aria-controls="initTableProfesores" rowspan="1" colspan="1" aria-label=" Actions : activate to sort column ascending" style="width: 80px;">Acciones</th>
                                         </tr>
@@ -126,44 +124,16 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-4">Especialidad</label>
+                                <label class="control-label col-md-4">Email</label>
                                 <div class="col-md-8">
-                                    <p name="paespecialidad" class="form-control-static">
+                                    <p name="paemail" class="form-control-static">
                                     </p>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-4">Status</label>
+                                <label class="control-label col-md-4">Teléfono</label>
                                 <div class="col-md-8">
-                                    <p name="paestatus" class="form-control-static">
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4">Materias</label>
-                                <div class="col-md-8">
-                                    <p name="pamaterias" class="form-control-static">
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4">Grupos</label>
-                                <div class="col-md-8">
-                                    <p name="pagrupos" class="form-control-static">
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4">Turnos</label>
-                                <div class="col-md-8">
-                                    <p name="paturnos" class="form-control-static">
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4">Horarios</label>
-                                <div class="col-md-8">
-                                    <p name="pahorarios" class="form-control-static">
+                                    <p name="patelefono" class="form-control-static">
                                     </p>
                                 </div>
                             </div>
@@ -171,6 +141,13 @@
                                 <label class="control-label col-md-4">Notas</label>
                                 <div class="col-md-8">
                                     <p name="panotas" class="form-control-static">
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4">Estatus</label>
+                                <div class="col-md-8">
+                                    <p name="paestatus" class="form-control-static">
                                     </p>
                                 </div>
                             </div>
@@ -202,13 +179,13 @@
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Apellido</label>
                                 <div class="col-md-6">
-                                    <input name="modplname" type="text" class="form-control input-circle" placeholder="Apellido Paterno">
+                                    <input name="modplname" type="text" pattern="[a-zA-Z\S]{1,25}" title="No debe llevar espacios" maxlength="25" class="form-control input-circle" placeholder="Apellido Paterno">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Apellido</label>
                                 <div class="col-md-6">
-                                    <input name="modmlname" type="text" class="form-control input-circle" placeholder="Apellido Materno">
+                                    <input name="modmlname" type="text" pattern="[A-Za-z\S]{1,25}" title="No debe llevar espacios" maxlength="25" class="form-control input-circle" placeholder="Apellido Materno">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -218,7 +195,7 @@
                                                                     <span class="input-group-addon input-circle-left">
                                                                         <i class="fa fa-credit-card"></i>
                                                                     </span>
-                                        <input name="modcedula" type="text" class="form-control input-circle-right" placeholder="Ingrese Cédula Profesional"> </div>
+                                        <input name="modcedula" type="text" maxlength="8" data-fv-numeric="true" pattern="[0-9]{7,8}" title="Sólo números" class="form-control input-circle-right" placeholder="Ingrese Cédula Profesional"> </div>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -238,21 +215,21 @@
                                                                     <span class="input-group-addon input-circle-left">
                                                                         <i class="fa fa-phone"></i>
                                                                     </span>
-                                        <input name="modphone" type="text" class="form-control input-circle-right" placeholder="Número de Teléfono"> </div>
+                                        <input name="modphone" type="tel" maxlength="10" data-fv-numeric="true" pattern="^[0-9]{7,10}$" class="form-control input-circle-right" placeholder="Número de Teléfono"> </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Notas</label>
                                 <div class="col-md-6">
-                                    <textarea name="modnotes" class="form-control rows="3"></textarea>
+                                    <textarea name="modnotes" maxlength="47" class="form-control rows="2"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-md-3">Status</label>
                                 <div class="col-md-6">
                                     <select name="modestatus" class="bs-select form-control" data-style="blue">
-                                        <option value="ACTIVO">Activo</option>
-                                        <option value="INACTIVO">Inactivo</option>
+                                        <option value="ACTIVO">ACTIVO</option>
+                                        <option value="INACTIVO">INACTIVO</option>
                                     </select>
                                 </div>
                             </div>
