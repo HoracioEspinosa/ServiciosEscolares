@@ -29,3 +29,12 @@ Route::post('/password/email', 'Modules\ModulesController@sendMail');
 
 Route::get('/logout', 'Auth\LoginController@logout');
 Route::post('/setToken', 'Auth\LoginController@setToken');
+
+/**
+ * Modulo periodo
+ */
+
+Route::get('/periodos', 'Modules\Periodos\PeriodosController@index');
+Route::get('/periodos/information', 'Modules\Periodos\PeriodosController@getInformation');
+Route::get('/periodos/create', 'Modules\Periodos\PeriodosController@createView');
+Route::post('/periodos/byID', 'Modules\Periodos\PeriodosController@getInformationByID');

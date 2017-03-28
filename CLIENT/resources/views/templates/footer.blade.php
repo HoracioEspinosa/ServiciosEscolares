@@ -48,6 +48,7 @@
 {!! HTML::script("/public/global/plugins/bootbox/bootbox.min.js") !!}
 {!! HTML::script("/public/pages/scripts/ui-bootbox.js") !!}
 {!! HTML::script("/public/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js") !!}
+{!! HTML::script('/public/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js') !!}
 {!! HTML::script("/public/global/plugins/bootstrap-select/js/bootstrap-select.min.js") !!}
 {!! HTML::script("/public/pages/scripts/form-validation.js") !!}
 {!! HTML::script("/public/pages/scripts/form-input-mask.min.js") !!}
