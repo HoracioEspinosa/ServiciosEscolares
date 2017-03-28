@@ -38,3 +38,9 @@ Route::get('/periodos', 'Modules\Periodos\PeriodosController@index');
 Route::get('/periodos/information', 'Modules\Periodos\PeriodosController@getInformation');
 Route::get('/periodos/create', 'Modules\Periodos\PeriodosController@createView');
 Route::post('/periodos/byID', 'Modules\Periodos\PeriodosController@getInformationByID');
+
+/*Route::get('/horarios', function(){
+	return view('horario');
+});*/
+
+Route::resource('/horarios', 'Modules\Horarios\HorariosController');
