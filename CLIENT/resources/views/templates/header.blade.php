@@ -230,7 +230,6 @@
                     <a href="/profesores" class="nav-link nav-toggle">
                         <i class="icon-briefcase"></i>
                         <span class="title">Profesores</span>
-                        <span class="selected"></span>
                         <span class="arrow open"></span>
                     </a>
                     <ul class="sub-menu">
@@ -239,6 +238,20 @@
                                 <i class="fa fa-plus-circle"></i>
                                 <span class="title">Agregar</span>
                                 <span class="selected"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item active">
+                    <a href="/grupos" class="nav-link nav-toggle">
+                        <i class="icon-briefcase"></i>
+                        <span class="title">Grupos</span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item start">
+                            <a href="/grupos" class="nav-link ">
+                                <i class="fa fa-plus-circle"></i>
+                                <span class="title">Ver</span>
                             </a>
                         </li>
                     </ul>

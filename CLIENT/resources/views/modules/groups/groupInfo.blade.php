@@ -14,32 +14,13 @@
                     <i class="fa fa-angle-right"></i>
                 </li>
                 <li>
-                    <span>grupos</span>
+                    <span></span>
                 </li>
             </ul>
             <div class="page-toolbar">
             </div>
         </div>
         <!-- END PAGE HEADER-->
-        <?php
-        $count = 0;
-        ?>
-        @foreach($groups as $group)
-            @if($count == 0)
-                <div class="col-sm-12">
-            @elseif($count == 6)
-                <?php $count = 0; ?>
-            @endif
-            <div class="col-sm-2 grupo" data-id="{{$group['idGrupos']}}">
-                <h2>Nombre: {{$group['nombre']}}</h2>
-                <h4>Cantidad de Alumnos: {{$group['cantidadAlumnos']}}</h4>
-            </div>
-                <?php $count++; ?>
-            @if($count == 6)
-                </div>
-                <?php $count = 0; ?>
-            @endif
-        @endforeach
     </div>
     <!-- END CONTENT BODY -->
 </div>
@@ -47,7 +28,7 @@
 @extends('/templates/footer')
 @section('styles_per_page')
     <link rel="stylesheet" href="public/css/modules/grupos/grupos.css">
-    @endsection
+@endsection
 @section('scripts_per_page')
     <script src="public/global/scripts/modules/groups/groups.js"></script>
-    @endsection
+@endsection

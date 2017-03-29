@@ -101,11 +101,6 @@
             </div>
         </div>
 
-
-
-
-
-
         <div id="view" class="modal fade" role="dialog" aria-labelledby="myModalLabel10" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">

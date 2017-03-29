@@ -34,12 +34,32 @@ class GroupsController extends Controller{
             }
         }
     }
+    public function getAllGroups(){
+        try{
+            try{
+                $client = new GuzzleHttp\Client( ['base_uri' => env('SERVER_API')] );
+                $headers = [
+                    'Content-Type' => 'application/x-www-form-urlencoded',
+                    'Authorization' => 'Bearer '. cookie::get('token'),
+                ];
+                $my_request = $client->request('GET', '/api/groups', [ 'headers' => $headers ] );
+                $result = $my_request->getBody()->getContents();
+                $result = json_decode($result, JSON_PRETTY_PRINT);
+                return $result;
+            }catch (ClientException $exception){;
+                return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
+            }
+        }catch (ServerException $serverException) {
+            return $serverException;
+        }
+    }
     public function index()
     {
         $this->setUserHeader();
         $users=ModuleUsersController::getAllUsersInformation();
         $result=$this->result;
-        return view('modules.groups.index', compact('result','users'));
+        $groups = $this->getAllGroups();
+        return view('modules.groups.index', compact('result','users', 'groups'));
     }
     /**
      * Show the form for creating a new resource.
@@ -70,7 +90,24 @@ class GroupsController extends Controller{
      */
     public function show($id)
     {
-        //
+        try{
+            try{
+                $client = new GuzzleHttp\Client( ['base_uri' => env('SERVER_API')] );
+                $headers = [
+                    'Content-Type' => 'application/x-www-form-urlencoded',
+                    'Authorization' => 'Bearer '. cookie::get('token'),
+                ];
+                $my_request = $client->request('GET', '/api/groups/'+$id, [ 'headers' => $headers ] );
+                $result = $my_request->getBody()->getContents();
+                dd($result);
+                return view('modules.groups.groupInfo', compact('result','users'));
+            }catch (ClientException $exception){;
+                return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
+            }
+        }catch (ServerException $serverException) {
+
+            return $serverException;
+        }
     }
 
     /**
