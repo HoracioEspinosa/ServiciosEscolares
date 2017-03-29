@@ -31,6 +31,11 @@ Route::get('auth/me', 'Api\AuthController@getAuthenticatedUser');
 Route::post('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
 
+Route::get('/carreras/get', 'Modules\Carreras\CarrerasController@getInformation');
+Route::post('/carreras/create', 'Modules\Carreras\CarrerasController@create');
+Route::delete('/carreras/delete', 'Modules\Carreras\CarrerasController@delete');
+Route::resource('/carreras', 'Modules\Carreras\CarrerasController');
+
 //Route::get('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
 
 //Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');

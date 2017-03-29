@@ -7,8 +7,7 @@ use Illuminate\Http\Request;
 use Caribbean\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Cookie;
 use GuzzleHttp;
-
-class HorariosController extends Controller
+class TiempoDisponibleController extends Controller
 {
     private $result='';
     /**
@@ -21,7 +20,7 @@ class HorariosController extends Controller
         $this->setUserHeader();
         $users=ModuleUsersController::getAllUsersInformation();
         $result=$this->result;
-        return view('modules.horarios.horario', compact('result','users'));
+        return view('modules.horarios.TiempoDisponible', compact('result','users'));
     }
 
     public function setUserHeader(){

@@ -7,10 +7,8 @@ use Illuminate\Http\Request;
 use Caribbean\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Cookie;
 use GuzzleHttp;
-
-class HorariosController extends Controller
+class HorarioDocenteController extends Controller
 {
-    private $result='';
     /**
      * Display a listing of the resource.
      *
@@ -21,7 +19,7 @@ class HorariosController extends Controller
         $this->setUserHeader();
         $users=ModuleUsersController::getAllUsersInformation();
         $result=$this->result;
-        return view('modules.horarios.horario', compact('result','users'));
+        return view('modules.horarios.horariodocente', compact('result','users'));
     }
 
     public function setUserHeader(){
@@ -46,6 +44,8 @@ class HorariosController extends Controller
             }
         }
     }
+
+
 
     /**
      * Show the form for creating a new resource.

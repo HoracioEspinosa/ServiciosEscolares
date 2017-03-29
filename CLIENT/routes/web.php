@@ -35,3 +35,14 @@ Route::post('/setToken', 'Auth\LoginController@setToken');
 });*/
 
 Route::resource('/horarios', 'Modules\Horarios\HorariosController');
+Route::resource('/horario/disponible', 'Modules\Horarios\TiempoDisponibleController');
+Route::resource('/horario/docente', 'Modules\Horarios\HorarioDocenteController');
+
+
+Route::resource('/horario/alumnos', 'Modules\Horarios\HorarioAlumnoController');
+Route::resource('/horario/escolar', 'Modules\Horarios\HorarioAlumnoController');
+
+
+Route::post('/carreras/create', 'Modules\Carreras\CarrerasController@create');
+Route::delete('/carreras/delete', 'Modules\Carreras\CarrerasController@delete');
+Route::resource('/carreras', 'Modules\Carreras\CarrerasController');

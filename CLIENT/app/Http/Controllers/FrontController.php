@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 
 class FrontController extends Controller
 {
-    public function horario()
+    /*public function horario()
     {
     	return view('horario');
     }
+   */
 }

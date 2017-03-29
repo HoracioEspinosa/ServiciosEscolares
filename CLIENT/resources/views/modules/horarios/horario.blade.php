@@ -53,10 +53,10 @@
                                 <td>Perez R</td>
                                 <td>German</td>
                                 <td>
-                                    <a href="tiempo_disponible.html" style="margin-left: 15px;" class="btn btn-success">
+                                    <a href="/horario/disponible" style="margin-left: 15px;" class="btn btn-success">
                                         <span class="glyphicon glyphicon-pencil"> tiempo disponible</span>
                                     </a>
-                                    <a href="#" style="margin-left: 15px;" class="btn btn-success">
+                                    <a href="/horario/docente" style="margin-left: 15px;" class="btn btn-success">
                                         <span class="glyphicon glyphicon-pencil"> horario</span>
                                     </a>
                                 </td>
@@ -68,10 +68,10 @@
                                 <td>Robles G</td>
                                 <td>Miguel</td>
                                 <td>
-                                    <a href="tiempo_disponible.html" style="margin-left: 15px;" class="btn btn-success">
+                                    <a href="/horario/disponible" style="margin-left: 15px;" class="btn btn-success">
                                         <span class="glyphicon glyphicon-pencil"> tiempo disponible</span>
                                     </a>
-                                    <a href="#" style="margin-left: 15px;" class="btn btn-success">
+                                    <a href="/horario/docente" style="margin-left: 15px;" class="btn btn-success">
                                         <span class="glyphicon glyphicon-pencil"> horario</span>
                                     </a>
                                 </td>
@@ -83,10 +83,10 @@
                                 <td>Doe A</td>
                                 <td>John</td>
                                 <td>
-                                    <a href="tiempo_disponible.html" style="margin-left: 15px;" class="btn btn-success">
+                                    <a href="/horario/disponible" style="margin-left: 15px;" class="btn btn-success">
                                         <span class="glyphicon glyphicon-pencil"> tiempo disponible</span>
                                     </a>
-                                    <a href="#" style="margin-left: 15px;" class="btn btn-success">
+                                    <a href="/horario/docente" style="margin-left: 15px;" class="btn btn-success">
                                         <span class="glyphicon glyphicon-pencil"> horario</span>
                                     </a>
                                 </td>
