@@ -6,7 +6,6 @@
     <div class="page-content">
         <!-- BEGIN PAGE HEADER-->
         <h1 class="page-title"> Nuevo Registro
-            <small>Profesores</small>
         </h1>
         <div class="page-bar">
             <ul class="page-breadcrumb">
@@ -43,19 +42,19 @@
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Nombre</label>
                                 <div class="col-md-4">
-                                    <input name="name" type="text" class="form-control input-circle" placeholder="Ingrese Nombre o nombres">
+                                    <input name="name" type="text" class="form-control input-circle" maxlength="45" placeholder="Ingrese nombre o nombres">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Apellido</label>
                                 <div class="col-md-4">
-                                    <input name="plname" type="text" class="form-control input-circle" placeholder="Apellido Paterno">
+                                    <input name="plname" type="text" pattern="[A-Za-z\S]{1,25}" title="No debe llevar espacios" maxlength="25" class="form-control input-circle" placeholder="Apellido Paterno">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Apellido</label>
                                 <div class="col-md-4">
-                                    <input name="mlname" type="text" class="form-control input-circle" placeholder="Apellido Materno">
+                                    <input name="mlname" type="text" pattern="[A-Za-z\S]{1,25}" title="No debe llevar espacios" maxlength="25" class="form-control input-circle" placeholder="Apellido Materno">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -65,7 +64,7 @@
                                                                     <span class="input-group-addon input-circle-left">
                                                                         <i class="fa fa-credit-card"></i>
                                                                     </span>
-                                        <input name="cedula" type="text" class="form-control input-circle-right" placeholder="Ingrese Cédula Profesional"> </div>
+                                        <input name="cedula" type="text" maxlength="8" data-fv-numeric="true" pattern="[0-9]{7,8}" title="Sólo números" class="form-control input-circle-right" placeholder="Ingrese Cédula Profesional"> </div>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -85,21 +84,21 @@
                                                                     <span class="input-group-addon input-circle-left">
                                                                         <i class="fa fa-phone"></i>
                                                                     </span>
-                                        <input name="phone" type="text" class="form-control input-circle-right" placeholder="Número de Teléfono"> </div>
+                                        <input name="phone" type="tel" maxlength="10" data-fv-numeric="true" pattern="[0-9]{10}" class="form-control input-circle-right" placeholder="Número de Teléfono"> </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Notas</label>
                                 <div class="col-md-4">
-                                    <textarea name="notes" class="form-control rows="3"></textarea>
+                                    <textarea name="notes" maxlength="47" class="form-control rows="1"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-md-3">Status</label>
                                 <div class="col-md-2">
                                     <select name="estatus" class="bs-select form-control" data-style="blue">
-                                        <option>Activo</option>
-                                        <option>Inactivo</option>
+                                        <option value="ACTIVO">ACTIVO</option>
+                                        <option value="INACTIVO">INACTIVO</option>
                                     </select>
                                 </div>
                             </div>
@@ -119,16 +118,16 @@
                 </div>
 
                 <!--##################-->
-                </div>
-                <!-- Table -->
             </div>
-        </div>
-
-        <!-- END PAGE HEADER-->
-        <div class="row">
+            <!-- Table -->
         </div>
     </div>
-    <!-- END CONTENT BODY -->
+
+    <!-- END PAGE HEADER-->
+    <div class="row">
+    </div>
+</div>
+<!-- END CONTENT BODY -->
 </div>
 <!-- END CONTENT -->
 

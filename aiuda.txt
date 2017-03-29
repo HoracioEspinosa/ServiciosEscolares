@@ -73,7 +73,7 @@ BEGIN
     BEGIN
       INSERT INTO informacion
       (nombre,apellido,genero,edad,curp,fecha_ingreso,foto) VALUES (_nombre,_apellido,_genero,_edad,_curp,now(),'foto');
-     
+
      INSERT INTO alumnos
      (estado,matricula,turno,idInformacionFK,idGrupos,idGeneraciones) VALUES ('Activo',_matricula,_turno,(SELECT MAX(idInformacion) FROM informacion ), _idGrupos,_idGeneraciones);
       IF `_rollback` THEN
@@ -103,3 +103,16 @@ CREATE PROCEDURE `INSERT_DEPARTMENTS` ( IN DE_NAME VARCHAR(50), IN DE_STATUS BOO
       END IF;
   END ;
 END $$
+
+
+DELIMITER $$
+
+CREATE PROCEDURE `REGISTRAR` (IN user VARCHAR(255), IN password VARCHAR(255))
+BEGIN
+	DECLARE `ID` INT DEFAULT 0;
+	INSERT INTO usuarios (usuario,contrasena) VALUES (user, password);
+    SET `ID` = (SELECT MAX(idusuarios) FROM usuarios);
+    INSERT INTO maestros (maestros.usuario_idusuario) VALUES (`ID`);
+    INSERT INTO escuela (escuela.usuarios_idusuarios) VALUES (`ID`);
+    SELECT MAX(idusuarios) FROM usuarios;
+END$$

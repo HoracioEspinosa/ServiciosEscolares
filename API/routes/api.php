@@ -24,7 +24,9 @@ Route::delete('/users/delete', 'ModuleUsersController@delete');
 Route::put('/users/restore', 'ModuleUsersController@restore');
 
 Route::get('/users/get/all', 'ModuleUsersController@getAllUsersInformation')->middleware('jwt.auth');
-Route::get('/users/get/table', 'ModuleUsersController@getAllProfesorsInformation')->middleware('jwt.auth');
+Route::get('/profesors/get/table', 'modules\profesores\ProfesorController@getAllProfesorsInformation');
+Route::get('/profesors/get/tablebyid/{idProfesor}', 'modules\profesores\ProfesorController@getInformationByIdProfesor');
+Route::post('/profesors/get/update', 'modules\profesores\ProfesorController@update');
 
 Route::post('/login', 'ModuleUsersController@login')->middleware('jwt.auth');
 
@@ -36,6 +38,7 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 
 Route::resource('/groups', 'GroupsController');
 
+Route::post('profesor/create', 'modules\profesores\ProfesorController@create');
 //Route::get('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
 
 //Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');

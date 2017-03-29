@@ -643,7 +643,7 @@ var TableDatatablesManaged = function () {
             "bDestroy": true,
             ajax: {
                 "type"   : "GET",
-                "url"    : 'http://servicioseduapi.dev/api/users/get/table',
+                "url"    : 'http://servicioseduapi.dev/api/profesors/get/table',
                 "data"   : {
                     "token" : token,
                     "deleted" : deleted
@@ -651,33 +651,31 @@ var TableDatatablesManaged = function () {
             },
             columns: [
                 {
-                    width: '15%',
-                    data : 'usuario',
+                    data : 'nombre',
                     searchable: true,
                     sortable: true
                 },
                 {
-                    data : 'nombre',
+                    data : 'apellido',
                     searchable: true,
                     sortable: true,
                     render: function (status, type, full, meta) {
-                        return full.nombre;
-                    }
-                },
-
-                {
-                    width: '15%',
-                    data: 'apellido',
-                    visible: true,
-                    render: function (type, type, full, meta) {
                         return full.apellido;
                     }
                 },
 
                 {
-                    data: 'usuario',
+                    data: 'estatus',
+                    visible: true,
                     render: function (type, type, full, meta) {
-                        return '<div class="actions"><a class="btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Ver" href="#view" data-toggle="modal"><i class="fa fa-eye"></i></a><a class="btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Modificar" href="#modify" data-toggle="modal"><i class="fa fa-edit"></i></a><a class="btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Eliminar" href="#delete" data-toggle="modal"><i class="fa fa-trash-o"></i></a></div>';
+                        return full.estatus;
+                    }
+                },
+                {
+                    data: 'idInformacion',
+                    render: function (type, type, full, meta) {
+                        var id = full.idProfesores;
+                        return '<div class="actions"><a class="mybutton btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Ver" data-llave='+id+' href="#view" data-toggle="modal"><i class="fa fa-eye"></i></a><a  class="mybutton btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Modificar" data-llave='+id+' href="#modify" data-toggle="modal"><i class="fa fa-edit"></i></a></div>';
                     }
                 }
 
@@ -710,7 +708,7 @@ var TableDatatablesManaged = function () {
                 {
                     extend: 'pdf',
                     pageSize: 'LEGAL',
-                    title: "Listado de sucursales",
+                    title: "Número de filas",
                     exportOptions: {
                         columns: [0, 1, 2, 3]
                     },
@@ -722,8 +720,8 @@ var TableDatatablesManaged = function () {
                 {
                     extend: 'print',
                     orientation: 'landscape',
-                    title: "Listado de sucursales",
-                    message: "Listado de sucursales generales de Caribbean Connection",
+                    title: "Listado de Profesores",
+                    message: "Listado de profes.",
                     pageSize: 'LEGAL',
                     exportOptions: {
                         columns: [0, 1, 2, 3]

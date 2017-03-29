@@ -34,4 +34,5 @@ Route::resource('/grupos', 'Modules\Groups\GroupsController');
 
 Route::resource('/horarios', 'Modules\Horarios\HorariosController');
 Route::resource('/profesores', 'Modules\Profesors\ProfesorsController');
-Route::post('/profesores/create', 'Modules\Profesors\ModulesStudentController@createProfesor');
+Route::post('/profesores/create', 'Modules\Profesors\ProfesorsController@createProfesor');
+Route::post('/profesores/update', 'Modules\Profesors\ProfesorsController@updateProfesor');
