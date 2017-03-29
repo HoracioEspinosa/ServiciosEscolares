@@ -21,3 +21,6 @@ Route::get("/pass", function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::resource('/groups', 'GroupsController');
+//Route::get('/groups/getInfoById', 'GroupsController@getInfoById');
