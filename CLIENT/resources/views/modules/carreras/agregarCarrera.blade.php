@@ -134,7 +134,7 @@
                         <th>Nombre</th>
                         <th>Tipo</th>
                         <th>Estado</th>
-                        <th>Carrera</th>
+                        <th>Opciones</th>
 
                     </tr>
                     </thead>

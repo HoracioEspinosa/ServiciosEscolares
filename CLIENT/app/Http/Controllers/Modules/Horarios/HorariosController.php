@@ -20,8 +20,25 @@ class HorariosController extends Controller
     {
         $this->setUserHeader();
         $users=ModuleUsersController::getAllUsersInformation();
+        $informacion=$this->getInformation();
+
         $result=$this->result;
-        return view('modules.horarios.horario', compact('result','users'));
+        return view('modules.horarios.horario', compact('result','users','informacion'));
+
+
+    }
+    public function disponible($id = null)
+    {
+        $this->setUserHeader();
+        $users=ModuleUsersController::getAllUsersInformation();
+
+
+        $informacion=$this->getInformation();
+        //dd($informacion);
+        //$profesores=$this->getProfesores();
+
+        $result=$this->result;
+        return view('modules.horarios.TiempoDisponible', compact('result','users','informacion','id'));//,'profesores'));
     }
 
     public function setUserHeader(){
@@ -38,6 +55,31 @@ class HorariosController extends Controller
                     $result = $client->get( 'api/auth/me', [ 'headers' => $headers ] );
                     $resultado= json_decode($result->getBody()->getContents(), JSON_PRETTY_PRINT)["user"];
                     $this->result = $resultado;
+                }catch (ClientException $exception){;
+                    return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
+                }
+            }catch (ServerException $serverException) {
+                return redirect('/logout');
+            }
+        }
+    }
+/*obtenemos la informacion del cliente*/
+
+    public function getInformation(){
+        if (cookie::get('token') == "" || Cookie::get('token')  == null) {
+            return redirect('/login');
+        }else{
+            try{
+                try{
+                    $client = new GuzzleHttp\Client( ['base_uri' => env('SERVER_API')]  );
+                    $headers = [
+                        'Content-Type' => 'application/json',
+                        'Authorization' => 'Bearer '. cookie::get('token'),
+                    ];
+                    $result = $client->get( 'api/horarios/get', [ 'headers' => $headers ] );
+                    $resultado= json_decode($result->getBody()->getContents(), JSON_PRETTY_PRINT);
+
+                    return $resultado;
                 }catch (ClientException $exception){;
                     return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
                 }

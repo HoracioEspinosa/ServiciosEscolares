@@ -39,58 +39,38 @@
                           <table class="table">
                             <thead>
                               <tr>
-                                <th>#</th>
+
                                 <th>Cedula</th>
                                 <th>Apellidos</th>
                                 <th>Nombres</th>
+                                <th>Edad</th>
+                                <th>Fecha de ingreso</th>
                                 <th>opciones</th>
                               </tr>
                             </thead>
                             <tbody>
-                              <tr>
-                                <td>1</td>
-                                <td>0198766373</td>
-                                <td>Perez R</td>
-                                <td>German</td>
-                                <td>
-                                    <a href="/horario/disponible" style="margin-left: 15px;" class="btn btn-success">
-                                        <span class="glyphicon glyphicon-pencil"> tiempo disponible</span>
-                                    </a>
-                                    <a href="/horario/docente" style="margin-left: 15px;" class="btn btn-success">
-                                        <span class="glyphicon glyphicon-pencil"> horario</span>
-                                    </a>
-                                </td>
-                              </tr>
-                              
-                              <tr>
-                                <td>2</td>
-                                <td>0238765368</td>
-                                <td>Robles G</td>
-                                <td>Miguel</td>
-                                <td>
-                                    <a href="/horario/disponible" style="margin-left: 15px;" class="btn btn-success">
-                                        <span class="glyphicon glyphicon-pencil"> tiempo disponible</span>
-                                    </a>
-                                    <a href="/horario/docente" style="margin-left: 15px;" class="btn btn-success">
-                                        <span class="glyphicon glyphicon-pencil"> horario</span>
-                                    </a>
-                                </td>
-                              </tr>
 
-                              <tr>
-                                <td>3</td>
-                                <td>0894532457</td>
-                                <td>Doe A</td>
-                                <td>John</td>
-                                <td>
-                                    <a href="/horario/disponible" style="margin-left: 15px;" class="btn btn-success">
-                                        <span class="glyphicon glyphicon-pencil"> tiempo disponible</span>
-                                    </a>
-                                    <a href="/horario/docente" style="margin-left: 15px;" class="btn btn-success">
-                                        <span class="glyphicon glyphicon-pencil"> horario</span>
-                                    </a>
-                                </td>
-                              </tr>
+                            @foreach($informacion as $key => $informacion)
+
+                                <tr id="inf{{$informacion['idInformacion']}}">
+                                    <td>{{$informacion['curp']}}</td>
+                                    <td>{{$informacion['apellido']}}</td>
+                                    <td>{{$informacion['nombre']}}</td>
+                                    <td>{{$informacion['edad']}}</td>
+                                    <td>{{$informacion['fecha_ingreso']}}</td>
+                                    <td>
+                                        <a href="/horario/disponible/{{$informacion['idProfesores']}}"  style="margin-left: 15px;" class="btn btn-success">
+                                            <span class="glyphicon glyphicon-pencil"> tiempo disponible</span>
+                                        </a>
+                                        <a href="/horario/docente" style="margin-left: 15px;" class="btn btn-success">
+                                            <span class="glyphicon glyphicon-pencil"> horario</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            @endforeach
+
+
+
 
                             </tbody>
                           </table>

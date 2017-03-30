@@ -48,24 +48,23 @@
                             <tbody style="background: #F9F9F9;">
                               <tr>
                                 <th> cedula: </th>
-                                <td>0198766373</td>
+                                <td>{{$informacion[$id]['curp']}}</td>
                               </tr>
                               <tr>
                                   <th>Apellidos: </th>
-                                  <td>Perez R</td>
+                                  <td>{{$informacion[$id]['apellido']}}</td>
                               </tr>
                               <tr>
                                   <th>Nombres: </th>
-                                  <td>German</td>
+                                  <td>{{$informacion[$id]['nombre']}}</td>
                               </tr>
-                                
                             </tbody>
                           </table>
                           </div>
 
 
-                          <h2>Horario</h2>  
-                          <div style="width: 1000px;" class="table-responsive">          
+                          <h2>Horario</h2>
+                          <div style="width: 1000px;" class="table-responsive">
                           <table class="table">
                             <thead>
                               <tr style="background: #8BD7D4;">

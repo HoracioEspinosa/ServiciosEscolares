@@ -20,7 +20,11 @@ class TiempoDisponibleController extends Controller
         $this->setUserHeader();
         $users=ModuleUsersController::getAllUsersInformation();
         $result=$this->result;
-        return view('modules.horarios.TiempoDisponible', compact('result','users'));
+
+        $informacion=$this->getInformation();
+        $profesores=$this->profesores();
+
+        return view('modules.horarios.TiempoDisponible', compact('result','users','informacion','profesores'));
     }
 
     public function setUserHeader(){

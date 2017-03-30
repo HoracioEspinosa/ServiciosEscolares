@@ -35,7 +35,8 @@ Route::post('/setToken', 'Auth\LoginController@setToken');
 });*/
 
 Route::resource('/horarios', 'Modules\Horarios\HorariosController');
-Route::resource('/horario/disponible', 'Modules\Horarios\TiempoDisponibleController');
+Route::get('/horario/disponible/{id?}', 'Modules\Horarios\HorariosController@disponible');
+/*Route::resource('/horario/disponible', 'Modules\Horarios\HorariosController');*/
 Route::resource('/horario/docente', 'Modules\Horarios\HorarioDocenteController');
 
 
