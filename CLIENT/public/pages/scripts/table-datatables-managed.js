@@ -180,717 +180,6 @@ function restoreBranchOffice(id) {
 
 var TableDatatablesManaged = function () {
 
-    var initTable1 = function () {
-        var table = $('#sample_1');
-        table.dataTable({
-            "language": {
-                "aria": {
-                    "sortAscending": ": activate to sort column ascending",
-                    "sortDescending": ": activate to sort column descending"
-                },
-                "emptyTable": "No se han encontrado registros",
-                "info": "Mostrando del _START_ al _END_ de _TOTAL_ registros",
-                "infoEmpty": "No se han encontrado resultados",
-                "infoFiltered": "(Filtrado de _MAX_ registros)",
-                "lengthMenu": "Número de usuarios &nbsp; _MENU_",
-                "search": "Buscar: &nbsp;",
-                "zeroRecords": "No se han encontrado resultados",
-                "paginate": {
-                    "previous":"Anterior",
-                    "next": "Siguiente",
-                    "last": "Último",
-                    "first": "Primero"
-                }
-            },
-            "bStateSave": true,
-            "lengthMenu": [
-                [5, 15, 20, -1],
-                [5, 15, 20, "Todos"]
-            ],
-            "pageLength": 5,
-            "pagingType": "bootstrap_full_number",
-            "columnDefs": [
-                {
-                    'orderable': false,
-                    'targets': [0]
-                },
-                {
-                    "searchable": false,
-                    "targets": [0]
-                },
-                {
-                    "className": "dt-right",
-                }
-            ],
-            "order": [
-                [1, "asc"]
-            ]
-        });
-
-        table.find('.group-checkable').change(function () {
-            var set = jQuery(this).attr("data-set");
-            var checked = jQuery(this).is(":checked");
-            jQuery(set).each(function () {
-                if (checked) {
-                    $(this).prop("checked", true);
-                    $(this).parents('tr').addClass("active");
-                } else {
-                    $(this).prop("checked", false);
-                    $(this).parents('tr').removeClass("active");
-                }
-            });
-        });
-
-        table.on('change', 'tbody tr .checkboxes', function () {
-            $(this).parents('tr').toggleClass("active");
-        });
-    }
-    var initTable1_2 = function () {
-        var table = $('#sample_1_2');
-        table.dataTable({
-            "language": {
-                "aria": {
-                    "sortAscending": ": activate to sort column ascending",
-                    "sortDescending": ": activate to sort column descending"
-                },
-                "emptyTable": "No se han encontrado registros",
-                "info": "Mostrando del _START_ al _END_ de _TOTAL_ registros",
-                "infoEmpty": "No se han encontrado resultados",
-                "infoFiltered": "(Filtrado de _MAX_ registros)",
-                "lengthMenu": "Número de usuarios &nbsp; _MENU_",
-                "search": "Buscar: &nbsp;",
-                "zeroRecords": "No se han encontrado resultados",
-                "paginate": {
-                    "previous":"Anterior",
-                    "next": "Siguiente",
-                    "last": "Último",
-                    "first": "Primero"
-                }
-            },
-            "bStateSave": false,
-
-            "lengthMenu": [
-                [5, 15, 20, -1],
-                [5, 15, 20, "Todos"]
-            ],
-            "pageLength": 5,
-            "pagingType": "bootstrap_full_number",
-            "columnDefs": [
-                {
-                    'orderable': false,
-                    'targets': [0]
-                },
-                {
-                    "searchable": false,
-                    "targets": [0]
-                },
-                {
-                    "className": "dt-right",
-                }
-            ],
-
-            "order": [
-                [1, "asc"]
-            ],
-            initComplete: function () {
-                this.api().column(1).every(function(){
-                    var column = this;
-                    var select = $('<select class="form-control input-sm"><option value="">Select</option></select>')
-                        .appendTo( $(column.footer()).empty() )
-                        .on( 'change', function () {
-                            var val = $.fn.dataTable.util.escapeRegex(
-                                $(this).val()
-                            );
-                            column
-                                .search( val ? '^'+val+'$' : '', true, false )
-                                .draw();
-                        } );
-
-                    column.data().unique().sort().each( function ( d, j ) {
-                        select.append( '<option value="'+d+'">'+d+'</option>' )
-                    } );
-                });
-
-            }
-        });
-        table.find('.group-checkable').change(function () {
-            var set = jQuery(this).attr("data-set");
-            var checked = jQuery(this).is(":checked");
-            jQuery(set).each(function () {
-                if (checked) {
-                    $(this).prop("checked", true);
-                    $(this).parents('tr').addClass("active");
-                } else {
-                    $(this).prop("checked", false);
-                    $(this).parents('tr').removeClass("active");
-                }
-            });
-        });
-        table.on('change', 'tbody tr .checkboxes', function () {
-            $(this).parents('tr').toggleClass("active");
-        });
-    }
-
-    var initTableBranchOffices = function () {
-        var token = $("#api-token").val();
-        var deleted = $("#checkDeleted .active").data("value");
-        var table = $('#TableBranchOffices').DataTable({
-            processing: true,
-            //sProcessing: 'Procesando...',
-            bProcessing: true,
-            bPaginate: true,
-            bLengthChange: true,
-            bInfo: true,
-            bAutoWidth: false ,
-            //bStateSave: true,
-            sPaginationType: "full_numbers",
-            serverSide: true,
-            bJQueryUI: true,
-            "bDestroy": true,
-            ajax: {
-                "type"   : "GET",
-                "url"    : 'http://serverjwt.dev/api/branch-offices/list',
-                "data"   : {
-                    "token" : token,
-                    "deleted" : deleted
-                },
-            },
-            columns: [
-                {
-                    width: '15%',
-                    data : 'name',
-                    searchable: true,
-                    sortable: true
-                },
-                {
-                    data : 'status',
-                    searchable: true,
-                    sortable: true,
-                    render: function (status, type, full, meta) {
-                        if(status){
-                            return '<span class="label label-sm label-success"> Aprovado </span>'
-                        } else {
-                            return '<span class="label label-sm label-warning"> No aprovado </span>';
-                        }
-                    }
-                },
-                { data : 'Observations' },
-                {
-                    width: '15%',
-                    data: 'type',
-                    visible: true,
-                    render: function (type, type, full, meta) {
-                        if(full.type == 1){
-                            return '<span class="label label-sm label-info"> Sucursal </span>'
-                        } else {
-                            return '<span class="label label-sm label-info"> Matriz</span>';
-                        }
-                    }
-                },
-                {
-                    width: '15%',
-                    data: 'deleted',
-                    visible: true,
-                    render: function (deleted, type, full, meta) {
-                        if(!deleted){
-                            return '<span class="label label-sm label-success"> Activo </span>'
-                        } else {
-                            return '<span class="label label-sm label-danger"> Eliminado</span>';
-                        }
-                    }
-                },
-                {
-                    width: '15%',
-                    data: "type",
-                    searchable: true,
-                    sortable: true,
-                    render: function (id, type, full, meta) {
-                        var element = '';
-                        if( full.deleted == 1 ) {
-                            element = '<div class="btn-group"><button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Acciones<i class="fa fa-angle-down"></i></button><ul class="dropdown-menu" role="menu"><li><a class="updateBranchOfficeList"><i class="icon-refresh"></i> Actualizar</a></li><li><a class="restoreBranchOffices" data-idRestore="' + full.id_branch_offices + '"><i class="fa fa-rotate-left"></i> Restaurar</a></li></ul></div>';
-                            $("#form_sample_2 .restoreBranchOffices").attr('data-idRestore', full.id_branch_offices);
-                        }else {
-                            element = '<div class="btn-group"><button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Acciones<i class="fa fa-angle-down"></i></button><ul class="dropdown-menu" role="menu"><li><a class="updateBranchOfficeList"><i class="icon-refresh"></i> Actualizar</a></li><li><a class="deleteBranchOffices" "><i class="icon-trash"></i> Eliminar</a></li></ul></div>';
-                        }
-                        return element;
-                    },
-                    type: "duration"
-                },
-
-            ],
-            "bSortClasses": false,
-            sDom: "lBfrtip",
-            buttons: [
-                {
-                    extend: 'copy',
-                    exportOptions: {
-                        columns: [0,1,2, 3]
-                    }
-                },
-                {
-                    extend: 'excel',
-                    orientation: 'landscape',
-                    pageSize: 'LEGAL',
-                    exportOptions: {
-                        columns: [0, 1, 2, 3]
-                    }
-                },
-                {
-                    extend: 'csv',
-                    orientation: 'landscape',
-                    pageSize: 'LEGAL',
-                    exportOptions: {
-                        columns: [0, 1, 2, 3]
-                    }
-                },
-                {
-                    extend: 'pdf',
-                    pageSize: 'LEGAL',
-                    title: "Listado de sucursales",
-                    exportOptions: {
-                        columns: [0, 1, 2, 3]
-                    },
-                    customize: function (doc) {
-                        doc.content[1].table.widths =
-                            Array(doc.content[1].table.body[0].length + 1).join('*').split('');
-                    }
-                },
-                {
-                    extend: 'print',
-                    orientation: 'landscape',
-                    title: "Listado de sucursales",
-                    message: "Listado de sucursales generales de Caribbean Connection",
-                    pageSize: 'LEGAL',
-                    exportOptions: {
-                        columns: [0, 1, 2, 3]
-                    },
-                    className: 'printDepartment',
-                }
-            ],
-            language: {
-                aria: {
-                    sortAscending: ": activate to sort column ascending",
-                    sortDescending: ": activate to sort column descending"
-                },
-                emptyTable: "No se han encontrado registros",
-                info: "Mostrando del _START_ al _END_ de _TOTAL_ registros",
-                infoEmpty: "No se han encontrado resultados",
-                infoFiltered: "(Filtrado de _MAX_ registros)",
-                lengthMenu: "Número de sucursales &nbsp; _MENU_",
-                search: "Buscar: &nbsp;",
-                zeroRecords: "No se han encontrado resultados",
-                paginate: {
-                    previous:"Anterior",
-                    next: "Siguiente",
-                    last: "Último",
-                    first: "Primero"
-                },
-                select: {
-                    info: false
-                }
-            },
-            lengthMenu: [
-                [2, 5, 15, 20, -1],
-                [2, 5, 15, 20, "Todos"]
-            ],
-
-            pageLength: 5,
-            columnDefs: [
-                { width: "10%", targets: 2 }
-            ],
-            iDisplayLength: 2
-        });
-        table.columns.adjust().draw();
-        table.select.info( false );
-        $('#TableBranchOffices tbody').on( 'click', 'tr', function () {
-            if ( $(this).hasClass('selected') ) {
-                $(this).removeClass('selected');
-            }
-            else {
-                table.$('tr.selected').removeClass('selected');
-                $(this).addClass('selected');
-            }
-        } );
-
-        $("#TableBranchOffices tbody").on('click', '.restoreBranchOffices', function (e) {
-            e.preventDefault();
-            var id = $(this).attr('data-idRestore');
-            var pass = null;
-            var uname = $("#uname").val();
-            checkPasswordAdminBranch(id, uname, pass);
-        });
-
-        $('#TableBranchOffices tbody').on( 'click', '.updateBranchOfficeList', function () {
-            var row = $(this).closest('tr').index('tr');
-            var data = table.row(row-1).data();
-            var inputUpdate = ' <div class="form-actions"><button type="button" class="btn blue updateBranchOffices" onclick="updateBranchOffices();">Actualizar la sucursal</button></div>';
-            var cancelUpdate = '<div class="form-actions"><button type="button" class="btn addBranchOffices">Cancelar</button></div>';
-            $("#form_sample_2 .updateInputBranchOffices").html('').append(inputUpdate);
-            $("#form_sample_2 .cancelBranchOffices").html('').append(cancelUpdate);
-            if(data.deleted == 1) {
-                $("#form_sample_2 .alert-deleted").show();
-                $("#form_sample_2 .addBranchOffices").prop('disabled', 'disabled');
-                $("#form_sample_2 .updateBranchOffices").prop('disabled', 'disabled');
-            } else {
-                $("#form_sample_2 .alert-deleted").hide();
-                $("#form_sample_2 .addBranchOffices").prop('disabled', '');
-                $("#form_sample_2 .updateBranchOffices").prop('disabled', '');
-            }
-            $("#form_sample_2 #id").val(data.id_branch_offices);
-            $("#form_sample_2 #id_observation").val(data.id_observations);
-            $("#form_sample_2 #name").val(data.name);
-            if(data.status == 0){
-                $('#form_sample_2 #status option').eq(2).prop('selected', true);
-            }else {
-                $('#form_sample_2 #status option').eq(1).prop('selected', true);
-            }
-
-            if(data.type == 0){
-                $('#form_sample_2 #type option').eq(1).prop('selected', true);
-            }else {
-                $('#form_sample_2 #type option').eq(2).prop('selected', true);
-            }
-
-
-            $("#form_sample_2 #observation").val(data.Observations);
-            $(".addDepartmentPorlet").css('box-shadow', '0 0 10px rgba(0, 0, 0, 0.58)');
-            setTimeout(function () {
-                $(".addDepartmentPorlet").css('box-shadow', '0 0 0 black');
-            }, 2000);
-        } );
-
-        $('#TableBranchOffices tbody').on( 'dblclick', 'tr', function () {
-            var row = $(this).closest('tr').index('tr');
-            var data = table.row(row-1).data();
-            var inputUpdate = ' <div class="form-actions"><button type="button" class="btn blue updateBranchOffices" onclick="updateBranchOffices();">Actualizar la sucursal</button></div>';
-            var cancelUpdate = '<div class="form-actions"><button type="button" class="btn addBranchOffices">Cancelar</button></div>';
-            $("#form_sample_2 .updateInputBranchOffices").html('').append(inputUpdate);
-            $("#form_sample_2 .cancelBranchOffices").html('').append(cancelUpdate);
-            if(data.deleted == 1) {
-                $("#form_sample_2 .alert-deleted").show();
-                $("#form_sample_2 .addBranchOffices").prop('disabled', 'disabled');
-                $("#form_sample_2 .updateBranchOffices").prop('disabled', 'disabled');
-            } else {
-                $("#form_sample_2 .alert-deleted").hide();
-                $("#form_sample_2 .addBranchOffices").prop('disabled', '');
-                $("#form_sample_2 .updateBranchOffices").prop('disabled', '');
-            }
-            $("#form_sample_2 #id").val(data.id_branch_offices);
-            $("#form_sample_2 #id_observation").val(data.id_observations);
-            $("#form_sample_2 #name").val(data.name);
-            if(data.status == 0){
-                $('#form_sample_2 #status option').eq(2).prop('selected', true);
-            }else {
-                $('#form_sample_2 #status option').eq(1).prop('selected', true);
-            }
-
-            if(data.type == 0){
-                $('#form_sample_2 #type option').eq(1).prop('selected', true);
-            }else {
-                $('#form_sample_2 #type option').eq(2).prop('selected', true);
-            }
-
-
-            $("#form_sample_2 #observation").val(data.Observations);
-            $(".addDepartmentPorlet").css('box-shadow', '0 0 10px rgba(0, 0, 0, 0.58)');
-            setTimeout(function () {
-                $(".addDepartmentPorlet").css('box-shadow', '0 0 0 black');
-            }, 2000);
-        } );
-
-        $("#TableBranchOffices tbody").on('click', '.deleteBranchOffices', function () {
-            var row = $(this).closest('tr').index('tr');
-            var data = table.row(row-1).data();
-            var name = data.name;
-            var id = data.id_branch_offices;
-            bootbox.confirm({
-                title: "Eliminar sucursal",
-                message: "¿Está seguro que desea eliminar la sucursal <i><small>' "+ name +"' </small></i>? ",
-                buttons: {
-                    cancel: {
-                        label: '<i class="fa fa-times"></i> Cancelar'
-                    },
-                    confirm: {
-                        className: "red",
-                        label: '<i class="fa fa-check"></i> Eliminar'
-                    }
-                },
-                callback: function (result) {
-                    if(result) {
-                        trashBranchOffice(id);
-                        clearInputsBranch();
-                    }
-                }
-            });
-        });
-    }
-
-    var initTableDepartments = function () {
-        var token = $("#api-token").val();
-        var deleted = $("#checkDeleted .active").data("value");
-        var table = $('#sample_Departments').DataTable({
-            processing: true,
-            //sProcessing: 'Procesando...',
-            bProcessing: true,
-            bPaginate: true,
-            bLengthChange: true,
-            bInfo: true,
-            bAutoWidth: true,
-            bStateSave: true,
-            sPaginationType: "full_numbers",
-            serverSide: true,
-            bJQueryUI: true,
-            "bDestroy": true,
-            ajax: {
-                "type"   : "GET",
-                "url"    : 'http://serverjwt.dev/api/departments/list',
-                "data"   : {
-                    "token" : token,
-                    "deleted" : deleted
-                },
-            },
-            columns: [
-                {
-                    data : 'name',
-                    searchable: true,
-                    sortable: true
-                },
-                {
-                    data : 'status',
-                    searchable: true,
-                    sortable: true,
-                    render: function (status, type, full, meta) {
-                        if(status){
-                            return '<span class="label label-sm label-success"> Aprovado </span>'
-                        } else {
-                            return '<span class="label label-sm label-warning"> No aprovado </span>';
-                        }
-                    }
-                },
-                { data : 'Observations' },
-                {
-                    data: 'branch_name'
-                },
-                {
-                    data: 'deleted',
-                    visible: true,
-                    render: function (deleted, type, full, meta) {
-                        if(!deleted){
-                            return '<span class="label label-sm label-success"> Activo </span>'
-                        } else {
-                            return '<span class="label label-sm label-danger"> Eliminado</span>';
-                        }
-                    }
-                },
-                {
-                    data: "name",
-                    searchable: true,
-                    sortable: true,
-                    render: function (id, type, full, meta) {
-                        var element = '';
-                        if( full.deleted == 1 ) {
-                            element = '<div class="btn-group"><button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Acciones<i class="fa fa-angle-down"></i></button><ul class="dropdown-menu" role="menu"><li><a class="updateDepartmentList"><i class="icon-refresh"></i> Actualizar</a></li><li><a class="restoreDepartment" data-idRestore="' + full.id_departments + '"><i class="fa fa-rotate-left"></i> Restaurar</a></li></ul></div>';
-                            $("#form_sample_8 .restoreDepartment").attr('data-idRestore', full.id_departments);
-                        }else {
-                            element = '<div class="btn-group"><button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Acciones<i class="fa fa-angle-down"></i></button><ul class="dropdown-menu" role="menu"><li><a class="updateDepartmentList"><i class="icon-refresh"></i> Actualizar</a></li><li><a class="deleteDepartment" "><i class="icon-trash"></i> Eliminar</a></li></ul></div>';
-                        }
-                        return element;
-                    },
-                    type: "duration"
-                }
-
-            ],
-            "bSortClasses": false,
-            sDom: "lBfrtip",
-            buttons: [
-                {
-                    extend: 'copy',
-                    exportOptions: {
-                        columns: [0,1,2]
-                    }
-                },
-                {
-                    extend: 'excel',
-                    orientation: 'landscape',
-                    pageSize: 'LEGAL',
-                    exportOptions: {
-                        columns: [0, 1, 2]
-                    }
-                },
-                {
-                    extend: 'csv',
-                    orientation: 'landscape',
-                    pageSize: 'LEGAL',
-                    exportOptions: {
-                        columns: [0, 1, 2]
-                    }
-                },
-                {
-                    extend: 'pdf',
-                    pageSize: 'LEGAL',
-                    title: "Listado de departamentos",
-                    exportOptions: {
-                        columns: [0, 1, 2]
-                    },
-                    customize: function (doc) {
-                        doc.content[1].table.widths =
-                            Array(doc.content[1].table.body[0].length + 1).join('*').split('');
-                    }
-                },
-                {
-                    extend: 'print',
-                    orientation: 'landscape',
-                    title: "Listado de departamentos",
-                    message: "Listado de departamentos generales de Caribbean Connection",
-                    pageSize: 'LEGAL',
-                    exportOptions: {
-                        columns: [0, 1, 2]
-                    },
-                    className: 'printDepartment',
-                }
-            ],
-            language: {
-                aria: {
-                    sortAscending: ": activate to sort column ascending",
-                    sortDescending: ": activate to sort column descending"
-                },
-                emptyTable: "No se han encontrado registros",
-                info: "Mostrando del _START_ al _END_ de _TOTAL_ registros",
-                infoEmpty: "No se han encontrado resultados",
-                infoFiltered: "(Filtrado de _MAX_ registros)",
-                lengthMenu: "Número de departamentos &nbsp; _MENU_",
-                search: "Buscar: &nbsp;",
-                zeroRecords: "No se han encontrado resultados",
-                paginate: {
-                    previous:"Anterior",
-                    next: "Siguiente",
-                    last: "Último",
-                    first: "Primero"
-                },
-                select: {
-                    info: false
-                }
-            },
-            lengthMenu: [
-                [2, 5, 15, 20, -1],
-                [2, 5, 15, 20, "Todos"]
-            ],
-            pageLength: 5,
-            iDisplayLength: 2,
-        });
-
-        table.select.info( false );
-        $('#sample_Departments tbody').on( 'click', 'tr', function () {
-            if ( $(this).hasClass('selected') ) {
-                $(this).removeClass('selected');
-            }
-            else {
-                table.$('tr.selected').removeClass('selected');
-                $(this).addClass('selected');
-            }
-        } );
-
-        $("#sample_Departments tbody").on('click', '.restoreDepartment', function (e) {
-            e.preventDefault();
-            var id = $(this).attr('data-idRestore');
-            var pass = null;
-            var uname = $("#uname").val();
-            checkPasswordAdmin(id, uname, pass);
-        });
-
-        $('#sample_Departments tbody').on( 'click', '.updateDepartmentList', function () {
-            var row = $(this).closest('tr').index('tr');
-            var data = table.row(row-1).data();
-            var inputUpdate = ' <div class="form-actions"><button type="button" class="btn blue updateDepartment" onclick="updateDepto();">Actualizar el departamento</button></div>';
-            var cancelUpdate = '<div class="form-actions"><button type="button" class="btn addDepartment">Cancelar</button></div>';
-            $("#form_sample_8 .updateInputDepartment").html('').append(inputUpdate);
-            $("#form_sample_8 .cancelDepartment").html('').append(cancelUpdate);
-            if(data.deleted == 1) {
-                $("#form_sample_8 .alert-deleted").show();
-                $("#form_sample_8 .addDepartment").prop('disabled', 'disabled');
-                $("#form_sample_8 .updateDepartment").prop('disabled', 'disabled');
-            } else {
-                $("#form_sample_8 .alert-deleted").hide();
-                $("#form_sample_8 .addDepartment").prop('disabled', '');
-                $("#form_sample_8 .updateDepartment").prop('disabled', '');
-            }
-            $("#form_sample_8 #id").val(data.id_departments);
-            $("#form_sample_8 #id_observation").val(data.id_observations);
-            $("#form_sample_8 #name").val(data.name);
-            if(data.status == 0){
-                $('#form_sample_8 #status option').eq(2).prop('selected', true);
-            }else {
-                $('#form_sample_8 #status option').eq(1).prop('selected', true);
-            }
-            $('#form_sample_8 #branch_id option[value="' + data.id_branch_offices + '"]').prop('selected', true);
-            $("#form_sample_8 #observation").val(data.Observations);
-            $(".addDepartmentPorlet").css('box-shadow', '0 0 10px rgba(0, 0, 0, 0.58)');
-            setTimeout(function () {
-                $(".addDepartmentPorlet").css('box-shadow', '0 0 0 black');
-            }, 2000);
-        } );
-
-        $('#sample_Departments tbody').on( 'dblclick', 'tr', function () {
-            var row = $(this).closest('tr').index('tr');
-            var data = table.row(row-1).data();
-            var inputUpdate = ' <div class="form-actions"><button type="button" class="btn blue updateDepartment" onclick="updateDepto();">Actualizar el departamento</button></div>';
-            var cancelUpdate = '<div class="form-actions"><button type="button" class="btn addDepartment">Cancelar</button></div>';
-            $("#form_sample_8 .updateInputDepartment").html('').append(inputUpdate);
-            $("#form_sample_8 .cancelDepartment").html('').append(cancelUpdate);
-            if(data.deleted == 1) {
-                $("#form_sample_8 .alert-deleted").show();
-                $("#form_sample_8 .addDepartment").prop('disabled', 'disabled');
-                $("#form_sample_8 .updateDepartment").prop('disabled', 'disabled');
-            } else {
-                $("#form_sample_8 .alert-deleted").hide();
-                $("#form_sample_8 .addDepartment").prop('disabled', '');
-                $("#form_sample_8 .updateDepartment").prop('disabled', '');
-            }
-            $("#form_sample_8 #id").val(data.id_departments);
-            $("#form_sample_8 #id_observation").val(data.id_observations);
-            $("#form_sample_8 #name").val(data.name);
-            if(data.status == 0){
-                $('#form_sample_8 #status option').eq(2).prop('selected', true);
-            }else {
-                $('#form_sample_8 #status option').eq(1).prop('selected', true);
-            }
-            $('#form_sample_8 #branch_id option[value="' + data.id_branch_offices + '"]').prop('selected', true);
-            $("#form_sample_8 #observation").val(data.Observations);
-            $(".addDepartmentPorlet").css('box-shadow', '0 0 10px rgba(0, 0, 0, 0.58)');
-            setTimeout(function () {
-                $(".addDepartmentPorlet").css('box-shadow', '0 0 0 black');
-            }, 2000);
-        } );
-
-
-
-        $("#sample_Departments tbody").on('click', '.deleteDepartment', function () {
-            var row = $(this).closest('tr').index('tr');
-            var data = table.row(row-1).data();
-            var name = data.name;
-            var id = data.id_departments;
-            bootbox.confirm({
-                title: "Eliminar departamento",
-                message: "¿Está seguro que desea eliminar el departamento <i><small>' "+ name +"' </small></i>? ",
-                buttons: {
-                    cancel: {
-                        label: '<i class="fa fa-times"></i> Cancelar'
-                    },
-                    confirm: {
-                        className: "red",
-                        label: '<i class="fa fa-check"></i> Eliminar'
-                    }
-                },
-                callback: function (result) {
-                    if(result) {
-                        trashDepartment(id);
-                        clearInputs();
-                    }
-                }
-            });
-        });
-
-    }
 
     var initTableUsers = function () {
         var deletedTYPE = $("#typeTABLE").val();
@@ -911,7 +200,7 @@ var TableDatatablesManaged = function () {
             "bDestroy": true,
             ajax: {
                 "type"   : "GET",
-                "url"    : 'http://serverjwt.dev/api/users/get/table',
+                "url"    : 'http://serviciosescolaresapi.dev/api/users/list',
                 "data"   : {
                     "token" : token,
                     "deleted" : deletedTYPE
@@ -919,36 +208,46 @@ var TableDatatablesManaged = function () {
             },
             columns: [
                 {
-                    data: 'level_name'
+                    data: 'tipo',
+                    render: function (nivel, type, full, meta) {
+                        var tipodealumno = "";
+                        if (nivel == 1) {
+                            tipodealumno = "Administrativo";
+                        } else if (nivel == 2) {
+                            tipodealumno = "Alumno";
+                        } else if (nivel == 3) {
+                            tipodealumno == "Profesor";
+                        } else {
+
+                        }
+                        return tipodealumno;
+                    }
                 },
                 {
-                    data: 'code',
+                    data: 'curp',
                 },
                 {
-                    data : 'name',
+                    data : 'nombre',
                     render: function (name, type, full, meta ) {
-                        return name + ' ' + full.lastname;
+                        return name + ' ' + full.apellido;
                     }
                 },
                 {
-                    data: 'email',
-                    render: function (email, type, full, meta) {
-                        return '<a href="mailto:'+email+'">' + email + '</a>';
+                    data: 'correo',
+                    render: function (correo, type, full, meta) {
+                        return '<a href="mailto:'+correo+'">' + correo + '</a>';
                     }
                 },
                 {
-                    data: 'extra_phones',
-                    render: function (extra_phones, type, full, meta) {
-                        return '<a href="tel:+52'+extra_phones+'">' + extra_phones + '</a>'
+                    data: 'telefono',
+                    render: function (telefono, type, full, meta) {
+                        return '<a href="tel:+52'+telefono+'">' + telefono + '</a>'
                     }
                 },
                 {
-                    data: 'department_name'
-                },
-                {
-                    data : 'status',
-                    render: function (status, type, full, meta) {
-                        if(status){
+                    data : 'estado',
+                    render: function (estado, type, full, meta) {
+                        if(estado){
                             return '<span class="label label-sm label-primary" style="background: #3598dc;"> Activo </span>'
                         } else {
                             return '<span class="label label-sm label-warning"> Inactivo </span>';
@@ -961,11 +260,11 @@ var TableDatatablesManaged = function () {
                     sortable: true,
                     render: function (id, type, full, meta) {
                         var $element = "";
-                        if(full.deleted) {
-                            $element = '<div class="btn-group"><button class="btn btn-xs blue dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Acciones<i class="fa fa-angle-down"></i></button><ul class="dropdown-menu" role="menu"><li><a class="updateUserList"><i class="icon-refresh"></i> Actualizar</a></li><li><a class="restoreUser" data-idRestore="'+full.id_users+'"><i class="icon-trash"></i> Restaurar</a></li></ul></div>';
-                            $("#form_sample_user .restoreUser").attr('data-idRestore', full.id_users);
+                        if(!full.estado) {
+                            $element = '<div class="btn-group"><button class="btn btn-xs blue dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Acciones<i class="fa fa-angle-down"></i></button><ul class="dropdown-menu" role="menu"><li><a class="updateUserList"><i class="icon-refresh"></i> Actualizar</a></li><li><a class="restoreUser" data-idRestore="'+full.idUsuarios+'"><i class="icon-trash"></i> Restaurar</a></li></ul></div>';
+                            $("#form_sample_user .restoreUser").attr('data-idRestore', full.idUsuarios);
                         } else {
-                            var username = full.username.toString().toLowerCase();
+                            var username = full.usuario.toString().toLowerCase();
                             username = username.replace(/á/gi,"a");
                             username = username.replace(/é/gi,"e");
                             username = username.replace(/í/gi,"i");
@@ -1008,7 +307,7 @@ var TableDatatablesManaged = function () {
                     extend: 'pdf',
                     orientation: 'landscape',
                     title: "Listado de usuarios",
-                    message: "Listado de usuarios de Caribbean Connection",
+                    message: "Listado de usuarios",
                     pageSize: 'LEGAL',
                     exportOptions: {
                         columns: [0, 1, 2, 3, 4, 5]
@@ -1085,7 +384,7 @@ var TableDatatablesManaged = function () {
             pageLength: 5,
             iDisplayLength: 2,
             initComplete: function(settings, json) {
-                loadBADGES();
+                //loadBADGES();
             },
         });
 
@@ -1117,41 +416,49 @@ var TableDatatablesManaged = function () {
                         $("#form_sample_user .addUser").prop('disabled', '');
                         $("#form_sample_user .updateDepartment").prop('disabled', '');
                     }
-                    $("#form_sample_user #code").val(data.code);
-                    $("#form_sample_user #mask_phone").val(data.extra_phones);
-                    $("#form_sample_user #name").val(data.name);
-                    $("#form_sample_user #email").val(data.email);
-                    $("#form_sample_user #lastname").val(data.lastname);
-                    $("#form_sample_user #address").val(data.address)
-                    $("#form_sample_user #identificator").val(data.id_users);
-                    $("#form_sample_user #age").val(data.age);
+                    $("#form_sample_user #code").val(data.curp);
+                    $("#form_sample_user #mask_phone").val(data.telefono);
+                    $("#form_sample_user #name").val(data.nombre);
+                    $("#form_sample_user #email").val(data.correo);
+                    $("#form_sample_user #lastname").val(data.apellido);
+                    $("#form_sample_user #address").val(data.direccion)
+                    $("#form_sample_user #identificator").val(data.idUsuarios);
+                    $("#form_sample_user #age").val(data.edad);
+                    $("#form_sample_user #idInformacion").val(data.idInformacion);
 
-                    if(data.status == 0){
-                        $('#form_sample_user #status option').eq(2).prop('selected', true);
+                    if(data.estado == 0){
+                        $('#form_sample_user #estado option').eq(2).prop('selected', true);
                     }else {
-                        $('#form_sample_user #status option').eq(1).prop('selected', true);
+                        $('#form_sample_user #estado option').eq(1).prop('selected', true);
                     }
 
-                    if(data.level_name == "Usuario"){
+                    if(data.tipo != 1){
                         $('#form_sample_user #type option').eq(1).prop('selected', true);
                     }else {
                         $('#form_sample_user #type option').eq(2).prop('selected', true);
                     }
 
-                    if(data.gender == 1){
+                    if(data.genero == 1){
                         $('#form_sample_user #gender option').eq(1).prop('selected', true);
                     }else {
                         $('#form_sample_user #gender option').eq(2).prop('selected', true);
                     }
 
-                    var id_branch = getBranchIDfromDepartment(data.id_departments, data);
-                    $('#form_sample_user #branch_id option[value=' + id_branch + ']').prop('selected', true);
+                    $('#form_sample_user #branch_id option[value=' + idUsuarios + ']').prop('selected', true);
+
+                    //$('#form_sample_user #branch_id').children('option[value="1"]').prop('selected', true);
+
+                    //$('#form_sample_user #branch_id option[value="' + id_branch + '"]').prop('selected', true);
+
+
                     $('#form_sample_user #branch_id option[value="' + data.id_branch_offices + '"]').prop('selected', true);
                     $("#form_sample_user #observation").val(data.Observations);
                     $(".addDepartmentPorlet").css('box-shadow', '0 0 10px rgba(0, 0, 0, 0.58)');
                 } catch (Exception) {
 
                 }
+
+
             } else {
                 clearInputsUsers();
             }
@@ -1173,35 +480,35 @@ var TableDatatablesManaged = function () {
                         $("#form_sample_user .addUser").prop('disabled', '');
                         $("#form_sample_user .updateDepartment").prop('disabled', '');
                     }
-                    $("#form_sample_user #code").val(data.code);
-                    $("#form_sample_user #mask_phone").val(data.extra_phones);
-                    $("#form_sample_user #name").val(data.name);
-                    $("#form_sample_user #email").val(data.email);
-                    $("#form_sample_user #lastname").val(data.lastname);
-                    $("#form_sample_user #address").val(data.address)
-                    $("#form_sample_user #identificator").val(data.id_users);
-                    $("#form_sample_user #age").val(data.age);
+                    $("#form_sample_user #code").val(data.curp);
+                    $("#form_sample_user #mask_phone").val(data.telefono);
+                    $("#form_sample_user #name").val(data.nombre);
+                    $("#form_sample_user #email").val(data.correo);
+                    $("#form_sample_user #lastname").val(data.apellido);
+                    $("#form_sample_user #address").val(data.direccion)
+                    $("#form_sample_user #identificator").val(data.idUsuarios);
+                    $("#form_sample_user #age").val(data.edad);
+                    $("#form_sample_user #idInformacion").val(data.idInformacion);
 
-                    if(data.status == 0){
-                        $('#form_sample_user #status option').eq(2).prop('selected', true);
+                    if(data.estado == 0){
+                        $('#form_sample_user #estado option').eq(2).prop('selected', true);
                     }else {
-                        $('#form_sample_user #status option').eq(1).prop('selected', true);
+                        $('#form_sample_user #estado option').eq(1).prop('selected', true);
                     }
 
-                    if(data.level_name == "Usuario"){
+                    if(data.tipo != 1){
                         $('#form_sample_user #type option').eq(1).prop('selected', true);
                     }else {
                         $('#form_sample_user #type option').eq(2).prop('selected', true);
                     }
 
-                    if(data.gender == 1){
+                    if(data.genero == 1){
                         $('#form_sample_user #gender option').eq(1).prop('selected', true);
                     }else {
                         $('#form_sample_user #gender option').eq(2).prop('selected', true);
                     }
 
-                    var id_branch = getBranchIDfromDepartment(data.id_departments, data);
-                    $('#form_sample_user #branch_id option[value=' + id_branch + ']').prop('selected', true);
+                    $('#form_sample_user #branch_id option[value=' + idUsuarios + ']').prop('selected', true);
 
                     //$('#form_sample_user #branch_id').children('option[value="1"]').prop('selected', true);
 
@@ -1229,14 +536,9 @@ var TableDatatablesManaged = function () {
             if (!jQuery().dataTable) {
                 return;
             }
-            initTable1();
-            initTable1_2();
-            initTableBranchOffices();
-            initTableDepartments();
             initTableUsers();
         },
         departments: function () {
-            initTableDepartments();
         },
         branch_offices: function () {
             initTableBranchOffices();
@@ -1255,8 +557,8 @@ if (App.isAngularJsApp() === false) {
 
 function getBranchIDfromDepartment(id, dataa) {
     $.ajax({
-        method: "POST",
-        url: "/users/department/get/branch",
+        method: "GET",
+        url: "/users/get/id",
         data: { 'id': id }
     }).done(function (data) {
         $('#form_sample_user #branch_id option[value=' + data + ']').prop('selected', true);

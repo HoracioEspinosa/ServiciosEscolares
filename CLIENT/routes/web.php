@@ -43,6 +43,13 @@ Route::resource('/horario/alumnos', 'Modules\Horarios\HorarioAlumnoController');
 Route::resource('/horario/escolar', 'Modules\Horarios\HorarioAlumnoController');
 
 
-Route::post('/carreras/create', 'Modules\Carreras\CarrerasController@create');
+Route::post('/carreras/create', 'Modules\Carreras\CarrerasControl   ler@create');
 Route::delete('/carreras/delete', 'Modules\Carreras\CarrerasController@delete');
 Route::resource('/carreras', 'Modules\Carreras\CarrerasController');
+
+Route::get('/users/profile/{username}', 'Modules\Users\ModuleUsersController@profile');
+Route::get('/users/get/id', 'Modules\Users\ModuleUsersController@getIDBranch');
+Route::put('/users/update', 'Modules\Users\ModuleUsersController@updateX');
+Route::delete('/users/delete', 'Modules\Users\ModuleUsersController@delete');
+Route::put('/users/restore', 'Modules\Users\ModuleUsersController@restore');
+Route::resource('/users', 'Modules\Users\ModuleUsersController');

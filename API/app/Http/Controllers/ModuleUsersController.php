@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Api\AuthController;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -52,22 +53,11 @@ class ModuleUsersController extends Controller
 
         if ($username == null) {
             $user = AuthController::getAuthenticatedUserWithParameter($request);
+            dd($user);
             $id = $user["id_users"];
-            $information = DB::table('users')
-                ->join('user_information', 'users.user_information_iduser_information', '=', 'user_information.iduser_information')
-                ->join('departments', 'users.Departments_id_departments','=','departments.id_departments')
-                ->join('users_levels', 'users.Users_levels_idUsers_levels', '=', 'users_levels.idUsers_levels')
-                ->select("users.username", "users.deleted", "users.id_users", "users.uname AS name", "users.lastname", "users.status AS status", "users.email", "user_information.code", "user_information.photo", "user_information.extra_phones", "user_information.address", "user_information.age", "user_information.gender", "departments.id_departments", "departments.name AS department_name", "users_levels.name AS level_name")
-                ->where('users.id_users', '=', $id)
-                ->get();
+            $information = User::all();
         } else {
-            $information = DB::table('users')
-                ->join('user_information', 'users.user_information_iduser_information', '=', 'user_information.iduser_information')
-                ->join('departments', 'users.Departments_id_departments','=','departments.id_departments')
-                ->join('users_levels', 'users.Users_levels_idUsers_levels', '=', 'users_levels.idUsers_levels')
-                ->select("users.username", "users.deleted", "users.id_users", "users.uname AS name", "users.lastname", "users.status AS status", "users.email", "user_information.code", "user_information.photo", "user_information.extra_phones", "user_information.address", "user_information.age", "user_information.gender", "departments.id_departments", "departments.name AS department_name", "users_levels.name AS level_name")
-                ->where('users.username', '=', $username)
-                ->get();
+            $information = User::all();
         }
         $information = json_encode($information[0], true);
         return json_decode($information, JSON_PRETTY_PRINT);
@@ -78,33 +68,13 @@ class ModuleUsersController extends Controller
      * @return mixed
      */
     function get(Request $request){
-        $user = AuthController::getAuthenticatedUserWithParameter($request);
+        //$user = AuthController::getAuthenticatedUserWithParameter($request);
         //$id = $user["id_users"];
-        $id = null;
-        $type = $request->input('deleted');
-        $query = DB::table('users')
-            ->join('user_information', 'users.user_information_iduser_information', '=', 'user_information.iduser_information')
-            ->join('departments', 'users.Departments_id_departments','=','departments.id_departments')
-            ->join('users_levels', 'users.Users_levels_idUsers_levels', '=', 'users_levels.idUsers_levels')
-            ->select("users.username", "users.deleted", "users.id_users", "users.uname AS name", "users.lastname", "users.status AS status", "users.email", "user_information.code", "user_information.photo", "user_information.extra_phones", "user_information.address", "user_information.age", "user_information.gender", "departments.id_departments", "departments.name AS department_name", "users_levels.name AS level_name")
-            ->where('id_users', '!=', $id)
-            ->get();
-        if($type == 1){
-            $users = $query;
-        } else if($type == 2 ){
-            $users = $query->where('level_name', 'Administrador');
-        } else if ($type == 3){
-            $users = $query->where('deleted', 1);
-        } else if( $type == 4 ) {
-            $users = $query->where('deleted', 0);
-        } else if ( $type == 5 ) {
-            $users = $query->where('status', 1);
-        } else if( $type == 6 ){
-            $users = $query->where('status', 0);
-        } else {
-            $users = $query;
-        }
-        return Datatables::of($users)->make(true);
+        //$id = null;
+        //$type = $request->input('deleted');
+        $query = User::all();
+
+        return Datatables::of($query)->make(true);
     }
 
     /**
@@ -134,18 +104,8 @@ class ModuleUsersController extends Controller
      * @return mixed
      */
     public function getBranchID(Request $request) {
-        $id = DB::table('departments')->where('id_departments', $request->input('id'))->select('departments.Branch_offices_id_branch_offices')->get();
-        return $id[0]->Branch_offices_id_branch_offices;
-    }
-
-    /**
-     * @param Request $request
-     * @return mixed
-     */
-    public function getDepartmentsByBranch(Request $request) {
-        $id = DB::table('departments')->where('Branch_offices_id_branch_offices', $request->input('id'))->get();
-        return $id;
-
+        $user = User::all()->where('idUsuarios', $request->input('id'));
+        return $user;
     }
 
     /**
@@ -181,36 +141,32 @@ class ModuleUsersController extends Controller
      */
     function update(Request $request) {
         $id             =   $request->input('id');
-        $name           =   $request->input('name');
-        $lastname       =   $request->input('lastname');
-        $email          =   $request->input('email');
-        $age            =   $request->input('age');
-        $photo          =   env('SERVER_API').'/public/img/users/default.jpg';
-        $phone          =   $request->input('phone');
-        $gender         =   $request->input('gender');
-        $type           =   $request->input('type');
-        $iDdepartment   =   $request->input('department_id');
-        $status         =   $request->input('status');
-        $address        =   $request->input('address');
+        $nombre           =   $request->input('nombre');
+        $apellido       =   $request->input('apellido');
+        $correo          =   $request->input('correo');
+        $edad            =   $request->input('edad');
+        $foto          =   env('SERVER_API').'/public/img/users/default.jpg';
+        $telefono          =   $request->input('telefono');
+        $genero         =   $request->input('genero');
+        $tipo           =   $request->input('tipo');
+        $estado           =   $request->input('estado');
+        $idInformacion         =   $request->input('idInformacion');
+        $direccion        =   $request->input('direccion');
 
-        $data = array($name, $lastname, $email, $age, $photo, $phone, $gender, $type, $iDdepartment, $status, $address, $id);
+        $data = array($nombre, $apellido, $correo, $edad, $foto, $telefono, $genero, $tipo, $idInformacion, $direccion, $id, $estado);
         $user = DB::select('CALL UPDATE_FULL_USER_DATA(?,?,?,?,?,?,?,?,?,?,?,?)', $data);
         $user = json_encode($user, true);
         return json_decode($user, JSON_PRETTY_PRINT);
     }
 
     function delete(Request $request) {
-        $id = $request->input('id');
-        $data = array($id);
-        $user = DB::select('CALL DELETE_USER(?)', $data);
+        $user = DB::table('usuarios')->where('idUsuarios', $request->input('id'))->update(['estado' => 0]);
         $user = json_encode($user, true);
         return json_decode($user, JSON_PRETTY_PRINT);
     }
 
     function restore(Request $request) {
-        $id = $request->input('id');
-        $data = array($id);
-        $user = DB::select('CALL RESTORE_USER(?)', $data);
+        $user = DB::table('usuarios')->where('idUsuarios', $request->input('id'))->update(['estado' => 1]);
         $user = json_encode($user, true);
         return json_decode($user, JSON_PRETTY_PRINT);
     }

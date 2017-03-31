@@ -22,6 +22,9 @@ Route::post('/users/create', 'ModuleUsersController@create')->middleware('jwt.au
 Route::put('/users/update', 'ModuleUsersController@update');
 Route::delete('/users/delete', 'ModuleUsersController@delete');
 Route::put('/users/restore', 'ModuleUsersController@restore');
+Route::get('/users/list', 'ModuleUsersController@get');
+Route::get('/users/get/id', 'ModuleUsersController@getBranchID');
+Route::get('/users/profile/username', 'ModuleUsersController@getAllUserInformationByUsername');
 
 Route::post('/login', 'ModuleUsersController@login')->middleware('jwt.auth');
 

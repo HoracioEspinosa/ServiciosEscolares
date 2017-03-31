@@ -11,6 +11,15 @@ use League\Flysystem\Exception;
 
 class CarrerasController extends Controller
 {
+
+    /**
+     * CarrerasController constructor.
+     */
+    public function __construct()
+    {
+        $this->middleware('jwt.auth');
+    }
+
     public function getInformation()
     {
 
