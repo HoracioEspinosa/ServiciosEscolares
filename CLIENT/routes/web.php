@@ -32,17 +32,30 @@ Route::post('/setToken', 'Auth\LoginController@setToken');
 
 
 
+
 /**
  * Calificaciones
  */
 
 Route::get('/calificaciones','Modules\Grades\ModuleGradesController@index');
 
+/**
+ * Modulo periodo
+ */
+
+Route::get('/periodos', 'Modules\Periodos\PeriodosController@index');
+Route::get('/periodos/information', 'Modules\Periodos\PeriodosController@getInformation');
+Route::post('/periodos/update', 'Modules\Periodos\PeriodosController@update');
+Route::post('/periodos/create', 'Modules\Periodos\PeriodosController@create');
+
+
+
 /*Route::get('/horarios', function(){
 	return view('horario');
 });*/
 
 Route::resource('/horarios', 'Modules\Horarios\HorariosController');
+
 Route::resource('/horario/disponible', 'Modules\Horarios\TiempoDisponibleController');
 Route::resource('/horario/docente', 'Modules\Horarios\HorarioDocenteController');
 

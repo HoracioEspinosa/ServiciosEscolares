@@ -25,6 +25,7 @@ Contact: admin@cloudftog.com.mx
     {!! HTML::style('/public/css/app.min.css') !!}
     {!! HTML::style('/public/global/plugins/datatables/datatables.min.css') !!}
     {!! HTML::style('/public/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css') !!}
+    {!! HTML::style('/public/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css') !!}
     {!! HTML::style('/public/global/plugins/bootstrap-select/css/bootstrap-select.min.css') !!}
     {!! HTML::style('/public/global/css/components-md.min.css') !!}
     {!! HTML::style('/public/global/css/plugins-md.min.css') !!}
@@ -36,7 +37,9 @@ Contact: admin@cloudftog.com.mx
         .page-content{ height: 100%;}
     </style>
 <!-- END THEME LAYOUT STYLES -->
-    <link rel="shortcut icon" href="/favicon.ico" /> </head>
+    <link rel="shortcut icon" href="/favicon.ico" /> 
+</head>
+
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 <!-- END HEAD -->
@@ -225,6 +228,7 @@ Contact: admin@cloudftog.com.mx
         <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
         <div class="page-sidebar navbar-collapse collapse">
             <ul class="page-sidebar-menu  page-header-fixed page-sidebar-menu-hover-submenu page-sidebar-menu-closed" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+                
                 <li class="nav-item active">
                     <a href="/" class="nav-link nav-toggle">
                         <i class="icon-home"></i>
@@ -232,6 +236,7 @@ Contact: admin@cloudftog.com.mx
                         <span class="selected"></span>
                     </a>
                 </li>
+<
                 <li class="nav-item active">
                     <a href="/calificaciones" class="nav-link nav-toggle">
                         <i class="fa fa-book"></i>
@@ -259,6 +264,28 @@ Contact: admin@cloudftog.com.mx
                         <span class="title">Usuarios</span>
                         <span class="selected"></span>
                     </a>
+
+                <li class="nav-item">
+                  <a href="/periodos" class="nav-link nav-toggle">
+                  <i class="icon-calendar"></i> 
+                  <span class="title">Periodos</span>          
+                  <span class="arrow "></span>
+                  </a>
+                  <ul class="sub-menu">
+                    <li >
+                      <a href="/periodos/create">
+                      <span class="badge badge-roundless badge-important">Nuevo</span>Crear</a>
+                    </li>
+                    <li >
+                      <a href="/periodos/update">
+                      Actualizar</a>
+                    </li>
+                    <li >
+                      <a href="/periodos/destroy">
+                      Eliminar</a>
+                    </li>
+                  </ul>
+
                 </li>
             </ul>
             <!-- END SIDEBAR MENU -->

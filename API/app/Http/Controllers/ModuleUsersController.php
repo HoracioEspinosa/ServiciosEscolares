@@ -14,6 +14,7 @@ use Tymon\JWTAuth\Exceptions\JWTException;
 class ModuleUsersController extends Controller
 {
 
+
     /**
      * @return mixed
      */

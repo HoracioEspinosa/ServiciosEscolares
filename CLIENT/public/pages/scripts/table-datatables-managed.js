@@ -1392,11 +1392,82 @@ var TableDatatablesManaged = function () {
 
     }
 
+    var initTablePeriods = function () {
+        var table = $('#tabla_periodos');
+        table.dataTable({
+            "language": {
+                "aria": {
+                    "sortAscending": ": activate to sort column ascending",
+                    "sortDescending": ": activate to sort column descending"
+                },
+                "emptyTable": "No se han encontrado registros",
+                "info": "Mostrando del _START_ al _END_ de _TOTAL_ registros",
+                "infoEmpty": "No se han encontrado resultados",
+                "infoFiltered": "(Filtrado de _MAX_ registros)",
+                "lengthMenu": "Número de periodos &nbsp; _MENU_",
+                "search": "Buscar: &nbsp;",
+                "zeroRecords": "No se han encontrado resultados",
+                "paginate": {
+                    "previous":"Anterior",
+                    "next": "Siguiente",
+                    "last": "Último",
+                    "first": "Primero"
+                }
+            },
+            "bStateSave": true,
+            "lengthMenu": [
+                [5, 15, 20, -1],
+                [5, 15, 20, "Todos"]
+            ],
+            "pageLength": 5,
+            "pagingType": "bootstrap_full_number",
+            "columnDefs": [
+                {
+                    'orderable': false,
+                    'targets': [0]
+                },
+                {
+                    "searchable": false,
+                    "targets": [0]
+                },
+                {
+                    "className": "dt-right",
+                }
+            ],
+            "order": [
+                [1, "asc"]
+            ]
+        });
+
+        table.find('.group-checkable').change(function () {
+            var set = jQuery(this).attr("data-set");
+            var checked = jQuery(this).is(":checked");
+            jQuery(set).each(function () {
+                if (checked) {
+                    $(this).prop("checked", true);
+                    $(this).parents('tr').addClass("active");
+                } else {
+                    $(this).prop("checked", false);
+                    $(this).parents('tr').removeClass("active");
+                }
+            });
+        });
+
+        table.on('change', 'tbody tr .checkboxes', function () {
+            $(this).parents('tr').toggleClass("active");
+        });
+    }
+
     return {
         init: function () {
             if (!jQuery().dataTable) {
                 return;
             }
+            initTable1();
+            initTable1_2();
+            initTablePeriods();
+            initTableBranchOffices();
+            initTableDepartments();
             initTableUsers();
         },
         departments: function () {
