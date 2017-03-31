@@ -243,24 +243,25 @@
                         <span class="selected"></span>
                     </a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a href="/calificaciones" class="nav-link nav-toggle">
                         <i class="fa fa-book"></i>
                         <span class="title">Calificaciones</span>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item ">
                     <a href="/profesores" class="nav-link nav-toggle">
                         <i class="icon-briefcase"></i>
                         <span class="title">Profesores</span>
                         <span class="arrow open"></span>
+
                     </a>
                     <ul class="sub-menu">
                         <li class="nav-item start">
                             <a href="/profesores/create" class="nav-link ">
                                 <i class="fa fa-plus-circle"></i>
                                 <span class="title">Agregar</span>
-                                <span class="selected"></span>
+
                             </a>
                         </li>
                     </ul>
@@ -269,7 +270,7 @@
                     <a href="/users" class="nav-link nav-toggle">
                         <i class="icon-users"></i>
                         <span class="title">Usuarios</span>
-                        <span class="selected"></span>
+
                     </a>
                 </li>
 
@@ -304,7 +305,7 @@
                     </ul>
                 </li>
 
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a href="/grupos" class="nav-link nav-toggle">
                         <i class="fa fa-users"></i>
                         <span class="title">Grupos</span>
@@ -316,13 +317,20 @@
                                 <span class="title">Ver</span>
                             </a>
                         </li>
-                        <li class="nav-item start">
+                        <li class="nav-item">
                             <a href="/grupos/create" class="nav-link ">
                                 <i class="fa fa-plus-circle"></i>
                                 <span class="title">Crear</span>
                             </a>
                         </li>
                     </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="/carreras" class="nav-link nav-toggle">
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        <span class="title">Carreras</span>
+                    </a>
                 </li>
             </ul>
             <!-- END SIDEBAR MENU -->
