@@ -1,14 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Modules\Groups;
 
-use App\Http\Controllers\Api\AuthController;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
-use Yajra\Datatables\Facades\Datatables;
-use JWTAuth;
-use Tymon\JWTAuth\Exceptions\JWTException;
+use Yajra\Datatables\Datatables;
 
 class GroupsController extends Controller
 {
@@ -42,7 +39,28 @@ class GroupsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nombre = $request->input('nombre');
+        $cantidad = $request->input('cantidadAlumnos');
+        $horario = $request->input('Horarios_idHorarios');
+        $carrera = $request->input('Carreras_idCarreras');
+        $data = array($nombre, $cantidad, $horario, $carrera);
+        $grupo = json_encode($data, true);
+        //dd(json_decode($user, JSON_PRETTY_PRINT));
+        try{
+            $grupo = DB::select("CALL registrarGrupo(?,?,?,?)", $data);
+            $grupo = json_encode($grupo, true);
+            return json_decode($grupo, JSON_PRETTY_PRINT);
+        }catch (Exception $ex){
+            return $ex;
+        }
+    }
+    public function getHorarios(){
+        $groups = DB::table('horario_alumno')->get();
+        return $groups;
+    }
+    public function getCarreras(){
+        $carreras = DB::table('Carreras')->get();
+        return $carreras;
     }
 
     /**
@@ -65,7 +83,7 @@ class GroupsController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**

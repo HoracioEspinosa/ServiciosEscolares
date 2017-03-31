@@ -244,14 +244,20 @@
                 </li>
                 <li class="nav-item active">
                     <a href="/grupos" class="nav-link nav-toggle">
-                        <i class="icon-briefcase"></i>
+                        <i class="fa fa-users"></i>
                         <span class="title">Grupos</span>
                     </a>
                     <ul class="sub-menu">
                         <li class="nav-item start">
                             <a href="/grupos" class="nav-link ">
-                                <i class="fa fa-plus-circle"></i>
+                                <i class="fa fa-eye"></i>
                                 <span class="title">Ver</span>
+                            </a>
+                        </li>
+                        <li class="nav-item start">
+                            <a href="/grupos/create" class="nav-link ">
+                                <i class="fa fa-plus-circle"></i>
+                                <span class="title">Crear</span>
                             </a>
                         </li>
                     </ul>

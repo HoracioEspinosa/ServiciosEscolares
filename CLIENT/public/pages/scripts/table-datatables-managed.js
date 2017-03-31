@@ -774,6 +774,157 @@ var TableDatatablesManaged = function () {
             }
         } );
     }
+    var initTableStudentsGroup = function ($id) {
+        var token = $("#api-token").val();
+        var deleted = $("#checkDeleted .active").data("value");
+        var table = $('#initTableProfesores').DataTable({
+            processing: true,
+            //sProcessing: 'Procesando...',
+            bProcessing: true,
+            bPaginate: true,
+            bLengthChange: true,
+            bInfo: true,
+            bAutoWidth: false ,
+            //bStateSave: true,
+            sPaginationType: "full_numbers",
+            serverSide: true,
+            bJQueryUI: true,
+            "bDestroy": true,
+            ajax: {
+                "type"   : "GET",
+                "url"    : 'http://serviciosescapi.dev/api/groups/' + $id,
+                "data"   : {
+                    "token" : token,
+                    "deleted" : deleted
+                },
+            },
+            columns: [
+                {
+                    data : 'nombre',
+                    searchable: true,
+                    sortable: true,
+                },
+                {
+                    data : 'apellido',
+                    searchable: true,
+                    sortable: true,
+                },
+
+                {
+                    data: 'matricula',
+                    visible: true,
+
+                },
+
+                {
+                    data: 'estado',
+                    visible: true,
+                },
+
+                {
+                    data: 'Acciones',
+                    render: function (type, type, full, meta) {
+                        var id = full.idAlumnos;
+                        return '<div class="actions">' + '<a class="mybutton btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Ver" data-llave='+id+' href="#view" data-toggle="modal"><i class="fa fa-users"></i></a><a  class="mybutton btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Modificar" data-llave='+id+' href="#modify" data-toggle="modal"><i class="fa fa-trash-o"></i></a></div>';
+                    }
+                }
+
+            ],
+            "bSortClasses": false,
+            sDom: "lBfrtip",
+            buttons: [
+                {
+                    extend: 'copy',
+                    exportOptions: {
+                        columns: [0,1,2,3]
+                    }
+                },
+                {
+                    extend: 'excel',
+                    orientation: 'landscape',
+                    pageSize: 'LEGAL',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3]
+                    }
+                },
+                {
+                    extend: 'csv',
+                    orientation: 'landscape',
+                    pageSize: 'LEGAL',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3]
+                    }
+                },
+                {
+                    extend: 'pdf',
+                    pageSize: 'LEGAL',
+                    title: "Número de filas",
+                    exportOptions: {
+                        columns: [0, 1, 2, 3]
+                    },
+                    customize: function (doc) {
+                        doc.content[1].table.widths =
+                            Array(doc.content[1].table.body[0].length + 1).join('*').split('');
+                    }
+                },
+                {
+                    extend: 'print',
+                    orientation: 'landscape',
+                    title: "Listado de Alumnos",
+                    message: "Listado de alumnos.",
+                    pageSize: 'LEGAL',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3]
+                    },
+                    className: 'printDepartment',
+                }
+            ],
+            language: {
+                aria: {
+                    sortAscending: ": activate to sort column ascending",
+                    sortDescending: ": activate to sort column descending"
+                },
+                emptyTable: "No se han encontrado registros",
+                info: "Mostrando del _START_ al _END_ de _TOTAL_ registros",
+                infoEmpty: "No se han encontrado resultados",
+                infoFiltered: "(Filtrado de _MAX_ registros)",
+                lengthMenu: "Número de sucursales &nbsp; _MENU_",
+                search: "Buscar: &nbsp;",
+                zeroRecords: "No se han encontrado resultados",
+                paginate: {
+                    previous:"Anterior",
+                    next: "Siguiente",
+                    last: "Último",
+                    first: "Primero"
+                },
+                select: {
+                    info: false
+                }
+            },
+            lengthMenu: [
+                [2, 5, 15, 20, -1],
+                [2, 5, 15, 20, "Todos"]
+            ],
+
+            pageLength: 5,
+            columnDefs: [
+                { width: "10%", targets: 2 }
+            ],
+            iDisplayLength: 2
+        });
+        table.columns.adjust().draw();
+        table.select.info( false );
+        $('#initTableProfesores tbody').on( 'click', 'tr', function () {
+            if ( $(this).hasClass('selected') ) {
+                $(this).removeClass('selected');
+            }
+            else {
+                table.$('tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+            }
+        } );
+    }
+
 
     var initTableDepartments = function () {
         var token = $("#api-token").val();
@@ -1396,6 +1547,9 @@ var TableDatatablesManaged = function () {
         },
         profesores:function(){
             initTableProfesores();
+        },
+        studentsGrupos:function($id){
+            initTableStudentsGroup($id);
         }
     };
 }();
