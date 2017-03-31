@@ -27,7 +27,7 @@ class HorariosController extends Controller
 
 
     }
-    public function disponible($id)
+    public function disponible(Request $request, $id)
     {
         $this->setUserHeader();
         $users=ModuleUsersController::getAllUsersInformation();
@@ -38,10 +38,10 @@ class HorariosController extends Controller
         //$profesores=$this->getProfesores();
 
         $result=$this->result;
-        return view('modules.horarios.TiempoDisponible', compact('result','users','informacion','id'));//,'profesores'));
+        return view('modules.horarios.TiempoDisponible', compact('result','users','informacion'));//,'profesores'));
     }
 
-    public function getInformationByIdProfesor($idProfesor) {
+    public function getInformationByIdProfesor($id) {
         if (cookie::get('token') == "" || cookie::get('token') == null){
             return redirect('/login');
         }
@@ -49,15 +49,15 @@ class HorariosController extends Controller
             try{
                 try{
                     $client = new GuzzleHttp\Client( ['base_uri' => env('SERVER_API')]  );
-                    $headers = [
-                        'Content-Type' => 'application/json',
-                        'Authorization' => 'Bearer '. cookie::get('token'),
-                    ];
-                    $result = $client->get( 'api/horarios/get', [ 'headers' => $headers ] );
-                    $result = $client->getBody()->getContents();
-                    $result = json_decode($result, JSON_PRETTY_PRINT);
+                    $my_request = $client->request('POST', 'api/horarios/getprofesor', [
+                        'form_params' => [
+                            'idProfesor' => $id,
+                        ],
+                    ]);
+                    $informacion = $my_request->getBody()->getContents();
+                    $informacion = json_decode($informacion, JSON_PRETTY_PRINT);
                     //dd($result);
-                    return $result;
+                    return $informacion;
                 }catch (ClientException $exception){
                     return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
                 }

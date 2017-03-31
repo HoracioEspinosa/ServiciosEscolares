@@ -30,7 +30,7 @@ Route::post('/password/email', 'Modules\ModulesController@sendMail');
 Route::get('/logout', 'Auth\LoginController@logout');
 Route::post('/setToken', 'Auth\LoginController@setToken');
 
-<<<<<<< HEAD
+
 /*Route::get('/horarios', function(){
 	return view('horario');
 });*/
@@ -48,8 +48,8 @@ Route::resource('/horario/escolar', 'Modules\Horarios\HorarioAlumnoController');
 Route::post('/carreras/create', 'Modules\Carreras\CarrerasController@create');
 Route::delete('/carreras/delete', 'Modules\Carreras\CarrerasController@delete');
 Route::resource('/carreras', 'Modules\Carreras\CarrerasController');
-=======
+
 Route::resource('/profesores', 'Modules\Profesors\ProfesorsController');
 Route::post('/profesores/create', 'Modules\Profesors\ProfesorsController@createProfesor');
 Route::post('/profesores/update', 'Modules\Profesors\ProfesorsController@updateProfesor');
->>>>>>> origin/profesores
+

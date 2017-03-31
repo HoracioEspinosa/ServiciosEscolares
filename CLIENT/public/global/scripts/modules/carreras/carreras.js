@@ -21,3 +21,11 @@ $(document).ready(function () {
         });
     });
 });
+
+$(function () {
+    $('input[type="button"]').click(function (e) {
+        var row=$(this).closest('tr');
+        row.remove()
+
+    })
+})

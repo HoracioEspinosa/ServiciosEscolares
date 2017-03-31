@@ -49,15 +49,15 @@
                     <tbody style="background: #F9F9F9;">
                     <tr>
                         <th> cedula: </th>
-                        <td>0198766373</td>
+                        <td>{{$informacion['curp']}}</td>
                     </tr>
                     <tr>
                         <th>Apellidos: </th>
-                        <td>Perez R</td>
+                        <td>{{$informacion['apellido']}}</td>
                     </tr>
                     <tr>
                         <th>Nombres: </th>
-                        <td>German</td>
+                        <td>{{$informacion['nombre']}}</td>
                     </tr>
 
                     </tbody>

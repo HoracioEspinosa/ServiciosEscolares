@@ -19,6 +19,25 @@
         color: white;
     }
 
+    .button2 {
+        background-color: #C63434;
+        border: none;
+        color: white;
+        padding: 8px 26px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 2px;
+    }
+
+    .button2:hover {
+        background-color: #E44A4A; /* Blue */
+        color: white;
+    }
+
 
 </style>
 <!-- BEGIN CONTENT -->
@@ -62,7 +81,7 @@
             <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog modal-sm">
                     <div class="modal-content">
-                        <div class="modal-header">
+                        <div style="background: #00BB5E; color: white;" class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                             <h4 class="modal-title">AGREGAR CARRERA</h4>
                         </div>
@@ -128,7 +147,7 @@
             <div style="width: 1000px; background: #FFFFFF;" class="table-responsive">
                 <table class="table">
                     <thead>
-                    <tr>
+                    <tr style="background-color: #3598DC; color: #ffffff;">
                         <th>id</th>
                         <th>Clave</th>
                         <th>Nombre</th>
@@ -149,12 +168,10 @@
 
 
                             <td>
-                                <a href="tiempo_disponible.html" style="margin-left: 15px;" class="btn btn-warning">
+                                <!--<a href="tiempo_disponible.html" style="margin-left: 15px;" class="btn btn-warning">
                                     <span class="glyphicon glyphicon-pencil"> detalles</span>
-                                </a>
-                                <a href="#" style="margin-left: 15px;" class="btn btn-danger" id="eliminar">
-                                    <span class="glyphicon glyphicon-pencil"> eliminar</span>
-                                </a>
+                                </a>-->
+                                <input class="button2" type="button" value="ELIMINAR">
                             </td>
                         </tr>
                     @endforeach

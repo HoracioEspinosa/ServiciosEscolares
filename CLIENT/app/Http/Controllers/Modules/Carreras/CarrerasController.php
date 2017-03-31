@@ -109,6 +109,7 @@ class CarrerasController extends Controller
                     /*$result = json_encode($result, true);*/
                     $result = json_decode($result, JSON_PRETTY_PRINT);
                     return $result;
+
                 }catch (ClientException $exception){;
                     return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
                 }
@@ -133,6 +134,7 @@ class CarrerasController extends Controller
                 $result = $my_request->getBody()->getContents();
                 $result = json_decode($result, JSON_PRETTY_PRINT);
                 return $result;
+
             }catch (ClientException $exception){;
                 return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
             }
