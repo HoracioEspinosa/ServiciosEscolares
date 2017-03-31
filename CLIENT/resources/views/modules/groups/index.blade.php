@@ -1,17 +1,10 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: jepe_
- * Date: 17/03/2017
- * Time: 11:52 AM
- */@include('/templates/header')
+@include('/templates/header')
 <!-- BEGIN CONTENT -->
 <div class="page-content-wrapper">
     <!-- BEGIN CONTENT BODY -->
     <div class="page-content">
         <!-- BEGIN PAGE HEADER-->
-        <h1 class="page-title"> Inicio
-            <small>Resultados generales</small>
+        <h1 class="page-title"> Grupos
         </h1>
         <div class="page-bar">
             <ul class="page-breadcrumb">
@@ -21,30 +14,40 @@
                     <i class="fa fa-angle-right"></i>
                 </li>
                 <li>
-                    <span>Resultados generales</span>
+                    <span>grupos</span>
                 </li>
             </ul>
             <div class="page-toolbar">
-                <div class="btn-group pull-right">
-                    <button type="button" class="btn btn-fit-height grey-salt dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true">
-                        Acciones
-                        <i class="fa fa-angle-down"></i>
-                    </button>
-                    <ul class="dropdown-menu pull-right" role="menu">
-                        <li>
-                            <a href="#">
-                                <i class="icon-bell"></i> Agregar reservación
-                            </a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
         <!-- END PAGE HEADER-->
-        <div class="row">
-        </div>
+        <?php
+        $count = 0;
+        ?>
+        @foreach($groups as $group)
+            @if($count == 0)
+                <div class="col-sm-12">
+            @elseif($count == 6)
+                <?php $count = 0; ?>
+            @endif
+            <div class="col-sm-2 grupo" data-id="{{$group['idGrupos']}}">
+                <h2>Nombre: {{$group['nombre']}}</h2>
+                <h4>Cantidad de Alumnos: {{$group['cantidadAlumnos']}}</h4>
+            </div>
+                <?php $count++; ?>
+            @if($count == 6)
+                </div>
+                <?php $count = 0; ?>
+            @endif
+        @endforeach
     </div>
     <!-- END CONTENT BODY -->
 </div>
 <!-- END CONTENT -->
 @extends('/templates/footer')
+@section('styles_per_page')
+    <link rel="stylesheet" href="public/css/modules/grupos/grupos.css">
+    @endsection
+@section('scripts_per_page')
+    <script src="public/global/scripts/modules/groups/groups.js"></script>
+    @endsection

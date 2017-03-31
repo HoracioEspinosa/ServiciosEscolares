@@ -6,18 +6,102 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
 =======
     <list default="true" id="162274ac-d07f-4406-a048-0edc34f4b1e0" name="Default" comment="">
+<<<<<<< HEAD
 
       <change type="MOVED" beforePath="$PROJECT_DIR$/CLIENT/resources/views/horario.blade.php" afterPath="$PROJECT_DIR$/CLIENT/resources/views/modules/horarios/horario.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DATA/BDServiciosEscolares1.2Pendiente.mwb" afterPath="$PROJECT_DIR$/DATA/BDServiciosEscolares1.2Pendiente.mwb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DATA/BDServiciosEscolares1.2Pendiente.mwb.bak" afterPath="$PROJECT_DIR$/DATA/BDServiciosEscolares1.2Pendiente.mwb.bak" />
+=======
+<<<<<<< HEAD
+>>>>>>> origin/grupos
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/routes/api.php" afterPath="$PROJECT_DIR$/API/routes/api.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/storage/logs/laravel.log" afterPath="$PROJECT_DIR$/API/storage/logs/laravel.log" />
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/app/Http/Controllers/FrontController.php" afterPath="$PROJECT_DIR$/CLIENT/app/Http/Controllers/FrontController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Carreras/CarrerasController.php" afterPath="$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Carreras/CarrerasController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Horarios/HorariosController.php" afterPath="$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Horarios/HorariosController.php" />
 
 
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/gulpfile.js" afterPath="$PROJECT_DIR$/CLIENT/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/apps/css/inbox.css" afterPath="$PROJECT_DIR$/CLIENT/public/apps/css/inbox.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/apps/css/ticket.css" afterPath="$PROJECT_DIR$/CLIENT/public/apps/css/ticket.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/apps/css/todo-2.css" afterPath="$PROJECT_DIR$/CLIENT/public/apps/css/todo-2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/apps/css/todo.css" afterPath="$PROJECT_DIR$/CLIENT/public/apps/css/todo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/css/app.css" afterPath="$PROJECT_DIR$/CLIENT/public/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/css/bootstrap.css" afterPath="$PROJECT_DIR$/CLIENT/public/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/css/modules/users/users.css" afterPath="$PROJECT_DIR$/CLIENT/public/css/modules/users/users.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/global/css/components-md.css" afterPath="$PROJECT_DIR$/CLIENT/public/global/css/components-md.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/global/css/components-rounded.css" afterPath="$PROJECT_DIR$/CLIENT/public/global/css/components-rounded.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/global/css/components.css" afterPath="$PROJECT_DIR$/CLIENT/public/global/css/components.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/global/css/plugins-md.css" afterPath="$PROJECT_DIR$/CLIENT/public/global/css/plugins-md.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/global/css/plugins.css" afterPath="$PROJECT_DIR$/CLIENT/public/global/css/plugins.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/custom.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/layout.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/blue.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/blue.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/darkblue.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/darkblue.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/default.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/grey.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/grey.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/light.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/light.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/light2.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout/css/themes/light2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/custom.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/layout.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/themes/blue.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/themes/blue.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/themes/dark.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/themes/dark.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/themes/default.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/themes/default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/themes/grey.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/themes/grey.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/themes/light.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout2/css/themes/light.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/custom.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/layout.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/blue-hoki.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/blue-hoki.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/blue-steel.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/blue-steel.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/default.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/green-haze.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/green-haze.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/purple-plum.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/purple-plum.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/purple-studio.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/purple-studio.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/red-intense.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/red-intense.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/red-sunglo.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/red-sunglo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/yellow-crusta.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/yellow-crusta.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/yellow-orange.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout3/css/themes/yellow-orange.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout4/css/custom.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout4/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout4/css/layout.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout4/css/layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout4/css/themes/default.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout4/css/themes/default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout4/css/themes/light.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout4/css/themes/light.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout5/css/custom.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout5/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout5/css/layout.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout5/css/layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout6/css/custom.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout6/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout6/css/layout.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout6/css/layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout7/css/custom.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout7/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/layouts/layout7/css/layout.css" afterPath="$PROJECT_DIR$/CLIENT/public/layouts/layout7/css/layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/about.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/about.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/blog.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/blog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/coming-soon.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/coming-soon.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/contact.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/contact.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/error.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/error.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/faq.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/faq.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/image-crop.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/image-crop.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/invoice-2.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/invoice-2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/invoice.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/invoice.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/lock-2.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/lock-2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/lock.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/lock.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/login-2.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/login-2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/login-3.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/login-3.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/login-4.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/login-4.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/login-5.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/login-5.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/login.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/login.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/portfolio.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/portfolio.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/pricing.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/pricing.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/profile-2.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/profile-2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/profile.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/profile.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/search.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/search.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/public/pages/css/tasks.css" afterPath="$PROJECT_DIR$/CLIENT/public/pages/css/tasks.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/resources/assets/sass/global/plugins/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/CLIENT/resources/assets/sass/global/plugins/bootstrap/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/routes/web.php" afterPath="$PROJECT_DIR$/CLIENT/routes/web.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial.txt" afterPath="$PROJECT_DIR$/tutorial.txt" />
+=======
+<<<<<<< HEAD
+>>>>>>> origin/grupos
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CLIENT/resources/views/modificarProfesor.blade.php" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Profesors/ModuleProfesorsController.php" afterPath="$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Profesors/ProfesorsController.php" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/CLIENT/resources/views/indexProfesors.blade.php" afterPath="$PROJECT_DIR$/CLIENT/resources/views/agregarProfesor.blade.php" />
@@ -33,7 +117,11 @@
 
 
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIENT/routes/web.php" afterPath="$PROJECT_DIR$/CLIENT/routes/web.php" />
+<<<<<<< HEAD
 >>>>>>> 9ad29d3757cf99a17d4276924642f38ada980a67
+=======
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,6 +151,7 @@
       <file leaf-file-name="ModuleGradesController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Grades/ModuleGradesController.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="272">
               <caret line="37" column="83" lean-forward="false" selection-start-line="37" selection-start-column="83" selection-end-line="37" selection-end-column="83" />
               <folding>
@@ -76,15 +165,32 @@
 
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CLIENT/routes/web.php">
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="221">
+              <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CarrerasController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Carreras/CarrerasController.php">
+>>>>>>> origin/grupos
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="267">
               <caret line="37" column="15" lean-forward="false" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
               <folding />
+<<<<<<< HEAD
 
       <file leaf-file-name="ProfesorsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Profesors/ProfesorsController.php">
           <provider selected="true" editor-type-id="text-editor">
 
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/grupos
             <state relative-caret-position="330">
               <caret line="40" column="26" lean-forward="false" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="26" />
 
@@ -94,11 +200,16 @@
               <folding>
                 <element signature="e#64#131#0#PHP" expanded="true" />
               </folding>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 
       <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/routes/api.php">
@@ -106,6 +217,15 @@
             <state relative-caret-position="352">
               <caret line="36" column="22" lean-forward="false" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
 
+=======
+<<<<<<< HEAD
+      <file leaf-file-name="HorariosController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Horarios/HorariosController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-680">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+>>>>>>> origin/grupos
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CLIENT/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -115,8 +235,13 @@
 
             <state relative-caret-position="510">
               <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="35" />
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4ae839e13358e20c25b204ffd130d9aaf8d7b9b0
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
               <folding />
 >>>>>>> 9ad29d3757cf99a17d4276924642f38ada980a67
             </state>
@@ -138,9 +263,19 @@
       <file leaf-file-name="modificarProfesor.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/modificarProfesor.blade.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="-1276">
               <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
 
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="612">
+              <caret line="36" column="20" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+=======
+            <state relative-caret-position="-1276">
+              <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
               <folding />
             </state>
           </provider>
@@ -156,6 +291,7 @@
       <file leaf-file-name="profesores.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/profesores.blade.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="572">
               <caret line="32" column="49" lean-forward="false" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
 
@@ -189,6 +325,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
               <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="493">
+              <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+=======
+            <state relative-caret-position="572">
+              <caret line="32" column="49" lean-forward="false" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
               <folding />
 >>>>>>> 9ad29d3757cf99a17d4276924642f38ada980a67
             </state>
@@ -217,11 +362,17 @@
       <file leaf-file-name="profesores.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/profesores.blade.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="468">
               <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="45" />
 
 
 >>>>>>> 9ad29d3757cf99a17d4276924642f38ada980a67
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="1462">
+              <caret line="92" column="72" lean-forward="false" selection-start-line="92" selection-start-column="72" selection-end-line="92" selection-end-column="72" />
+>>>>>>> origin/grupos
               <folding />
             </state>
           </provider>
@@ -231,6 +382,7 @@
       <file leaf-file-name="califprof.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/modules/grades/califprof.blade.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="-39">
               <caret line="87" column="30" lean-forward="false" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
 =======
@@ -241,6 +393,15 @@
             <state relative-caret-position="340">
               <caret line="54" column="50" lean-forward="true" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
 >>>>>>> 9ad29d3757cf99a17d4276924642f38ada980a67
+=======
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+            <state relative-caret-position="468">
+              <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="45" />
+>>>>>>> 4ae839e13358e20c25b204ffd130d9aaf8d7b9b0
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
               <folding />
             </state>
           </provider>
@@ -266,11 +427,22 @@
       <file leaf-file-name="agregarProfesor.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/agregarProfesor.blade.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="187">
               <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
 
 
 >>>>>>> 9ad29d3757cf99a17d4276924642f38ada980a67
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="391">
+              <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+=======
+            <state relative-caret-position="187">
+              <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+>>>>>>> 4ae839e13358e20c25b204ffd130d9aaf8d7b9b0
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
               <folding />
             </state>
           </provider>
@@ -347,6 +519,7 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/CLIENT/.gitignore" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/CLIENT/storage/logs/laravel.log" />
         <option value="$PROJECT_DIR$/CLIENT/vendor/illuminate/html/HtmlServiceProvider.php" />
         <option value="$PROJECT_DIR$/tutorial.txt" />
@@ -384,6 +557,10 @@
         <option value="$PROJECT_DIR$/CLIENT/resources/views/modules/horarios/horario.blade.php" />
         <option value="$PROJECT_DIR$/CLIENT/routes/web.php" />
 
+=======
+        <option value="$PROJECT_DIR$/CLIENT/gulpfile.js" />
+=======
+>>>>>>> origin/grupos
         <option value="$PROJECT_DIR$/CLIENT/resources/assets/sass/modules/profesors/profesors.scss" />
         <option value="$PROJECT_DIR$/CLIENT/resources/views/index.blade.php" />
         <option value="$PROJECT_DIR$/CLIENT/resources/views/modules/profesors/index.blade.php" />
@@ -400,9 +577,14 @@
         <option value="$PROJECT_DIR$/CLIENT/routes/web.php" />
         <option value="$PROJECT_DIR$/CLIENT/resources/views/profesores.blade.php" />
         <option value="$PROJECT_DIR$/CLIENT/resources/views/agregarProfesor.blade.php" />
+<<<<<<< HEAD
 
 
 >>>>>>> 9ad29d3757cf99a17d4276924642f38ada980a67
+=======
+>>>>>>> 4ae839e13358e20c25b204ffd130d9aaf8d7b9b0
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
       </list>
     </option>
   </component>
@@ -438,6 +620,7 @@
         </tasks>
       </GulpfileState>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
       <GulpfileState>
@@ -446,11 +629,19 @@
 
 
 >>>>>>> 9ad29d3757cf99a17d4276924642f38ada980a67
+=======
+      <GulpfileState>
+        <gulpfile-path>$PROJECT_DIR$/API/gulpfile.js</gulpfile-path>
+      </GulpfileState>
+=======
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
     </gulpfiles>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/CLIENT/node_modules" />
+<<<<<<< HEAD
 <<<<<<< HEAD
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
@@ -467,6 +658,8 @@
     </configurations>
 =======
 
+=======
+>>>>>>> origin/grupos
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
@@ -474,7 +667,11 @@
     <option name="y" value="-8" />
     <option name="width" value="1320" />
     <option name="height" value="784" />
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/grupos
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
@@ -483,8 +680,12 @@
     <option name="y" value="-9" />
     <option name="width" value="1938" />
     <option name="height" value="1060" />
+<<<<<<< HEAD
 
 >>>>>>> 9ad29d3757cf99a17d4276924642f38ada980a67
+=======
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -550,12 +751,19 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+=======
+              <option name="myItemId" value="public" />
+=======
+              <option name="myItemId" value="routes" />
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -573,15 +781,25 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              <option name="myItemId" value="app" />
+=======
+>>>>>>> origin/grupos
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+<<<<<<< HEAD
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="modules" />
+=======
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -599,11 +817,22 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+=======
+<<<<<<< HEAD
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+=======
+              <option name="myItemId" value="resources" />
+>>>>>>> origin/grupos
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -660,6 +889,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
+<<<<<<< HEAD
+=======
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -680,6 +913,37 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
+          </PATH>
+          <PATH>
+=======
+<<<<<<< HEAD
+>>>>>>> origin/grupos
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ServiciosEscolares" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ServiciosEscolares" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CLIENT" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+<<<<<<< HEAD
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+=======
+              <option name="myItemId" value="Personal" />
+=======
+>>>>>>> origin/grupos
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -700,32 +964,14 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ServiciosEscolares" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ServiciosEscolares" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CLIENT" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
+<<<<<<< HEAD
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Controllers" />
+=======
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -823,6 +1069,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="Carreras" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -1274,12 +1521,27 @@
 
       <pane id="Scratches" />
 
+=======
+<<<<<<< HEAD
+              <option name="myItemId" value="Horarios" />
+=======
+              <option name="myItemId" value="Profesors" />
+>>>>>>> origin/profesores
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+>>>>>>> origin/grupos
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/CLIENT" />
+<<<<<<< HEAD
 
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="C:\Users\omarc\AppData\Roaming\npm\node_modules\gulp" />
@@ -1750,6 +2012,15 @@
     </configuration>
 =======
 
+=======
+<<<<<<< HEAD
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="js.buildTools.gulp.gulp_package_dir" value="C:\Users\omarc\AppData\Roaming\npm\node_modules\gulp" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+  </component>
+  <component name="RunManager" selected="Gulp.js.SASS">
+=======
+>>>>>>> origin/grupos
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
@@ -1764,8 +2035,12 @@
     </key>
   </component>
   <component name="RunManager" selected="Gulp.js.SASSP">
+<<<<<<< HEAD
 
 >>>>>>> 9ad29d3757cf99a17d4276924642f38ada980a67
+=======
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
@@ -1795,6 +2070,7 @@
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <node-interpreter>project</node-interpreter>
 =======
 
@@ -1803,6 +2079,12 @@
       <node-interpreter>project</node-interpreter>
 
 >>>>>>> 9ad29d3757cf99a17d4276924642f38ada980a67
+=======
+      <node-interpreter>C:/Program Files/nodejs/node</node-interpreter>
+=======
+      <node-interpreter>project</node-interpreter>
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
       <node-options />
       <gulpfile />
       <tasks />
@@ -1832,9 +2114,12 @@
     </configuration>
 <<<<<<< HEAD
     <configuration default="false" name="SASS" type="js.build_tools.gulp" factoryName="Gulp.js">
+<<<<<<< HEAD
 =======
 
     <configuration default="false" name="SASS" type="js.build_tools.gulp" factoryName="Gulp.js">
+=======
+>>>>>>> origin/grupos
       <node-interpreter>C:/Program Files/nodejs/node</node-interpreter>
       <node-options />
       <gulpfile>$PROJECT_DIR$/CLIENT/gulpfile.js</gulpfile>
@@ -1845,7 +2130,11 @@
     </configuration>
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Gulp.js.SASS" />
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/grupos
     <configuration default="false" name="SASSP" type="js.build_tools.gulp" factoryName="Gulp.js">
 >>>>>>> 9ad29d3757cf99a17d4276924642f38ada980a67
       <node-interpreter>project</node-interpreter>
@@ -1892,7 +2181,11 @@
 =======
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Gulp.js.SASSP" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
     </list>
 >>>>>>> 9ad29d3757cf99a17d4276924642f38ada980a67
   </component>
@@ -1911,6 +2204,7 @@
       <workItem from="1487344019118" duration="87000" />
       <workItem from="1487344946004" duration="1048000" />
       <workItem from="1487977752839" duration="711000" />
+<<<<<<< HEAD
 <<<<<<< HEAD
       <workItem from="1489600313892" duration="26000" />
       <workItem from="1489636704274" duration="4490000" />
@@ -1968,10 +2262,13 @@
     <option name="totallyTimeSpent" value="97011000" />
 =======
 
+=======
+>>>>>>> origin/grupos
       <workItem from="1489600313892" duration="26000" />
       <workItem from="1489764903277" duration="4943000" />
       <workItem from="1489771017256" duration="629000" />
       <workItem from="1489774107568" duration="72000" />
+<<<<<<< HEAD
       <workItem from="1489965387899" duration="7404000" />
       <workItem from="1490035848102" duration="7428000" />
       <workItem from="1490195846373" duration="644000" />
@@ -1986,6 +2283,9 @@
       <workItem from="1490722020969" duration="3251000" />
       <workItem from="1490754077236" duration="1050000" />
 
+=======
+=======
+>>>>>>> origin/grupos
       <workItem from="1489600313892" duration="70000" />
       <workItem from="1489637648916" duration="2777000" />
       <workItem from="1489647689647" duration="873000" />
@@ -2000,13 +2300,20 @@
 
       <workItem from="1490109847452" duration="3384000" />
       <workItem from="1490115620715" duration="4757000" />
+<<<<<<< HEAD
 
 
 
+=======
+=======
+>>>>>>> 4ae839e13358e20c25b204ffd130d9aaf8d7b9b0
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
 
     <option name="totallyTimeSpent" value="67433000" />
 >>>>>>> 9ad29d3757cf99a17d4276924642f38ada980a67
@@ -2019,6 +2326,10 @@
       <are-packages-shown value="true" />
       <is-autoscroll-to-source value="true" />
     </todo-panel>
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="8263000" />
+>>>>>>> origin/grupos
   </component>
   <component name="ToolWindowManager">
 <<<<<<< HEAD
@@ -2041,6 +2352,7 @@
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2515873" sideWeight="0.153457" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2515873" sideWeight="0.846543" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2052,6 +2364,12 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
 
 
+=======
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2730159" sideWeight="0.5184" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2730159" sideWeight="0.4816" order="0" side_tool="false" content_ui="combo" />
+=======
+<<<<<<< HEAD
+>>>>>>> origin/grupos
     <option name="totallyTimeSpent" value="31729000" />
   </component>
   <component name="ToolWindowManager">
@@ -2069,7 +2387,12 @@
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21748401" sideWeight="0.43631038" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21748401" sideWeight="0.5636896" order="0" side_tool="false" content_ui="combo" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4ae839e13358e20c25b204ffd130d9aaf8d7b9b0
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2088,6 +2411,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44270834" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2099,6 +2423,12 @@
 
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
 
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937685" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2154,6 +2484,7 @@
   </component>
   <component name="editorHistoryManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/ModulesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -2163,6 +2494,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Users/ModuleBranchOfficesController.php" />
     <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/index.blade.php">
+=======
+    <entry file="file://$PROJECT_DIR$/CLIENT/gulpfile.js">
+>>>>>>> origin/grupos
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2502,7 +2836,13 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Carreras/CarrerasController.php">
+=======
+=======
+>>>>>>> origin/profesores
+    <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/ModulesController.php">
+>>>>>>> origin/grupos
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1955">
           <caret line="119" column="64" lean-forward="false" selection-start-line="119" selection-start-column="64" selection-end-line="119" selection-end-column="64" />
@@ -2640,6 +2980,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/Modules/Horarios/HorarioController.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 
         <state relative-caret-position="238">
           <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
@@ -2648,25 +2989,55 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
 
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+=======
+        <state relative-caret-position="638">
+          <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Horarios/HorariosController.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-323">
           <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
           <folding>
             <element signature="e#63#130#0#PHP" expanded="true" />
 >>>>>>> 9ad29d3757cf99a17d4276924642f38ada980a67
           </folding>
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="391">
+          <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+          <folding />
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CLIENT/.env">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="170">
           <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+=======
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
         </state>
       </provider>
     </entry>
@@ -2677,7 +3048,12 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/templates/header.blade.php">
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/API/routes/console.php">
+>>>>>>> origin/grupos
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4029">
           <caret line="237" column="44" lean-forward="false" selection-start-line="237" selection-start-column="44" selection-end-line="237" selection-end-column="44" />
@@ -2691,6 +3067,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CLIENT/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="267">
           <caret line="37" column="15" lean-forward="false" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
 
@@ -2699,6 +3076,11 @@
         </state>
       </provider>
     </entry>
+=======
+        <state relative-caret-position="1462">
+          <caret line="92" column="72" lean-forward="false" selection-start-line="92" selection-start-column="72" selection-end-line="92" selection-end-column="72" />
+=======
+>>>>>>> origin/grupos
     <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/ModuleBranchOfficesController.php" />
     <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Users/ModuleBranchOfficesController.php" />
     <entry file="file://$PROJECT_DIR$/README.md" />
@@ -2742,14 +3124,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 
     <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/modules/horarios/horariodocente.blade.php">
 
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/CLIENT/gulpfile.js">
+=======
+>>>>>>> origin/grupos
     <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/modules/profesors/profile.blade.php" />
     <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Users/ModuleUsersController.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -2762,7 +3154,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CLIENT/app/User.php">
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="83" column="52" lean-forward="false" selection-start-line="83" selection-start-column="52" selection-end-line="83" selection-end-column="52" />
@@ -2770,12 +3166,21 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 
     <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/modules/horarios/horario.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
           <caret line="97" column="30" lean-forward="true" selection-start-line="96" selection-start-column="32" selection-end-line="97" selection-end-column="30" />
 
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/Api/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+=======
+>>>>>>> origin/grupos
     <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/profesores.blade.php">
 
       <provider selected="true" editor-type-id="text-editor">
@@ -2901,13 +3306,27 @@
 
         <state relative-caret-position="17">
           <caret line="21" column="44" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="44" />
+<<<<<<< HEAD
 
 
 >>>>>>> 9ad29d3757cf99a17d4276924642f38ada980a67
+=======
+>>>>>>> 4ae839e13358e20c25b204ffd130d9aaf8d7b9b0
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/API/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+=======
+>>>>>>> origin/grupos
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/modules/grades/califprof.blade.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -2964,10 +3383,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1276">
           <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+<<<<<<< HEAD
+=======
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Carreras/CarrerasController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-24">
+          <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+=======
+>>>>>>> origin/grupos
     <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/agregarProfesor.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1562">
@@ -2987,11 +3419,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="45" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4ae839e13358e20c25b204ffd130d9aaf8d7b9b0
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Horarios/HorariosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-680">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+>>>>>>> origin/grupos
     <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/agregarProfesor.blade.php">
       <provider selected="true" editor-type-id="text-editor">
 
@@ -3000,9 +3446,14 @@
 
         <state relative-caret-position="187">
           <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+<<<<<<< HEAD
 
 
 >>>>>>> 9ad29d3757cf99a17d4276924642f38ada980a67
+=======
+>>>>>>> 4ae839e13358e20c25b204ffd130d9aaf8d7b9b0
+>>>>>>> origin/profesores
+>>>>>>> origin/grupos
           <folding />
         </state>
       </provider>

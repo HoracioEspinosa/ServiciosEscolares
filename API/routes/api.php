@@ -27,10 +27,12 @@ Route::get('/users/get/id', 'ModuleUsersController@getBranchID');
 Route::get('/users/profile/username', 'ModuleUsersController@getAllUserInformationByUsername');
 
 Route::get('/users/get/all', 'ModuleUsersController@getAllUsersInformation')->middleware('jwt.auth');
+
 Route::get('/profesors/get/table', 'modules\profesores\ProfesorController@getAllProfesorsInformation');
 Route::get('/profesors/get/tablebyid/{idProfesor}', 'modules\profesores\ProfesorController@getInformationByIdProfesor');
 Route::post('/profesors/get/update', 'modules\profesores\ProfesorController@update');
 Route::post('profesor/create', 'modules\profesores\ProfesorController@create');
+
 
 Route::post('/login', 'ModuleUsersController@login')->middleware('jwt.auth');
 
@@ -40,6 +42,9 @@ Route::get('auth/me', 'Api\AuthController@getAuthenticatedUser');
 Route::post('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
 
+Route::resource('/groups', 'Modules\Groups\GroupsController');
+Route::get('/input/getHorarios', 'Modules\Groups\GroupsController@getHorarios');
+Route::get('/input/getCarreras', 'Modules\Groups\GroupsController@getCarreras');
 
 Route::get('/carreras/get', 'Modules\Carreras\CarrerasController@getInformation');
 Route::post('/carreras/create', 'Modules\Carreras\CarrerasController@create');
@@ -52,6 +57,8 @@ Route::get('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')
 Route::get('/periodos', 'Modules\Periodos\PeriodosController@getInfo');
 Route::post('/periodos/getByID', 'Modules\Periodos\PeriodosController@getInfoByID');
 Route::post('/periodos/create', 'Modules\Periodos\PeriodosController@create');
+
+
 
 
 //Route::get('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');

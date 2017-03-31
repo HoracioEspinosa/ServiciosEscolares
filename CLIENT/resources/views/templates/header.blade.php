@@ -1,10 +1,4 @@
 <!DOCTYPE html>
-<!--
-Version: 1.0
-Author: Horacio Darinel Espinosa Barceló
-Website: http://www.cloudfrog.com.mx/
-Contact: admin@cloudftog.com.mx
--->
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
 <!--[if !IE]><!-->
@@ -245,7 +239,6 @@ Contact: admin@cloudftog.com.mx
                     <a href="/profesores" class="nav-link nav-toggle">
                         <i class="icon-briefcase"></i>
                         <span class="title">Profesores</span>
-                        <span class="selected"></span>
                         <span class="arrow open"></span>
                     </a>
                     <ul class="sub-menu">
@@ -286,6 +279,25 @@ Contact: admin@cloudftog.com.mx
                     </li>
                   </ul>
 
+                <li class="nav-item active">
+                    <a href="/grupos" class="nav-link nav-toggle">
+                        <i class="fa fa-users"></i>
+                        <span class="title">Grupos</span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item start">
+                            <a href="/grupos" class="nav-link ">
+                                <i class="fa fa-eye"></i>
+                                <span class="title">Ver</span>
+                            </a>
+                        </li>
+                        <li class="nav-item start">
+                            <a href="/grupos/create" class="nav-link ">
+                                <i class="fa fa-plus-circle"></i>
+                                <span class="title">Crear</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
             <!-- END SIDEBAR MENU -->

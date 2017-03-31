@@ -30,8 +30,6 @@ Route::post('/password/email', 'Modules\ModulesController@sendMail');
 Route::get('/logout', 'Auth\LoginController@logout');
 Route::post('/setToken', 'Auth\LoginController@setToken');
 
-Route::resource('/groups', 'Modules\Groups\GroupsController');
-
 
 
 /**
@@ -55,7 +53,6 @@ Route::post('/periodos/create', 'Modules\Periodos\PeriodosController@create');
 	return view('horario');
 });*/
 
-Route::resource('/horarios', 'Modules\Horarios\HorariosController');
 
 Route::resource('/horario/disponible', 'Modules\Horarios\TiempoDisponibleController');
 Route::resource('/horario/docente', 'Modules\Horarios\HorarioDocenteController');
@@ -80,4 +77,9 @@ Route::get('/profesores/create', 'Modules\Profesors\ProfesorsController@create')
 Route::post('/profesores/create', 'Modules\Profesors\ProfesorsController@createProfesor');
 Route::post('/profesores/update', 'Modules\Profesors\ProfesorsController@updateProfesor');
 Route::resource('/profesores', 'Modules\Profesors\ProfesorsController');
+
+
+Route::resource('/grupos', 'Modules\Groups\GroupsController');
+
+Route::resource('/horarios', 'Modules\Horarios\HorariosController');
 

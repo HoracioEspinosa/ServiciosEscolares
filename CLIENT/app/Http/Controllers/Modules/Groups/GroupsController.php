@@ -3,6 +3,7 @@
 namespace Caribbean\Http\Controllers\Modules\Groups;
 
 use Caribbean\Http\Controllers\Controller;
+use Caribbean\Http\Controllers\Modules\Users\ModuleUsersController;
 use Illuminate\Http\Request;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\ServerException;
@@ -10,11 +11,7 @@ use Illuminate\Support\Facades\Cookie;
 use GuzzleHttp;
 
 class GroupsController extends Controller{
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    private $result='';
     public function setUserHeader(){
         if (cookie::get('token') == "" || Cookie::get('token')  == null) {
             return redirect('/login');
@@ -37,95 +34,95 @@ class GroupsController extends Controller{
             }
         }
     }
-    public static function getAllUsersInformation() {
-        if (cookie::get('token') == "" || cookie::get('token')  == null) {
-            return redirect('/login');
-        }else{
+    public function getHorarios(){
+        try{
             try{
-                try{
-                    $client = new GuzzleHttp\Client(
-                        ['base_uri' => env('SERVER_API')]
-                    );
-                    $headers = [
-                        'Content-Type' => 'application/json',
-                        'Authorization' => 'Bearer '. cookie::get('token'),
-                    ];
-                    $result = $client->get(
-                        'api/users/get/all', [
-                            'headers' => $headers
-                        ]
-                    );
-                    return json_decode($result->getBody()->getContents(), JSON_PRETTY_PRINT);
-                }catch (ClientException $exception){;
-                    return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
-                }
-            }catch (ServerException $serverException) {
-                return json_decode($serverException->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
+                $client = new GuzzleHttp\Client( ['base_uri' => env('SERVER_API')] );
+                $headers = [
+                    'Content-Type' => 'application/x-www-form-urlencoded',
+                    'Authorization' => 'Bearer '. cookie::get('token'),
+                ];
+                $my_request = $client->request('GET', '/api/input/getHorarios', [ 'headers' => $headers ] );
+                $horarios = $my_request->getBody()->getContents();
+                $horarios = json_decode($horarios, JSON_PRETTY_PRINT);
+                return $horarios;
+            }catch (ClientException $exception){;
+                return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
             }
-        }
-    }
-    public static function getUserInformation() {
-        if (cookie::get('token') == "" || cookie::get('token')  == null) {
-            return redirect('/login');
-        }else{
-            try{
-                try{
-                    $client = new GuzzleHttp\Client(
-                        ['base_uri' => env('SERVER_API')]
-                    );
-                    $headers = [
-                        'Content-Type' => 'application/json',
-                        'Authorization' => 'Bearer '. cookie::get('token'),
-                    ];
-                    $result = $client->get(
-                        'api/getUserData', [
-                            'headers' => $headers
-                        ]
-                    );
-                    return json_decode($result->getBody()->getContents(), JSON_PRETTY_PRINT);
-                }catch (ClientException $exception){;
-                    return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
-                }
-            }catch (ServerException $serverException) {
-                return json_decode($serverException->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
-            }
-        }
-    }
-    public function index(){
-        $branch_offices = null;
-        if (cookie::get('token') == "" || cookie::get('token')  == null) {
-            return redirect('/groups');
-        }else{
-            try{
-                try{
-                    $client = new GuzzleHttp\Client(
-                        ['base_uri' => env('SERVER_API')]
-                    );
-                    $headers = [
-                        'Content-Type' => 'application/json',
-                        'Authorization' => 'Bearer '. cookie::get('token'),
-                    ];
-                    $result = $client->get(
-                        'api/departments/branch-names', [
-                            'headers' => $headers
-                        ]
-                    );
-                    $branch_offices = $result->getBody()->getContents();
-                }catch (ClientException $exception){
-                    //return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
-                }
-            }catch (ServerException $serverException) {
-                //return json_decode($serverException->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
-            }
-        }
-        $branch_offices = json_decode($branch_offices);
+        }catch (ServerException $serverException) {
 
+            return $serverException;
+        }
+    }
+    public function getCarreras(){
+        try{
+            try{
+                $client = new GuzzleHttp\Client( ['base_uri' => env('SERVER_API')] );
+                $headers = [
+                    'Content-Type' => 'application/x-www-form-urlencoded',
+                    'Authorization' => 'Bearer '. cookie::get('token'),
+                ];
+                $my_request = $client->request('GET', '/api/input/getCarreras', [ 'headers' => $headers ] );
+                $carreras = $my_request->getBody()->getContents();
+                $carreras = json_decode($carreras, JSON_PRETTY_PRINT);
+                return $carreras;
+            }catch (ClientException $exception){;
+                return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
+            }
+        }catch (ServerException $serverException) {
+
+            return $serverException;
+        }
+    }
+
+    public function getAllStudentsById($id)
+    {
+        try{
+            try{
+                $client = new GuzzleHttp\Client( ['base_uri' => env('SERVER_API')] );
+                $headers = [
+                    'Content-Type' => 'application/x-www-form-urlencoded',
+                    'Authorization' => 'Bearer '. cookie::get('token'),
+                ];
+                $my_request = $client->request('GET', '/api/groups/'.$id, [ 'headers' => $headers ] );
+                $result = $my_request->getBody()->getContents();
+                return $result;
+            }catch (ClientException $exception){;
+                return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
+            }
+        }catch (ServerException $serverException) {
+
+            return $serverException;
+        }
+    }
+
+    public function getAllGroups(){
+        try{
+            try{
+                $client = new GuzzleHttp\Client( ['base_uri' => env('SERVER_API')] );
+                $headers = [
+                    'Content-Type' => 'application/x-www-form-urlencoded',
+                    'Authorization' => 'Bearer '. cookie::get('token'),
+                ];
+                $my_request = $client->request('GET', '/api/groups', [ 'headers' => $headers ] );
+                $result = $my_request->getBody()->getContents();
+                $result = json_decode($result, JSON_PRETTY_PRINT);
+                return $result;
+            }catch (ClientException $exception){;
+                return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
+            }
+        }catch (ServerException $serverException) {
+            return $serverException;
+        }
+    }
+    public function index()
+    {
         $this->setUserHeader();
-        $result = $this->result;
-        $users = $this->getAllUsersInformation();
-        return view('modules.groups.index', compact('result', 'users', 'branch_offices'));
+        $users=ModuleUsersController::getAllUsersInformation();
+        $result=$this->result;
+        $groups = $this->getAllGroups();
+        return view('modules.groups.index', compact('result','users', 'groups'));
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -133,7 +130,12 @@ class GroupsController extends Controller{
      */
     public function create()
     {
-        //
+        $this->setUserHeader();
+        $users=ModuleUsersController::getAllUsersInformation();
+        $result=$this->result;
+        $horarios = $this->getHorarios();
+        $carreras = $this->getCarreras();
+        return view('modules.groups.create', compact('result','users', 'horarios', 'carreras'));
     }
 
     /**
@@ -144,7 +146,38 @@ class GroupsController extends Controller{
      */
     public function store(Request $request)
     {
-        //
+        try{
+            $nombre = $request->input('nombre');
+            $cantidad = "0";
+            $horario = $request->get('horario');
+            $carrera = $request->get('carrera');
+            $client = new GuzzleHttp\Client( ['base_uri' => env('SERVER_API')] );
+            $headers = [
+                'Content-Type' => 'application/x-www-form-urlencoded',
+                'Authorization' => 'Bearer '. cookie::get('token'),
+            ];
+            $my_request = $client->request('POST', '/api/groups', [
+                'form_params' => [
+                    'nombre' => $nombre,
+                    'cantidadAlumnos' => $cantidad,
+                    'Horarios_idHorarios' => $horario,
+                    'Carreras_idCarreras' => $carrera,
+                ],
+                'headers' => $headers
+            ]);
+            $result = $my_request->getBody()->getContents();
+            $result = json_decode($result, JSON_PRETTY_PRINT);
+            $result = $result[0];
+            if ($result['MESSAGE'] == 'OK') {
+                return redirect('/grupos');
+            }
+            else{
+            }
+            //return $result;
+        }catch (ClientException $exception){
+            //dd($exception->getResponse()->getBody()->getContents());
+            return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
+        }
     }
 
     /**
@@ -155,7 +188,10 @@ class GroupsController extends Controller{
      */
     public function show($id)
     {
-        //
+        $this->setUserHeader();
+        $users=ModuleUsersController::getAllUsersInformation();
+        $result=$this->result;
+        return view('modules.groups.groupInfo', compact('result','users', 'id'));
     }
 
     /**

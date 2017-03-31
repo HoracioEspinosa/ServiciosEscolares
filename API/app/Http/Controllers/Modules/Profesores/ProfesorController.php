@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\modules\profesores;
+namespace App\Http\Controllers\Modules\Profesores;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -10,13 +10,13 @@ use Yajra\Datatables\Datatables;
 class ProfesorController extends Controller
 {
     public function getInformation(){
-        $info = DB::select('SELECT * FROM profesores INNER JOIN informacion ON profesores.idInformacion=informacion.idInformacion');
+        $info = DB::select('SELECT * FROM Profesores INNER JOIN informacion ON Profesores.idInformacion=informacion.idInformacion');
         $info = json_encode($info, true);
         return json_decode($info, JSON_PRETTY_PRINT);
     }
 
     public function getAllProfesorsInformation() {
-        $users = DB::table('profesores')->join('informacion', 'profesores.idInformacion', '=', 'informacion.idInformacion')->get();
+        $users = DB::table('Profesores')->join('informacion', 'Profesores.idInformacion', '=', 'informacion.idInformacion')->get();
         return Datatables::of($users)->make(true);
     }
 
@@ -47,7 +47,7 @@ class ProfesorController extends Controller
     }
 
     public function getInformationByIdProfesor($idProfesor, Request $request){
-        $info = DB::select('SELECT * FROM profesores INNER JOIN informacion ON profesores.idInformacion=informacion.idInformacion WHERE profesores.idProfesores='.$idProfesor);
+        $info = DB::select('SELECT * FROM Profesores INNER JOIN informacion ON Profesores.idInformacion=informacion.idInformacion WHERE Profesores.idProfesores='.$idProfesor);
         $info = json_encode($info, true);
         return json_decode($info, JSON_PRETTY_PRINT);
     }
