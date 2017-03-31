@@ -20,7 +20,9 @@ Contact: admin@cloudftog.com.mx
     <meta content="" name="author" />
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" type="text/css">
+    {!! HTML::style('/public/css/modules/expedientes/iconos.css') !!}
     {!! HTML::style('/public/global/plugins/font-awesome/css/font-awesome.min.css') !!}
+
     {!! HTML::style('/public/global/plugins/simple-line-icons/simple-line-icons.min.css') !!}
     {!! HTML::style('/public/css/app.min.css') !!}
     {!! HTML::style('/public/global/plugins/datatables/datatables.min.css') !!}
@@ -32,6 +34,8 @@ Contact: admin@cloudftog.com.mx
     {!! HTML::style('/public/layouts/layout2/css/themes/blue.min.css') !!}
     {!! HTML::style('/public/layouts/layout2/css/custom.min.css') !!}
     {!! HTML::style('/public/css/modules/users/users.min.css') !!}
+    {!! HTML::style('/public/css/modules/expedientes/dropzone.css') !!}
+
     <style type="text/css">
         .page-content{ height: 100%;}
     </style>

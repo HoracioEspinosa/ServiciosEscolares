@@ -31,6 +31,13 @@ Route::get('auth/me', 'Api\AuthController@getAuthenticatedUser');
 Route::post('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
 
+
+Route::post('/expedientes/Buscar','Modules\Expedientes\ExpedientesController@buscar');
+
+Route::post('/expedientes/procedimientos/{id}','Modules\Expedientes\ExpedientesController@procedimientos');
+
+Route::resource('/expedientes','Modules\Expedientes\ExpedientesController');
+
 //Route::get('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
 
 //Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');

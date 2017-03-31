@@ -61,6 +61,12 @@
 {!! HTML::script('/public/layouts/global/scripts/quick-nav.min.js') !!}
 {!! HTML::script('/public/global/scripts/global.js') !!}
 {!! HTML::script("/public/pages/scripts/components-bootstrap-select.js") !!}
+{!! HTML::script("/public/pages/scripts/dropzone.js") !!}
+{!! HTML::script("/public/pages/scripts/main.js") !!}
+
+
+
+
 
 @yield('scripts_per_page')
 <!-- END THEME LAYOUT SCRIPTS -->

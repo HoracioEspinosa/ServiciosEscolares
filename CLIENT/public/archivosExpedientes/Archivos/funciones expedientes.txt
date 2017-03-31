@@ -1,0 +1,5 @@
+var path = 'imagen/fondo/archivo.jpg';
+
+var result = path.match(/[-_\w]+[.][\w]+$/i)[0];
+
+console.log(result);

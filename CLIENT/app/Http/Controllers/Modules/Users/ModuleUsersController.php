@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\ServerException;
 use Illuminate\Support\Facades\Cookie;
-use GuzzleHttp;
+    use GuzzleHttp;
 /**
  * Class ModuleUsersController
  * @package Caribbean\Http\Controllers\Users

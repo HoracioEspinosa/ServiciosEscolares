@@ -1,0 +1,27 @@
+Perfil{
+ muestra informacion
+da de dalta usuario
+Modificar
+
+}
+
+categorias{
+	muestra categorias
+	pedir prestado libro
+}
+
+login
+registro
+
+
+escritorio
+
+login
+
+libros disponibles
+libros prestados con nombre de quien fue prestados
+agregar libros
+dar de baja libros
+
+
+

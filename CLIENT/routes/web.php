@@ -29,3 +29,8 @@ Route::post('/password/email', 'Modules\ModulesController@sendMail');
 
 Route::get('/logout', 'Auth\LoginController@logout');
 Route::post('/setToken', 'Auth\LoginController@setToken');
+
+Route::get('/expedientes/{id}','Modules\Expedientes\ExpedientesController@index');
+Route::get('/expedientes/procedimientos/{id}','Modules\Expedientes\ExpedientesController@procedimientosExpe');
+Route::get('/expedientes/get/archivos/{id}','Modules\Expedientes\ExpedientesController@getarchivos');
+
