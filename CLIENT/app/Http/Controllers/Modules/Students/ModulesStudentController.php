@@ -75,6 +75,7 @@ class ModulesStudentController
             }
         }
     }
+
     public function getInformationByIdAlumno($idAlumnos) {
         if (cookie::get('token') == "" || cookie::get('token') == null){
             return redirect('/login');
