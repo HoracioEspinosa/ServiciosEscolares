@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="162274ac-d07f-4406-a048-0edc34f4b1e0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="162274ac-d07f-4406-a048-0edc34f4b1e0" name="Default" comment="vista, controlador cliente y API para calificaciones de alumno" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,17 +53,17 @@
         <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/Grades/ModuleGradesController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+              <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
               <folding>
                 <element signature="e#439#1169#0#PHP" expanded="false" />
                 <element signature="e#1175#1771#0#PHP" expanded="false" />
                 <element signature="e#1777#2251#0#PHP" expanded="false" />
                 <element signature="e#2257#2937#0#PHP" expanded="false" />
                 <element signature="e#2943#3539#0#PHP" expanded="false" />
-                <marker date="1490587648280" expanded="true" signature="574:588" ph="SELECT * FRO... " />
-                <marker date="1490587648280" expanded="true" signature="574:596" ph="SELECT * FRO... usuarios" />
-                <marker date="1490587648280" expanded="true" signature="574:598" ph="SELECT * FRO... usuarios" />
-                <marker date="1490587648280" expanded="true" signature="608:633" ph="/*$informati... " />
+                <marker date="1490943548344" expanded="true" signature="574:588" ph="SELECT * FRO... " />
+                <marker date="1490943548344" expanded="true" signature="574:596" ph="SELECT * FRO... usuarios" />
+                <marker date="1490943548344" expanded="true" signature="574:598" ph="SELECT * FRO... usuarios" />
+                <marker date="1490943548344" expanded="true" signature="608:633" ph="/*$informati... " />
               </folding>
             </state>
           </provider>
@@ -75,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/modules/grades/calif.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1185">
-              <caret line="76" column="28" lean-forward="true" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
+              <caret line="76" column="28" lean-forward="false" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -140,11 +138,11 @@
         <option value="$PROJECT_DIR$/API/app/Http/Controllers/ModuleUsersController.php" />
         <option value="$PROJECT_DIR$/API/app/Http/Controllers/Grades/ModuleGradesController" />
         <option value="$PROJECT_DIR$/API/routes/api.php" />
-        <option value="$PROJECT_DIR$/API/app/Http/Controllers/Grades/ModuleGradesController.php" />
         <option value="$PROJECT_DIR$/CLIENT/resources/views/templates/header.blade.php" />
         <option value="$PROJECT_DIR$/CLIENT/app/Http/Controllers/Modules/Grades/ModuleGradesController.php" />
         <option value="$PROJECT_DIR$/CLIENT/resources/views/modules/grades/califprof.blade.php" />
         <option value="$PROJECT_DIR$/CLIENT/resources/views/modules/grades/calif.blade.php" />
+        <option value="$PROJECT_DIR$/API/app/Http/Controllers/Grades/ModuleGradesController.php" />
       </list>
     </option>
   </component>
@@ -944,7 +942,7 @@
       <workItem from="1490541929466" duration="31185000" />
       <workItem from="1490619061437" duration="3125000" />
       <workItem from="1490656817547" duration="5572000" />
-      <workItem from="1490930426553" duration="9109000" />
+      <workItem from="1490930426553" duration="9439000" />
     </task>
     <task id="LOCAL-00001" summary="vista, controlador cliente y API para calificaciones de alumno">
       <created>1490930757076</created>
@@ -978,7 +976,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96163000" />
+    <option name="totallyTimeSpent" value="96493000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1309,8 +1307,8 @@
         <state relative-caret-position="1598">
           <caret line="100" column="29" lean-forward="false" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
           <folding>
-            <marker date="1490368785275" expanded="true" signature="1236:1391" ph="SELECT * FRO... users" />
-            <marker date="1490368785275" expanded="true" signature="5928:5981" ph="SELECT passw... users" />
+            <marker date="1490943548352" expanded="true" signature="1236:1391" ph="SELECT * FRO... users" />
+            <marker date="1490943548352" expanded="true" signature="5928:5981" ph="SELECT passw... users" />
           </folding>
         </state>
       </provider>
@@ -1332,7 +1330,7 @@
     <entry file="file://$PROJECT_DIR$/CLIENT/resources/views/modules/grades/calif.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1185">
-          <caret line="76" column="28" lean-forward="true" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
+          <caret line="76" column="28" lean-forward="false" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1358,17 +1356,17 @@
     <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/Grades/ModuleGradesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
           <folding>
             <element signature="e#439#1169#0#PHP" expanded="false" />
             <element signature="e#1175#1771#0#PHP" expanded="false" />
             <element signature="e#1777#2251#0#PHP" expanded="false" />
             <element signature="e#2257#2937#0#PHP" expanded="false" />
             <element signature="e#2943#3539#0#PHP" expanded="false" />
-            <marker date="1490587648280" expanded="true" signature="574:588" ph="SELECT * FRO... " />
-            <marker date="1490587648280" expanded="true" signature="574:596" ph="SELECT * FRO... usuarios" />
-            <marker date="1490587648280" expanded="true" signature="574:598" ph="SELECT * FRO... usuarios" />
-            <marker date="1490587648280" expanded="true" signature="608:633" ph="/*$informati... " />
+            <marker date="1490943548344" expanded="true" signature="574:588" ph="SELECT * FRO... " />
+            <marker date="1490943548344" expanded="true" signature="574:596" ph="SELECT * FRO... usuarios" />
+            <marker date="1490943548344" expanded="true" signature="574:598" ph="SELECT * FRO... usuarios" />
+            <marker date="1490943548344" expanded="true" signature="608:633" ph="/*$informati... " />
           </folding>
         </state>
       </provider>
