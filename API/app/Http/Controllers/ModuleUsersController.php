@@ -38,9 +38,15 @@ class ModuleUsersController extends Controller
      */
     public function getAllUsersInformation() {
         //$users = DB::table('users')->join('user_information', 'users.user_information_iduser_information', '=', 'user_information.iduser_information');
-        $users = DB::select('SELECT * FROM users INNER JOIN user_information ON users.user_information_iduser_information = user_information.iduser_information WHERE users.deleted != 1');
+        $users = DB::select('SELECT * FROM usuarios INNER JOIN informacion ON usuarios.idUsuarios = informacion.idInformacion');
         $users = json_encode($users, true);
         return json_decode($users, JSON_PRETTY_PRINT);
+    }
+
+
+    public function getAllProfesorsInformation() {
+        $users = DB::table('usuarios')->join('informacion', 'usuarios.idUsuarios', '=', 'informacion.idInformacion')->get();
+        return Datatables::of($users)->make(true);
     }
 
     /**

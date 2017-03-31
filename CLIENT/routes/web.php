@@ -53,3 +53,6 @@ Route::put('/users/update', 'Modules\Users\ModuleUsersController@updateX');
 Route::delete('/users/delete', 'Modules\Users\ModuleUsersController@delete');
 Route::put('/users/restore', 'Modules\Users\ModuleUsersController@restore');
 Route::resource('/users', 'Modules\Users\ModuleUsersController');
+Route::resource('/profesores', 'Modules\Profesors\ProfesorsController');
+Route::post('/profesores/create', 'Modules\Profesors\ProfesorsController@createProfesor');
+Route::post('/profesores/update', 'Modules\Profesors\ProfesorsController@updateProfesor');

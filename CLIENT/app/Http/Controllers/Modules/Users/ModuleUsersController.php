@@ -170,7 +170,7 @@ class ModuleUsersController extends Controller
                         ]
                     );
                     return json_decode($result->getBody()->getContents(), JSON_PRETTY_PRINT);
-                }catch (ClientException $exception){;
+                }catch (ClientException $exception){
                     return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
                 }
             }catch (ServerException $serverException) {
