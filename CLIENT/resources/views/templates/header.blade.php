@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 no-js"> <![endif]-->
 <!--[if !IE]><!-->
 <html lang="en">
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>Servicios escolares</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="Servicios escolares" name="description" />
-    <meta content="" name="author" />
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="Servicios escolares" name="description"/>
+    <meta content="" name="author"/>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" type="text/css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all"
+          type="text/css">
     {!! HTML::style('/public/global/plugins/font-awesome/css/font-awesome.min.css') !!}
     {!! HTML::style('/public/global/plugins/simple-line-icons/simple-line-icons.min.css') !!}
     {!! HTML::style('/public/css/app.min.css') !!}
@@ -28,14 +31,16 @@
     {!! HTML::style('/public/layouts/layout2/css/custom.min.css') !!}
     {!! HTML::style('/public/css/modules/users/users.min.css') !!}
     <style type="text/css">
-        .page-content{ height: 100%;}
+        .page-container {
+            height: 0px !important;
+        }
     </style>
-<!-- END THEME LAYOUT STYLES -->
-    <link rel="shortcut icon" href="/favicon.ico" /> 
+    <!-- END THEME LAYOUT STYLES -->
+    <link rel="shortcut icon" href="/favicon.ico"/>
 </head>
 
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
 <!-- END HEAD -->
 
 <!-- <body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-md">-->
@@ -51,14 +56,15 @@
         <!-- BEGIN LOGO -->
         <div class="page-logo">
             <a href="/">
-                <img src="/public/layouts/layout2/img/logo-default.png" alt="logo" class="logo-default" /> </a>
+                <img src="/public/layouts/layout2/img/logo-default.png" alt="logo" class="logo-default"/> </a>
             <div class="menu-toggler sidebar-toggler">
                 <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
             </div>
         </div>
         <!-- END LOGO -->
         <!-- BEGIN RESPONSIVE MENU TOGGLER -->
-        <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+        <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse"
+           data-target=".navbar-collapse"> </a>
         <!-- END RESPONSIVE MENU TOGGLER -->
         <!-- BEGIN PAGE ACTIONS -->
         <!-- DOC: Remove "hide" class to enable the page header actions -->
@@ -105,7 +111,8 @@
                     <!-- DOC: Apply "dropdown-hoverable" class after below "dropdown" and remove data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to enable hover dropdown mode -->
                     <!-- DOC: Remove "dropdown-hoverable" and add data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to the below A element with dropdown-toggle class -->
                     <li class="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">
-                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                           data-close-others="true">
                             <i class="icon-bell"></i>
                             <span class="badge badge-default"> 1 </span>
                         </a>
@@ -116,7 +123,8 @@
                                 <a href="#">ver todas</a>
                             </li>
                             <li>
-                                <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
+                                <ul class="dropdown-menu-list scroller" style="height: 250px;"
+                                    data-handle-color="#637283">
                                     <li>
                                         <a href="javascript:;">
                                             <span class="time">9 días</span>
@@ -135,7 +143,8 @@
                     <!-- BEGIN INBOX DROPDOWN -->
                     <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
                     <li class="dropdown dropdown-extended dropdown-inbox" id="header_inbox_bar">
-                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                           data-close-others="true">
                             <i class="icon-envelope-open"></i>
                             <span class="badge badge-default"> 1 </span>
                         </a>
@@ -146,11 +155,13 @@
                                 <a href="#">ver todos</a>
                             </li>
                             <li>
-                                <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
+                                <ul class="dropdown-menu-list scroller" style="height: 275px;"
+                                    data-handle-color="#637283">
                                     <li>
                                         <a href="#">
                                             <span class="photo">
-                                                <img src="/public/layouts/layout3/img/avatar11.jpg" class="img-circle" alt="">
+                                                <img src="/public/layouts/layout3/img/avatar11.jpg" class="img-circle"
+                                                     alt="">
                                             </span>
                                             <span class="subject">
                                                 <span class="from"> Diana Fernández </span>
@@ -167,8 +178,9 @@
                     <!-- BEGIN USER LOGIN DROPDOWN -->
                     <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
                     <li class="dropdown dropdown-user">
-                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                            <img alt="" class="img-circle" src="{{ $result['foto'] }}" />
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                           data-close-others="true">
+                            <img alt="" class="img-circle" src="{{ $result['foto'] }}"/>
                             <span class="username username-hide-on-mobile">{{ $result["nombre"] }} {{ $result["apellido"] }}</span>
                             <i class="fa fa-angle-down"></i>
                         </a>
@@ -189,10 +201,10 @@
                                     <span class="badge badge-success"> 7 </span>
                                 </a>
                             </li>
-                            <li class="divider"> </li>
+                            <li class="divider"></li>
                             <li>
-                                <a href="/logout" >
-                                    <i class="icon-logout" ></i> Cerrar sesión</a>
+                                <a href="/logout">
+                                    <i class="icon-logout"></i> Cerrar sesión</a>
                             </li>
                         </ul>
                     </li>
@@ -211,7 +223,7 @@
 </div>
 <!-- END HEADER -->
 <!-- BEGIN HEADER & CONTENT DIVIDER -->
-<div class="clearfix"> </div>
+<div class="clearfix"></div>
 <!-- END HEADER & CONTENT DIVIDER -->
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
@@ -221,8 +233,9 @@
         <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
         <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
         <div class="page-sidebar navbar-collapse collapse">
-            <ul class="page-sidebar-menu  page-header-fixed page-sidebar-menu-hover-submenu page-sidebar-menu-closed" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
-                
+            <ul class="page-sidebar-menu  page-header-fixed page-sidebar-menu-hover-submenu page-sidebar-menu-closed"
+                data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+
                 <li class="nav-item active">
                     <a href="/" class="nav-link nav-toggle">
                         <i class="icon-home"></i>
@@ -230,11 +243,12 @@
                         <span class="selected"></span>
                     </a>
                 </li>
-<
                 <li class="nav-item active">
                     <a href="/calificaciones" class="nav-link nav-toggle">
                         <i class="fa fa-book"></i>
                         <span class="title">Calificaciones</span>
+                    </a>
+                </li>
                 <li class="nav-item">
                     <a href="/profesores" class="nav-link nav-toggle">
                         <i class="icon-briefcase"></i>
@@ -257,27 +271,38 @@
                         <span class="title">Usuarios</span>
                         <span class="selected"></span>
                     </a>
+                </li>
 
                 <li class="nav-item">
-                  <a href="/periodos" class="nav-link nav-toggle">
-                  <i class="icon-calendar"></i> 
-                  <span class="title">Periodos</span>          
-                  <span class="arrow "></span>
-                  </a>
-                  <ul class="sub-menu">
-                    <li >
-                      <a href="/periodos/create">
-                      <span class="badge badge-roundless badge-important">Nuevo</span>Crear</a>
-                    </li>
-                    <li >
-                      <a href="/periodos/update">
-                      Actualizar</a>
-                    </li>
-                    <li >
-                      <a href="/periodos/destroy">
-                      Eliminar</a>
-                    </li>
-                  </ul>
+                    <a href="/periodos" class="nav-link nav-toggle">
+                        <i class="icon-calendar"></i>
+                        <span class="title">Periodos</span>
+                        <span class="arrow "></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item start">
+                            <a href="/periodos/create" class="nav-link">
+                                <i class="fa fa-plus-circle"></i>
+                                <span class="badge badge-roundless badge-important">Nuevo</span>
+                                <span class="title">Crear</span>
+                            </a>
+                        </li>
+                        <li class="nav-item start">
+                            <a href="/periodos/update">
+                            <i class="fa fa-plus-circle"></i>
+                            <span class="badge badge-roundless badge-important">Nuevo</span>
+                            <span class="title">Actualizar</span>
+                            </a>
+                        </li>
+                        <li class="nav-item start">
+                            <a href="/periodos/destroy">
+                            <i class="fa fa-plus-circle"></i>
+                            <span class="badge badge-roundless badge-important">Nuevo</span>
+                            <span class="title">Eliminar</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
                 <li class="nav-item active">
                     <a href="/grupos" class="nav-link nav-toggle">
@@ -303,6 +328,7 @@
             <!-- END SIDEBAR MENU -->
         </div>
     </div>
-        <!-- END SIDEBAR -->
-    </div>
     <!-- END SIDEBAR -->
+</div>
+
+<!-- END SIDEBAR -->
