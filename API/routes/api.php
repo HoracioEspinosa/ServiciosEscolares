@@ -30,7 +30,11 @@ Route::get('auth/me', 'Api\AuthController@getAuthenticatedUser');
 
 Route::post('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
-Route::get('periodos', 'ModuleUsersController@periodos');
+
+
+Route::get('/periodos', 'Modules\Periodos\PeriodosController@getInfo');
+Route::post('/periodos/getByID', 'Modules\Periodos\PeriodosController@getInfoByID');
+Route::post('/periodos/create', 'Modules\Periodos\PeriodosController@create');
 
 
 //Route::get('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');

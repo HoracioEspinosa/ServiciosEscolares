@@ -12,13 +12,7 @@ use Tymon\JWTAuth\Exceptions\JWTException;
 
 class ModuleUsersController extends Controller
 {
-    public function periodos()
-    {
-        //$info = DB::table('Periodos')->get();
-        $info = DB::select('SELECT pds.idPeriodos, y.idAnio, inicio, fin, Anio, status FROM Periodos as pds INNER JOIN Periodos_has_Anio as yrs ON (pds.idPeriodos = yrs.idPeriodos) INNER JOIN Anio as y ON(yrs.idAnio = y.idAnio)');
-        $info = json_encode($info,true);
-        return json_decode($info,JSON_PRETTY_PRINT);
-    }
+
 
     /**
      * @return mixed

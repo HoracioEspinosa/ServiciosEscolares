@@ -1,12 +1,12 @@
 @include('/templates/header')
 
 <!-- BEGIN CONTENT -->
-   <div class="page-content-wrapper">
+   <div class="page-content-wrapper" id="log">
         <!-- BEGIN CONTENT BODY -->
         <div class="page-content">
             <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
-            <div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
+            <div class="modal fade bs-modal-sm" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
@@ -19,7 +19,33 @@
                             @include('/modules/periodos/create')
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn blue">Guardar</button>
+                            <button type="button" class="btn blue" onclick="createPeriodo()">Crear</button>
+                            <button type="button" class="btn default" data-dismiss="modal">Cancelar</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
+            <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+
+            <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+            <div class="modal fade bs-modal-sm" id="actualizar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                            <div class="caption font-green">
+                                <i class="icon-calendar font-green"></i>
+                                <span class="caption-subject bold uppercase"> Edicion de periodos</span>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            @include('/modules/periodos/update')
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn blue" onclick="update()">Guardar</button>
                             <button type="button" class="btn default" data-dismiss="modal">Cancelar</button>
                         </div>
                     </div>
@@ -108,6 +134,7 @@
                                         </tr>
                                     </thead>
                                     <tbody id="cuerpoTablaPeriodos">
+
                                         @foreach($datosPeriodos as $periodo)
 
                                             <tr>
@@ -119,7 +146,7 @@
                                                 </td>
                                                 <td>{{ucfirst($periodo['inicio'])}}</td>
                                                 <td>{{ucfirst($periodo['fin'])}}</td>
-                                                <td>{{$periodo['Anio']}}</td>
+                                                <td>{{$periodo['anio']}}</td>
                                                 <td>
 
                                                     @if($periodo['status'] == "0")
@@ -137,7 +164,7 @@
                                                         </button>
                                                         <ul class="dropdown-menu pull-left" role="menu">
                                                             <li>
-                                                                <a href="javascript:getPeriodosByID({{$periodo['idAnio']}});">
+                                                                <a onclick="getPeriodosByID({{$periodo['idPeriodos']}});" data-toggle="modal" href="#actualizar">
                                                                     <i class="fa fa-pencil"></i> Editar
                                                                 </a>
                                                             </li>

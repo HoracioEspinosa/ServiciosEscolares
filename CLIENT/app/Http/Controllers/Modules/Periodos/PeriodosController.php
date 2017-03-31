@@ -29,7 +29,8 @@ class PeriodosController extends Controller
         $this->setUserHeader();
         $users=ModuleUsersController::getAllUsersInformation();
         $result = $this->result;
-        $datosPeriodos = PeriodosController::getInformation();
+        $datosPeriodos = $this->getInformation();
+        //dd($datosPeriodos);
         return view('modules.periodos.index', compact('result', 'users', 'datosPeriodos'))->with("token", Cookie::get('token'));
     }
 
@@ -60,8 +61,38 @@ class PeriodosController extends Controller
         }
     }
 
-    public static function getInformationByID(Request $request){
-        $idPeriodo = $request->input('id');
+    public function update(Request $request){
+        $this->setUserHeader();
+        $datos = $this->getInformationByID($request->input('id'));
+        return $datos;
+    }
+
+    public function getInformationByID($id){
+        if (cookie::get('token') == "" || cookie::get('token')  == null) {
+            return redirect('/login');
+        }
+        else{
+            try {
+                try {
+
+                    $client = new GuzzleHttp\Client( ['base_uri' => env('SERVER_API')]  );
+                    $my_request = $client->request('POST', '/api/periodos/getByID', [
+                        'form_params' => [
+                            'id' => $id,
+                        ],
+                    ]);
+                    $result = $my_request->getBody()->getContents();
+                    $result = json_decode($result, JSON_PRETTY_PRINT);
+                    //dd($result);
+                    return $result;
+                }catch (ClientException $exception){;
+                    return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
+                }
+            }catch (ServerException $serverException) {
+                dd($serverException);
+                //return redirect('/logout');
+            }
+        }
     }
     public function setUserHeader(){
         if (cookie::get('token') == "" || Cookie::get('token')  == null) {
@@ -86,11 +117,66 @@ class PeriodosController extends Controller
         }
     }
 
-    public function createView()
+    public function create(Request $request){
+        if (cookie::get('token') == "" || cookie::get('token')  == null) {
+            return redirect('/login');
+        }
+        else{
+            try{
+                try{
+                    $idPeriodo = $request->input('periodo');
+                    $anio = $request->input('anio');
+                    $status = 1;
+                    if ($idPeriodo == 1){
+                        $inicio = "enero";
+                        $fin = "abril";
+                    }elseif ($idPeriodo == 2){
+                        $inicio = "mayo";
+                        $fin = "agosto";
+                    }else{
+                        $inicio = "septiembre";
+                        $fin = "diciembre";
+                    }
+
+                    $client = new GuzzleHttp\Client( ['base_uri' => env('SERVER_API')] );
+                    $headers = [
+                        'Content-Type' => 'application/x-www-form-urlencoded',
+                        'Authorization' => 'Bearer '. cookie::get('token'),
+                    ];
+                    $my_request = $client->request('POST', '/api/periodos/create', [
+                        'form_params' => [
+                            'startPeriod' => $inicio,
+                            'endPeriod' => $fin,
+                            'year' => $anio,
+                            'status' => $status,
+                        ],
+                        'headers' => $headers
+                    ]);
+                    $result = $my_request->getBody()->getContents();
+                    $result = json_decode($result, JSON_PRETTY_PRINT);
+                    $result = $result[0];
+                    if ($result['MESSAGE'] == 'OK') {
+                        //return redirect('/periodos');
+                        return 'OK';
+                    }
+                    else{
+                    }
+                    //return $result;
+                }catch (ClientException $exception){
+                    //dd($exception->getResponse()->getBody()->getContents());
+                    return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
+                }
+            } catch (ServerException $serverException) {
+                //dd($serverException);
+                return redirect('/login');
+            }
+        }
+    }
+    /*public function createView()
     {
         $this->setUserHeader();
         $users=ModuleUsersController::getAllUsersInformation();
         $result = $this->result;
         return view('modules.periodos.create', compact('result', 'users'))->with("token", Cookie::get('token'));
-    }
+    }*/
 }

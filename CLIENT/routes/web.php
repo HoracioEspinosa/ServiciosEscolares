@@ -36,8 +36,9 @@ Route::post('/setToken', 'Auth\LoginController@setToken');
 
 Route::get('/periodos', 'Modules\Periodos\PeriodosController@index');
 Route::get('/periodos/information', 'Modules\Periodos\PeriodosController@getInformation');
-Route::get('/periodos/create', 'Modules\Periodos\PeriodosController@createView');
-Route::post('/periodos/byID', 'Modules\Periodos\PeriodosController@getInformationByID');
+Route::post('/periodos/update', 'Modules\Periodos\PeriodosController@update');
+Route::post('/periodos/create', 'Modules\Periodos\PeriodosController@create');
+
 
 /*Route::get('/horarios', function(){
 	return view('horario');
