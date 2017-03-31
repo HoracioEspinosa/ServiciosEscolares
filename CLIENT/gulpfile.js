@@ -63,7 +63,11 @@ gulp.task('minify', function () {
     gulp.src(['./public/css/*.css', '!./public/css/*.min.css']).pipe(minifyCss()).pipe(rename({suffix: '.min'})).pipe(gulp.dest('./public/css/'));
     gulp.src(['./public/css/modules/*.css', '!./public/css/modules/*.min.css']).pipe(minifyCss()).pipe(rename({suffix: '.min'})).pipe(gulp.dest('./public/css/modules/'));
     gulp.src(['./public/css/modules/users/*.css', '!./public/css/modules/users/*.min.css']).pipe(minifyCss()).pipe(rename({suffix: '.min'})).pipe(gulp.dest('./public/css/modules/users/'));
+<<<<<<< HEAD
     gulp.src(['./public/css/modules/calificaciones/*.css', '!./public/css/modules/calificaciones/*.min.css']).pipe(minifyCss()).pipe(rename({suffix: '.min'})).pipe(gulp.dest('./public/css/modules/calificaciones/'));
+=======
+    gulp.src(['./public/css/modules/horarios/*.css', '!./public/css/modules/horarios/*.min.css']).pipe(minifyCss()).pipe(rename({suffix: '.min'})).pipe(gulp.dest('./public/css/modules/horarios/'));
+>>>>>>> 9ad29d3757cf99a17d4276924642f38ada980a67
     gulp.src(['./public/global/css/*.css', '!./public/global/css/**/*.min.css']).pipe(minifyCss()).pipe(rename({suffix: '.min'})).pipe(gulp.dest('./public/global/css/'));
 
     // css minify

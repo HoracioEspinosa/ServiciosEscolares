@@ -94,8 +94,18 @@ Tutorial para hacer todo el pedo del Horacio.
 11.5	Guardar.
 12	Esto se hace tanto en CLIENT como en API
 	php artisan key:generate
+<<<<<<< HEAD
+
+	"composer key:generate"
+	"composer config:clear"
+=======
 	php artisan config:clear
+<<<<<<< HEAD:tutorial.txt
 13	Con esto ya deberï¿½a poder entrar utilizando su direcciï¿½n de VHOST en su navegador por ejemplo: serviciosmivhost.dev y entra al login, para probar que todo estï¿½ bien deberï¿½an poder loggearse utilizando lo siguiente, user: Horacio, pass: horacio123x
+=======
+>>>>>>> 6859cdca39b6a09a09d4ec50ef1cc62b77299b72
+13	Con esto ya debería poder entrar utilizando su dirección de VHOST en su navegador por ejemplo: serviciosmivhost.dev y entra al login, para probar que todo esté bien deberían poder loggearse utilizando lo siguiente, user: Horacio, pass: horacio123x
+>>>>>>> 9ad29d3757cf99a17d4276924642f38ada980a67:README.md
 
 14 Cualquier cosa, antes de perder el control, apagar y encender su wampp o xampp.
 

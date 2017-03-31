@@ -1,6 +1,6 @@
 @include('/templates/header')
 <!-- BEGIN CONTENT -->
-<input type="hidden" id="uname" value="{{ $result['uname'] }}">
+<input type="hidden" id="uname" value="{{ $result['usuario'] }}">
 <div class="page-content-wrapper">
     <!-- BEGIN CONTENT BODY -->
     <div class="page-content">
@@ -54,47 +54,9 @@
                         <ul class="inbox-nav">
                             <li class="active">
                                 <a href="javascript:;" data-type="inbox" data-title="Inbox" data-id="1"> Todos
-                                    <span class="badge badge-success recordsTotal">0</span>
+                                    <span class="badge badge-success recordsTotal">1</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="javascript:;" data-type="important" data-title="Inbox" data-id="2"> Administradores
-                                    <span class="badge adminsTotal">0</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;" data-type="draft" data-title="Draft" data-id="3"> Eliminados
-                                    <span class="badge badge-danger deletedTotal">0</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;" data-type="draft" data-title="Draft" data-id="4"> No eliminados
-                                    <span class="badge badge-primary nodeletedTotal">0</span>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="javascript:;" data-title="Trash" data-id="5"> Activos
-                                    <span class="badge badge-info activeTotal">0</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;" data-type="inbox" data-title="Promotions" data-id="6"> Inactivos
-                                    <span class="badge badge-warning inactiveTotal">0</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="inbox-contacts">
-                            <li class="divider margin-bottom-30"></li>
-                            @foreach($users as $user)
-                                <li>
-                                    <a href="javascript:;">
-                                        <img class="contact-pic" src="{{ $user['photo'] }}">
-                                        <span class="contact-name">{{ $user['uname'].' '.$user['lastname'] }}</span>
-                                        <span class="contact-status bg-green"></span>
-                                    </a>
-                                </li>
-                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -117,7 +79,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-7">
-                                        @if($result["Users_levels_idUsers_levels"] == 1)
+                                        @if($result["idUsuarios"] == 1)
                                             <div class="btn-group" data-toggle="buttons" id="checkDeleted" style="display: none;">
                                                 <label class="btn blue active" data-value="0"><span class="md-click-circle md-click-animate" style="height: 86px; width: 86px; top: -28px; left: 21px;"></span><input type="radio" class="toggle" value="0" name="typeTableElements"> Todos</label>
                                                 <label class="btn blue" data-value="1"><input type="radio" class="toggle" value="1" name="typeTableElements">Eliminados </label>
@@ -172,6 +134,7 @@
                                         <form id="form_sample_user" class="form-horizontal" novalidate="novalidate">
                                             <input type="hidden" name="token" value="{{ Cookie::get('token') }}">
                                             <input type="hidden" name="identificator" id="identificator">
+                                            <input type="hidden" name="idInformacion" id="idInformacion">
                                             <div class="col-sm-12">
                                                 <div class="col-sm-4">
                                                     <div class="row">
@@ -180,7 +143,7 @@
                                                             <div class="col-md-9">
                                                                 <div class="input-icon right">
                                                                     <i class="fa fa-lock"></i>
-                                                                    <input type="text" class="form-control" name="code" id="code" disabled placeholder="(Generado automáticamente)">
+                                                                    <input type="text" class="form-control" name="code" id="code" placeholder="(Generado automáticamente)">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -203,17 +166,6 @@
                                                                 <div class="input-icon right">
                                                                     <i class="fa fa-user"></i>
                                                                     <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Ingrese el apellido">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="form-group">
-                                                            <label class="control-label col-md-2">Correo:</label>
-                                                            <div class="col-md-9">
-                                                                <div class="input-icon right">
-                                                                    <i class="fa fa-envelope"></i>
-                                                                    <input type="email" class="form-control" name="email" id="email" placeholder="Ingrese el correo electrónico">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -243,7 +195,21 @@
                                                     </div>
                                                     <div class="row">
                                                         <div class="form-group">
-                                                            <label class="control-label col-md-2">Genero:</label>
+                                                            <label class="control-label col-md-2">Correo:</label>
+                                                            <div class="col-md-9">
+                                                                <div class="input-icon right">
+                                                                    <i class="fa fa-envelope"></i>
+                                                                    <input type="email" class="form-control" name="email" id="email" placeholder="Ingrese el correo electrónico">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <!-- AQUI -->
+                                                    <div class="row">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">Genero:</label>
                                                             <div class="col-md-9">
                                                                 <div class="input-icon right">
                                                                     <select class="form-control" name="gender" id="gender">
@@ -257,7 +223,7 @@
                                                     </div>
                                                     <div class="row">
                                                         <div class="form-group">
-                                                            <label class="control-label col-md-2">Tipo:</label>
+                                                            <label class="control-label col-md-3">Tipo:</label>
                                                             <div class="col-md-9">
                                                                 <div class="input-icon right">
                                                                     <select class="form-control" name="type" id="type">
@@ -269,44 +235,12 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-sm-4">
                                                     <div class="row">
                                                         <div class="form-group">
-                                                            <label class="control-label col-md-3">Sucursal</label>
+                                                            <label class="control-label col-md-3">Estado:</label>
                                                             <div class="col-md-9">
                                                                 <div class="input-icon right">
-                                                                    <i class="fa"></i>
-                                                                    <select class="form-control" name="branch_id" id="branch_id">
-                                                                        <option value="">Seleccionar sucursal</option>
-                                                                        @foreach($branch_offices as $branch_office)
-                                                                            <option value="{{ $branch_office->id_branch_offices }}">{{ $branch_office->name }}</option>
-                                                                        @endforeach
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="form-group">
-                                                            <label class="control-label col-md-3">Departamento: </label>
-                                                            <div class="col-md-9">
-                                                                <div class="input-icon right">
-                                                                    <i class="fa"></i>
-                                                                    <select class="form-control" name="department_id" id="department_id">
-                                                                        <option value="">Seleccionar departamento</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="form-group">
-                                                            <label class="control-label col-md-3">Estado: </label>
-                                                            <div class="col-md-9">
-                                                                <div class="input-icon right">
-                                                                    <i class="fa"></i>
-                                                                    <select class="form-control" name="status" id="status">
+                                                                    <select class="form-control" name="estado" id="estado">
                                                                         <option value="">Seleccionar estado</option>
                                                                         <option value="1">Activo</option>
                                                                         <option value="0">Inactivo</option>
@@ -361,12 +295,11 @@
                                     <table class="table table-striped table-advance table-hover display responsive nowrap dataTable dtr-inline" id="sample_Users" width="100%" role="grid" aria-describedby="sample_3_info">
                                         <thead>
                                         <tr role="row">
-                                            <th class="sorting" tabindex="0" aria-controls="sample_Users" rowspan="1" colspan="1" aria-label=" Nivel: activate to sort column ascending" style="width: 145.2px;">&nbsp;Nivel</th>
-                                            <th class="sorting" tabindex="0" aria-controls="sample_Users" rowspan="1" colspan="1" aria-label=" Código: activate to sort column ascending" style="width: 145.2px;"> Código</th>
+                                            <th class="sorting" tabindex="0" aria-controls="sample_Users" rowspan="1" colspan="1" aria-label=" Nivel: activate to sort column ascending" style="width: 145.2px;">&nbsp;Tipo de usuario</th>
+                                            <th class="sorting" tabindex="0" aria-controls="sample_Users" rowspan="1" colspan="1" aria-label=" Código: activate to sort column ascending" style="width: 145.2px;"> CURP</th>
                                             <th class="sorting" tabindex="0" aria-controls="sample_Users" rowspan="1" colspan="1" aria-label="ascending" aria-label=" Nombre: activate to sort column descending" style="width: 186.2px;"> Nombre </th>
                                             <th class="sorting" tabindex="0" aria-controls="sample_Users" rowspan="1" colspan="1" aria-label=" Correo: activate to sort column ascending" style="width: 145.2px;"> Correo </th>
-                                            <th class="sorting" tabindex="0" aria-controls="sample_Users" rowspan="1" colspan="1" aria-label=" Teléfonos: activate to sort column ascending" style="width: 145.2px;"> Teléfonos </th>
-                                            <th class="sorting" tabindex="0" aria-controls="sample_Users" rowspan="1" colspan="1" aria-label=" Departamento: activate to sort column ascending" style="width: 145.2px;"> Departamento</th>
+                                            <th class="sorting" tabindex="0" aria-controls="sample_Users" rowspan="1" colspan="1" aria-label=" Teléfonos: activate to sort column ascending" style="width: 145.2px;"> Teléfono </th>
                                             <th class="sorting" tabindex="0" aria-controls="sample_Users" rowspan="1" colspan="1" aria-label=" Permiso: activate to sort column ascending" style="width: 145.2px;"> Estado </th>
                                             <th class="sorting" tabindex="0" aria-controls="sample_Users" rowspan="1" colspan="1" aria-label=" Acciones: activate to sort column ascending" style="width: 145.2px;"> Acciones</th>
                                         </tr>

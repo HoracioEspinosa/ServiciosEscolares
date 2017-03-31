@@ -1,5 +1,8 @@
+
 8@include('/templates/header')
 <input type="hidden" id="uname" value="{{ $result['uname'] }}">
+@include('/templates/header')
+<input type="hidden" id="uname" value="{{ $result['usuario'] }}">
 <div class="page-content-wrapper">
     <!-- BEGIN CONTENT BODY -->
     <div class="page-content">
@@ -30,12 +33,12 @@
                     <div class="portlet light profile-sidebar-portlet ">
                         <!-- SIDEBAR USERPIC -->
                         <div class="profile-userpic">
-                            <img src="{{ $active["photo"] }}" class="img-responsive" alt=""> </div>
+                            <img src="{{ $active["foto"] }}" class="img-responsive" alt=""> </div>
                         <!-- END SIDEBAR USERPIC -->
                         <!-- SIDEBAR USER TITLE -->
                         <div class="profile-usertitle">
-                            <div class="profile-usertitle-name"> {{ $active["name"]." ".$active["lastname"] }} </div>
-                            <div class="profile-usertitle-job"> {{ $active["level_name"] }} </div>
+                            <div class="profile-usertitle-name"> {{ $active["nombre"]." ".$active["apellido"] }} </div>
+                            <!--div class="profile-usertitle-job">  </div-->
                         </div>
                         <!-- END SIDEBAR USER TITLE -->
                         <!-- SIDEBAR BUTTONS -->
@@ -83,23 +86,23 @@
                         </div>
                         <!-- END STAT -->
                         <div>
-                            <h4 class="profile-desc-title">Acerca de {{ $active["name"]." ".$active["lastname"] }}</h4>
+                            <h4 class="profile-desc-title">Acerca de {{ $active["nombre"]." ".$active["apellido"] }}</h4>
                             <span class="profile-desc-text"> Mi pequeña descripción </span>
                             <div class="margin-top-20 profile-desc-link">
                                 <i class="fa fa-phone"></i>
-                                <a href="tel:+52{{ str_replace(array('(',')','-',' '),'',$active["extra_phones"]) }}"> +52 {{ $active["extra_phones"] }}</a>
+                                <a href="tel:+52{{ str_replace(array('(',')','-',' '),'',$active["telefono"]) }}"> +52 {{ $active["telefono"] }}</a>
                             </div>
                             <div class="margin-top-20 profile-desc-link">
                                 <i class="fa fa-home"></i>
-                                <span> {{ $active["address"] }}</span>
+                                <span> {{ $active["direccion"] }}</span>
                             </div>
                             <div class="margin-top-20 profile-desc-link">
                                 <i class="fa fa-envelope"></i>
-                                <a href="mailto:{{ $active["email"] }}">{{ $active["email"] }}</a>
+                                <a href="mailto:{{ $active["correo"] }}">{{ $active["correo"] }}</a>
                             </div>
                             <div class="margin-top-20 profile-desc-link">
                                 <i class="fa fa-lock"></i>
-                                <span>{{ $active["code"] }}</span>
+                                <span>{{ $active["curp"] }}</span>
                             </div>
                         </div>
                     </div>

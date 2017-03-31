@@ -236,12 +236,34 @@ Contact: admin@cloudftog.com.mx
                     <a href="/calificaciones" class="nav-link nav-toggle">
                         <i class="fa fa-book"></i>
                         <span class="title">Calificaciones</span>
+                <li class="nav-item">
+                    <a href="/profesores" class="nav-link nav-toggle">
+                        <i class="icon-briefcase"></i>
+                        <span class="title">Profesores</span>
+                        <span class="selected"></span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item start">
+                            <a href="/profesores/create" class="nav-link ">
+                                <i class="fa fa-plus-circle"></i>
+                                <span class="title">Agregar</span>
+                                <span class="selected"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="/users" class="nav-link nav-toggle">
+                        <i class="icon-users"></i>
+                        <span class="title">Usuarios</span>
                         <span class="selected"></span>
                     </a>
                 </li>
             </ul>
             <!-- END SIDEBAR MENU -->
         </div>
+    </div>
         <!-- END SIDEBAR -->
     </div>
     <!-- END SIDEBAR -->
