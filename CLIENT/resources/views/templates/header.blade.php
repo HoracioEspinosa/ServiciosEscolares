@@ -232,7 +232,7 @@ Contact: admin@cloudftog.com.mx
                         <span class="selected"></span>
                     </a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a href="/profesores" class="nav-link nav-toggle">
                         <i class="icon-briefcase"></i>
                         <span class="title">Profesores</span>
@@ -248,6 +248,13 @@ Contact: admin@cloudftog.com.mx
                             </a>
                         </li>
                     </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="/users" class="nav-link nav-toggle">
+                        <i class="icon-users"></i>
+                        <span class="title">Usuarios</span>
+                        <span class="selected"></span>
+                    </a>
                 </li>
             </ul>
             <!-- END SIDEBAR MENU -->
