@@ -31,8 +31,8 @@ Route::get('auth/me', 'Api\AuthController@getAuthenticatedUser');
 Route::post('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
 
-//Route::get('/horarios/get', 'Modules\Horarios\HorarioController@getInformation');
-Route::get('/horarios/get', 'Modules\Horarios\HorarioController@getInformationByIdProfesor');
+Route::get('/horarios/get', 'Modules\Horarios\HorarioController@getInformation');
+Route::get('/horarios/{id$}/get', 'Modules\Horarios\HorarioController@getInformationByIdProfesor');
 Route::resource('/horarios', 'Modules\Horarios\HorarioController');
 
 Route::get('/carreras/get', 'Modules\Carreras\CarrerasController@getInformation');

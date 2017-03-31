@@ -49,6 +49,10 @@ class HorariosController extends Controller
             try{
                 try{
                     $client = new GuzzleHttp\Client( ['base_uri' => env('SERVER_API')]  );
+                    $headers = [
+                        'Content-Type' => 'application/json',
+                        'Authorization' => 'Bearer '. cookie::get('token'),
+                    ];
                     $result = $client->get( 'api/horarios/get', [ 'headers' => $headers ] );
                     $result = $client->getBody()->getContents();
                     $result = json_decode($result, JSON_PRETTY_PRINT);
