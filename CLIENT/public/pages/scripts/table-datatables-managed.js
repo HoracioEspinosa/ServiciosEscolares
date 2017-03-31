@@ -1061,7 +1061,7 @@ var TableDatatablesManaged = function () {
             "bDestroy": true,
             ajax: {
                 "type"   : "GET",
-                "url"    : 'http://serviciosescolaresapi.dev/api/users/list',
+                "url"    : 'http://servicioseduapi.dev/api/users/list',
                 "data"   : {
                     "token" : token,
                     "deleted" : deletedTYPE

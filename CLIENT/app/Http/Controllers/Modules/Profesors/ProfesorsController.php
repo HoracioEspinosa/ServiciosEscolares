@@ -35,7 +35,6 @@ class ProfesorsController extends Controller
         $users = ModuleUsersController::getAllUsersInformation();
         $result = $this->result;
         return view('agregarProfesor', compact('result', 'users'));
-        createProfesor($request);
     }
 
 
