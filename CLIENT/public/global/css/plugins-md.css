@@ -975,12 +975,15 @@ table.dataTable.no-footer {
 table.dataTable tr.heading > th {
   background-color: #fbfcfd; }
 
+<<<<<<< HEAD
 table.dataTable td.sorting_1, table.dataTable td.sorting_2, table.dataTable td.sorting_3,
 table.dataTable th.sorting_1,
 table.dataTable th.sorting_2,
 table.dataTable th.sorting_3 {
   background: #e0e0e0 !important; }
 
+=======
+>>>>>>> a8c557a0557ce9996777b98b8ac63e9dfbf49a45
 /***
 Extended pagination
 ***/

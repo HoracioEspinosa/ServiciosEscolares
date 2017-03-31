@@ -625,6 +625,307 @@ var TableDatatablesManaged = function () {
         });
     }
 
+    var initTableProfesores = function () {
+        var token = $("#api-token").val();
+        var deleted = $("#checkDeleted .active").data("value");
+        var table = $('#initTableProfesores').DataTable({
+            processing: true,
+            //sProcessing: 'Procesando...',
+            bProcessing: true,
+            bPaginate: true,
+            bLengthChange: true,
+            bInfo: true,
+            bAutoWidth: false ,
+            //bStateSave: true,
+            sPaginationType: "full_numbers",
+            serverSide: true,
+            bJQueryUI: true,
+            "bDestroy": true,
+            ajax: {
+                "type"   : "GET",
+                "url"    : 'http://servicioseduapi.dev/api/profesors/get/table',
+                "data"   : {
+                    "token" : token,
+                    "deleted" : deleted
+                },
+            },
+            columns: [
+                {
+                    data : 'nombre',
+                    searchable: true,
+                    sortable: true
+                },
+                {
+                    data : 'apellido',
+                    searchable: true,
+                    sortable: true,
+                    render: function (status, type, full, meta) {
+                        return full.apellido;
+                    }
+                },
+
+                {
+                    data: 'estatus',
+                    visible: true,
+                    render: function (type, type, full, meta) {
+                        return full.estatus;
+                    }
+                },
+                {
+                    data: 'idInformacion',
+                    render: function (type, type, full, meta) {
+                        var id = full.idProfesores;
+                        return '<div class="actions"><a class="mybutton btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Ver" data-llave='+id+' href="#view" data-toggle="modal"><i class="fa fa-eye"></i></a><a  class="mybutton btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Modificar" data-llave='+id+' href="#modify" data-toggle="modal"><i class="fa fa-edit"></i></a></div>';
+                    }
+                }
+
+            ],
+            "bSortClasses": false,
+            sDom: "lBfrtip",
+            buttons: [
+                {
+                    extend: 'copy',
+                    exportOptions: {
+                        columns: [0,1,2,3]
+                    }
+                },
+                {
+                    extend: 'excel',
+                    orientation: 'landscape',
+                    pageSize: 'LEGAL',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3]
+                    }
+                },
+                {
+                    extend: 'csv',
+                    orientation: 'landscape',
+                    pageSize: 'LEGAL',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3]
+                    }
+                },
+                {
+                    extend: 'pdf',
+                    pageSize: 'LEGAL',
+                    title: "Número de filas",
+                    exportOptions: {
+                        columns: [0, 1, 2, 3]
+                    },
+                    customize: function (doc) {
+                        doc.content[1].table.widths =
+                            Array(doc.content[1].table.body[0].length + 1).join('*').split('');
+                    }
+                },
+                {
+                    extend: 'print',
+                    orientation: 'landscape',
+                    title: "Listado de Profesores",
+                    message: "Listado de profes.",
+                    pageSize: 'LEGAL',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3]
+                    },
+                    className: 'printDepartment',
+                }
+            ],
+            language: {
+                aria: {
+                    sortAscending: ": activate to sort column ascending",
+                    sortDescending: ": activate to sort column descending"
+                },
+                emptyTable: "No se han encontrado registros",
+                info: "Mostrando del _START_ al _END_ de _TOTAL_ registros",
+                infoEmpty: "No se han encontrado resultados",
+                infoFiltered: "(Filtrado de _MAX_ registros)",
+                lengthMenu: "Número de sucursales &nbsp; _MENU_",
+                search: "Buscar: &nbsp;",
+                zeroRecords: "No se han encontrado resultados",
+                paginate: {
+                    previous:"Anterior",
+                    next: "Siguiente",
+                    last: "Último",
+                    first: "Primero"
+                },
+                select: {
+                    info: false
+                }
+            },
+            lengthMenu: [
+                [2, 5, 15, 20, -1],
+                [2, 5, 15, 20, "Todos"]
+            ],
+
+            pageLength: 5,
+            columnDefs: [
+                { width: "10%", targets: 2 }
+            ],
+            iDisplayLength: 2
+        });
+        table.columns.adjust().draw();
+        table.select.info( false );
+        $('#initTableProfesores tbody').on( 'click', 'tr', function () {
+            if ( $(this).hasClass('selected') ) {
+                $(this).removeClass('selected');
+            }
+            else {
+                table.$('tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+            }
+        } );
+    }
+    var initTableStudentsGroup = function ($id) {
+        var token = $("#api-token").val();
+        var deleted = $("#checkDeleted .active").data("value");
+        var table = $('#initTableProfesores').DataTable({
+            processing: true,
+            //sProcessing: 'Procesando...',
+            bProcessing: true,
+            bPaginate: true,
+            bLengthChange: true,
+            bInfo: true,
+            bAutoWidth: false ,
+            //bStateSave: true,
+            sPaginationType: "full_numbers",
+            serverSide: true,
+            bJQueryUI: true,
+            "bDestroy": true,
+            ajax: {
+                "type"   : "GET",
+                "url"    : 'http://serviciosescapi.dev/api/groups/' + $id,
+                "data"   : {
+                    "token" : token,
+                    "deleted" : deleted
+                },
+            },
+            columns: [
+                {
+                    data : 'nombre',
+                    searchable: true,
+                    sortable: true,
+                },
+                {
+                    data : 'apellido',
+                    searchable: true,
+                    sortable: true,
+                },
+
+                {
+                    data: 'matricula',
+                    visible: true,
+
+                },
+
+                {
+                    data: 'estado',
+                    visible: true,
+                },
+
+                {
+                    data: 'Acciones',
+                    render: function (type, type, full, meta) {
+                        var id = full.idAlumnos;
+                        return '<div class="actions">' + '<a class="mybutton btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Ver" data-llave='+id+' href="#view" data-toggle="modal"><i class="fa fa-users"></i></a><a  class="mybutton btn btn-circle btn-icon-only btn-default tooltips" data-placement="bottom" data-original-title="Modificar" data-llave='+id+' href="#modify" data-toggle="modal"><i class="fa fa-trash-o"></i></a></div>';
+                    }
+                }
+
+            ],
+            "bSortClasses": false,
+            sDom: "lBfrtip",
+            buttons: [
+                {
+                    extend: 'copy',
+                    exportOptions: {
+                        columns: [0,1,2,3]
+                    }
+                },
+                {
+                    extend: 'excel',
+                    orientation: 'landscape',
+                    pageSize: 'LEGAL',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3]
+                    }
+                },
+                {
+                    extend: 'csv',
+                    orientation: 'landscape',
+                    pageSize: 'LEGAL',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3]
+                    }
+                },
+                {
+                    extend: 'pdf',
+                    pageSize: 'LEGAL',
+                    title: "Número de filas",
+                    exportOptions: {
+                        columns: [0, 1, 2, 3]
+                    },
+                    customize: function (doc) {
+                        doc.content[1].table.widths =
+                            Array(doc.content[1].table.body[0].length + 1).join('*').split('');
+                    }
+                },
+                {
+                    extend: 'print',
+                    orientation: 'landscape',
+                    title: "Listado de Alumnos",
+                    message: "Listado de alumnos.",
+                    pageSize: 'LEGAL',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3]
+                    },
+                    className: 'printDepartment',
+                }
+            ],
+            language: {
+                aria: {
+                    sortAscending: ": activate to sort column ascending",
+                    sortDescending: ": activate to sort column descending"
+                },
+                emptyTable: "No se han encontrado registros",
+                info: "Mostrando del _START_ al _END_ de _TOTAL_ registros",
+                infoEmpty: "No se han encontrado resultados",
+                infoFiltered: "(Filtrado de _MAX_ registros)",
+                lengthMenu: "Número de sucursales &nbsp; _MENU_",
+                search: "Buscar: &nbsp;",
+                zeroRecords: "No se han encontrado resultados",
+                paginate: {
+                    previous:"Anterior",
+                    next: "Siguiente",
+                    last: "Último",
+                    first: "Primero"
+                },
+                select: {
+                    info: false
+                }
+            },
+            lengthMenu: [
+                [2, 5, 15, 20, -1],
+                [2, 5, 15, 20, "Todos"]
+            ],
+
+            pageLength: 5,
+            columnDefs: [
+                { width: "10%", targets: 2 }
+            ],
+            iDisplayLength: 2
+        });
+        table.columns.adjust().draw();
+        table.select.info( false );
+        $('#initTableProfesores tbody').on( 'click', 'tr', function () {
+            if ( $(this).hasClass('selected') ) {
+                $(this).removeClass('selected');
+            }
+            else {
+                table.$('tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+            }
+        } );
+    }
+
+
     var initTableDepartments = function () {
         var token = $("#api-token").val();
         var deleted = $("#checkDeleted .active").data("value");
@@ -911,7 +1212,7 @@ var TableDatatablesManaged = function () {
             "bDestroy": true,
             ajax: {
                 "type"   : "GET",
-                "url"    : 'http://serverjwt.dev/api/users/get/table',
+                "url"    : 'http://servicioseduapi.dev/api/users/list',
                 "data"   : {
                     "token" : token,
                     "deleted" : deletedTYPE
@@ -919,36 +1220,46 @@ var TableDatatablesManaged = function () {
             },
             columns: [
                 {
-                    data: 'level_name'
+                    data: 'tipo',
+                    render: function (nivel, type, full, meta) {
+                        var tipodealumno = "";
+                        if (nivel == 1) {
+                            tipodealumno = "Administrativo";
+                        } else if (nivel == 2) {
+                            tipodealumno = "Alumno";
+                        } else if (nivel == 3) {
+                            tipodealumno == "Profesor";
+                        } else {
+
+                        }
+                        return tipodealumno;
+                    }
                 },
                 {
-                    data: 'code',
+                    data: 'curp',
                 },
                 {
-                    data : 'name',
+                    data : 'nombre',
                     render: function (name, type, full, meta ) {
-                        return name + ' ' + full.lastname;
+                        return name + ' ' + full.apellido;
                     }
                 },
                 {
-                    data: 'email',
-                    render: function (email, type, full, meta) {
-                        return '<a href="mailto:'+email+'">' + email + '</a>';
+                    data: 'correo',
+                    render: function (correo, type, full, meta) {
+                        return '<a href="mailto:'+correo+'">' + correo + '</a>';
                     }
                 },
                 {
-                    data: 'extra_phones',
-                    render: function (extra_phones, type, full, meta) {
-                        return '<a href="tel:+52'+extra_phones+'">' + extra_phones + '</a>'
+                    data: 'telefono',
+                    render: function (telefono, type, full, meta) {
+                        return '<a href="tel:+52'+telefono+'">' + telefono + '</a>'
                     }
                 },
                 {
-                    data: 'department_name'
-                },
-                {
-                    data : 'status',
-                    render: function (status, type, full, meta) {
-                        if(status){
+                    data : 'estado',
+                    render: function (estado, type, full, meta) {
+                        if(estado){
                             return '<span class="label label-sm label-primary" style="background: #3598dc;"> Activo </span>'
                         } else {
                             return '<span class="label label-sm label-warning"> Inactivo </span>';
@@ -961,11 +1272,11 @@ var TableDatatablesManaged = function () {
                     sortable: true,
                     render: function (id, type, full, meta) {
                         var $element = "";
-                        if(full.deleted) {
-                            $element = '<div class="btn-group"><button class="btn btn-xs blue dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Acciones<i class="fa fa-angle-down"></i></button><ul class="dropdown-menu" role="menu"><li><a class="updateUserList"><i class="icon-refresh"></i> Actualizar</a></li><li><a class="restoreUser" data-idRestore="'+full.id_users+'"><i class="icon-trash"></i> Restaurar</a></li></ul></div>';
-                            $("#form_sample_user .restoreUser").attr('data-idRestore', full.id_users);
+                        if(!full.estado) {
+                            $element = '<div class="btn-group"><button class="btn btn-xs blue dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Acciones<i class="fa fa-angle-down"></i></button><ul class="dropdown-menu" role="menu"><li><a class="updateUserList"><i class="icon-refresh"></i> Actualizar</a></li><li><a class="restoreUser" data-idRestore="'+full.idUsuarios+'"><i class="icon-trash"></i> Restaurar</a></li></ul></div>';
+                            $("#form_sample_user .restoreUser").attr('data-idRestore', full.idUsuarios);
                         } else {
-                            var username = full.username.toString().toLowerCase();
+                            var username = full.usuario.toString().toLowerCase();
                             username = username.replace(/á/gi,"a");
                             username = username.replace(/é/gi,"e");
                             username = username.replace(/í/gi,"i");
@@ -1008,7 +1319,7 @@ var TableDatatablesManaged = function () {
                     extend: 'pdf',
                     orientation: 'landscape',
                     title: "Listado de usuarios",
-                    message: "Listado de usuarios de Caribbean Connection",
+                    message: "Listado de usuarios",
                     pageSize: 'LEGAL',
                     exportOptions: {
                         columns: [0, 1, 2, 3, 4, 5]
@@ -1085,7 +1396,7 @@ var TableDatatablesManaged = function () {
             pageLength: 5,
             iDisplayLength: 2,
             initComplete: function(settings, json) {
-                loadBADGES();
+                //loadBADGES();
             },
         });
 
@@ -1117,41 +1428,49 @@ var TableDatatablesManaged = function () {
                         $("#form_sample_user .addUser").prop('disabled', '');
                         $("#form_sample_user .updateDepartment").prop('disabled', '');
                     }
-                    $("#form_sample_user #code").val(data.code);
-                    $("#form_sample_user #mask_phone").val(data.extra_phones);
-                    $("#form_sample_user #name").val(data.name);
-                    $("#form_sample_user #email").val(data.email);
-                    $("#form_sample_user #lastname").val(data.lastname);
-                    $("#form_sample_user #address").val(data.address)
-                    $("#form_sample_user #identificator").val(data.id_users);
-                    $("#form_sample_user #age").val(data.age);
+                    $("#form_sample_user #code").val(data.curp);
+                    $("#form_sample_user #mask_phone").val(data.telefono);
+                    $("#form_sample_user #name").val(data.nombre);
+                    $("#form_sample_user #email").val(data.correo);
+                    $("#form_sample_user #lastname").val(data.apellido);
+                    $("#form_sample_user #address").val(data.direccion)
+                    $("#form_sample_user #identificator").val(data.idUsuarios);
+                    $("#form_sample_user #age").val(data.edad);
+                    $("#form_sample_user #idInformacion").val(data.idInformacion);
 
-                    if(data.status == 0){
-                        $('#form_sample_user #status option').eq(2).prop('selected', true);
+                    if(data.estado == 0){
+                        $('#form_sample_user #estado option').eq(2).prop('selected', true);
                     }else {
-                        $('#form_sample_user #status option').eq(1).prop('selected', true);
+                        $('#form_sample_user #estado option').eq(1).prop('selected', true);
                     }
 
-                    if(data.level_name == "Usuario"){
+                    if(data.tipo != 1){
                         $('#form_sample_user #type option').eq(1).prop('selected', true);
                     }else {
                         $('#form_sample_user #type option').eq(2).prop('selected', true);
                     }
 
-                    if(data.gender == 1){
+                    if(data.genero == 1){
                         $('#form_sample_user #gender option').eq(1).prop('selected', true);
                     }else {
                         $('#form_sample_user #gender option').eq(2).prop('selected', true);
                     }
 
-                    var id_branch = getBranchIDfromDepartment(data.id_departments, data);
-                    $('#form_sample_user #branch_id option[value=' + id_branch + ']').prop('selected', true);
+                    $('#form_sample_user #branch_id option[value=' + idUsuarios + ']').prop('selected', true);
+
+                    //$('#form_sample_user #branch_id').children('option[value="1"]').prop('selected', true);
+
+                    //$('#form_sample_user #branch_id option[value="' + id_branch + '"]').prop('selected', true);
+
+
                     $('#form_sample_user #branch_id option[value="' + data.id_branch_offices + '"]').prop('selected', true);
                     $("#form_sample_user #observation").val(data.Observations);
                     $(".addDepartmentPorlet").css('box-shadow', '0 0 10px rgba(0, 0, 0, 0.58)');
                 } catch (Exception) {
 
                 }
+
+
             } else {
                 clearInputsUsers();
             }
@@ -1173,35 +1492,35 @@ var TableDatatablesManaged = function () {
                         $("#form_sample_user .addUser").prop('disabled', '');
                         $("#form_sample_user .updateDepartment").prop('disabled', '');
                     }
-                    $("#form_sample_user #code").val(data.code);
-                    $("#form_sample_user #mask_phone").val(data.extra_phones);
-                    $("#form_sample_user #name").val(data.name);
-                    $("#form_sample_user #email").val(data.email);
-                    $("#form_sample_user #lastname").val(data.lastname);
-                    $("#form_sample_user #address").val(data.address)
-                    $("#form_sample_user #identificator").val(data.id_users);
-                    $("#form_sample_user #age").val(data.age);
+                    $("#form_sample_user #code").val(data.curp);
+                    $("#form_sample_user #mask_phone").val(data.telefono);
+                    $("#form_sample_user #name").val(data.nombre);
+                    $("#form_sample_user #email").val(data.correo);
+                    $("#form_sample_user #lastname").val(data.apellido);
+                    $("#form_sample_user #address").val(data.direccion)
+                    $("#form_sample_user #identificator").val(data.idUsuarios);
+                    $("#form_sample_user #age").val(data.edad);
+                    $("#form_sample_user #idInformacion").val(data.idInformacion);
 
-                    if(data.status == 0){
-                        $('#form_sample_user #status option').eq(2).prop('selected', true);
+                    if(data.estado == 0){
+                        $('#form_sample_user #estado option').eq(2).prop('selected', true);
                     }else {
-                        $('#form_sample_user #status option').eq(1).prop('selected', true);
+                        $('#form_sample_user #estado option').eq(1).prop('selected', true);
                     }
 
-                    if(data.level_name == "Usuario"){
+                    if(data.tipo != 1){
                         $('#form_sample_user #type option').eq(1).prop('selected', true);
                     }else {
                         $('#form_sample_user #type option').eq(2).prop('selected', true);
                     }
 
-                    if(data.gender == 1){
+                    if(data.genero == 1){
                         $('#form_sample_user #gender option').eq(1).prop('selected', true);
                     }else {
                         $('#form_sample_user #gender option').eq(2).prop('selected', true);
                     }
 
-                    var id_branch = getBranchIDfromDepartment(data.id_departments, data);
-                    $('#form_sample_user #branch_id option[value=' + id_branch + ']').prop('selected', true);
+                    $('#form_sample_user #branch_id option[value=' + idUsuarios + ']').prop('selected', true);
 
                     //$('#form_sample_user #branch_id').children('option[value="1"]').prop('selected', true);
 
@@ -1224,6 +1543,72 @@ var TableDatatablesManaged = function () {
 
     }
 
+    var initTablePeriods = function () {
+        var table = $('#tabla_periodos');
+        table.dataTable({
+            "language": {
+                "aria": {
+                    "sortAscending": ": activate to sort column ascending",
+                    "sortDescending": ": activate to sort column descending"
+                },
+                "emptyTable": "No se han encontrado registros",
+                "info": "Mostrando del _START_ al _END_ de _TOTAL_ registros",
+                "infoEmpty": "No se han encontrado resultados",
+                "infoFiltered": "(Filtrado de _MAX_ registros)",
+                "lengthMenu": "Número de periodos &nbsp; _MENU_",
+                "search": "Buscar: &nbsp;",
+                "zeroRecords": "No se han encontrado resultados",
+                "paginate": {
+                    "previous":"Anterior",
+                    "next": "Siguiente",
+                    "last": "Último",
+                    "first": "Primero"
+                }
+            },
+            "bStateSave": true,
+            "lengthMenu": [
+                [5, 15, 20, -1],
+                [5, 15, 20, "Todos"]
+            ],
+            "pageLength": 5,
+            "pagingType": "bootstrap_full_number",
+            "columnDefs": [
+                {
+                    'orderable': false,
+                    'targets': [0]
+                },
+                {
+                    "searchable": false,
+                    "targets": [0]
+                },
+                {
+                    "className": "dt-right",
+                }
+            ],
+            "order": [
+                [1, "asc"]
+            ]
+        });
+
+        table.find('.group-checkable').change(function () {
+            var set = jQuery(this).attr("data-set");
+            var checked = jQuery(this).is(":checked");
+            jQuery(set).each(function () {
+                if (checked) {
+                    $(this).prop("checked", true);
+                    $(this).parents('tr').addClass("active");
+                } else {
+                    $(this).prop("checked", false);
+                    $(this).parents('tr').removeClass("active");
+                }
+            });
+        });
+
+        table.on('change', 'tbody tr .checkboxes', function () {
+            $(this).parents('tr').toggleClass("active");
+        });
+    }
+
     return {
         init: function () {
             if (!jQuery().dataTable) {
@@ -1231,18 +1616,24 @@ var TableDatatablesManaged = function () {
             }
             initTable1();
             initTable1_2();
+            initTablePeriods();
             initTableBranchOffices();
             initTableDepartments();
             initTableUsers();
         },
         departments: function () {
-            initTableDepartments();
         },
         branch_offices: function () {
             initTableBranchOffices();
         },
         users: function () {
             initTableUsers();
+        },
+        profesores:function(){
+            initTableProfesores();
+        },
+        studentsGrupos:function($id){
+            initTableStudentsGroup($id);
         }
     };
 }();
@@ -1255,8 +1646,8 @@ if (App.isAngularJsApp() === false) {
 
 function getBranchIDfromDepartment(id, dataa) {
     $.ajax({
-        method: "POST",
-        url: "/users/department/get/branch",
+        method: "GET",
+        url: "/users/get/id",
         data: { 'id': id }
     }).done(function (data) {
         $('#form_sample_user #branch_id option[value=' + data + ']').prop('selected', true);

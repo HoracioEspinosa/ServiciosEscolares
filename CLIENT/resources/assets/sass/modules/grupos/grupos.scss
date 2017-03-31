@@ -1,0 +1,11 @@
+.grupo{
+  &:hover{
+    cursor: pointer;
+    border:1px solid #26344B;
+  }
+  transition: all 0.4s;
+  padding: 12px;
+  box-shadow: #26344b 0 0 10px;
+  margin: 10px;
+  width: 15%;
+}

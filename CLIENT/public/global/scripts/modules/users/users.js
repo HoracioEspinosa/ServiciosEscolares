@@ -20,7 +20,7 @@ function loadBADGES() {
 }
 
 function checkChanges() {
-    loadBADGES();
+    //loadBADGES();
 }
 
 $("#agregarUsuarios").on('click', function () {
@@ -34,8 +34,9 @@ $(document).ready(function () {
             var table = $('#sample_Users').DataTable();
             var row = $(this).closest('tr').index('tr');
             var data = table.row(row-1).data();
-            var name = data.name;
-            var id = data.id_users;
+            var name = data.nombre;
+            var id = data.idUsuarios;
+            console.log(id + ", " + name);
             bootbox.confirm({
                 title: "Eliminar usuario",
                 message: "¿Está seguro que desea eliminar el usuario <i><small>' "+ name +"' </small></i>? ",
@@ -66,7 +67,7 @@ $(document).ready(function () {
             var id = $(this).attr('data-idRestore');
             var pass = null;
             var uname = $("#uname").val();
-            checkPasswordAdminUser(id, uname, pass);
+            restoreUser(id);
         } catch (err) {
 
         }

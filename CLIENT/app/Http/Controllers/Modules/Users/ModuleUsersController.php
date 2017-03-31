@@ -168,7 +168,7 @@ class ModuleUsersController extends Controller
                         ]
                     );
                     return json_decode($result->getBody()->getContents(), JSON_PRETTY_PRINT);
-                }catch (ClientException $exception){;
+                }catch (ClientException $exception){
                     return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
                 }
             }catch (ServerException $serverException) {
@@ -189,12 +189,7 @@ class ModuleUsersController extends Controller
                         'Content-Type' => 'application/x-www-form-urlencoded',
                         'Authorization' => 'Bearer '. cookie::get('token'),
                     ];
-                    $my_request = $client->request('POST', '/api/users/get/branch/id', [
-                        'form_params' => [
-                            'id' => $id,
-                        ],
-                        'headers' => $headers
-                    ]);
+                    $my_request = $client->request('GET', '/api/users/get/id?id='.$request->input('id'), [ 'headers' => $headers ]);
                     $result = $my_request->getBody()->getContents();
                     $result = json_decode($result, JSON_PRETTY_PRINT);
                     return $result;
@@ -311,9 +306,9 @@ class ModuleUsersController extends Controller
                 $phone          =   $request->input('mask_phone');
                 $gender         =   $request->input('gender');
                 $type           =   $request->input('type');
-                $iDdepartment   =   $request->input('department_id');
-                $status         =   $request->input('status');
                 $address        =   $request->input('address');
+                $estado         =   $request->input('estado');
+                $idInformacion  =   $request->input('idInformacion');
 
                 $client = new GuzzleHttp\Client( ['base_uri' => env('SERVER_API')] );
                 $headers = [
@@ -322,16 +317,16 @@ class ModuleUsersController extends Controller
 
                 $params = array(
                     'id' => $id,
-                    'name' => $name,
-                    'lastname' => $lastname,
-                    'email' => $email,
-                    'age' => $age,
-                    'phone' => $phone,
-                    'gender' => $gender,
-                    'type' => $type,
-                    'department_id' => $iDdepartment,
-                    'status' => $status,
-                    'address' => $address
+                    'nombre' => $name,
+                    'apellido' => $lastname,
+                    'correo' => $email,
+                    'edad' => $age,
+                    'telefono' => $phone,
+                    'genero' => $gender,
+                    'tipo' => $type,
+                    'direccion' => $address,
+                    'estado' => $estado,
+                    'idInformacion' => $idInformacion
                 );
 
                 //$cosa = json_encode($params, true);

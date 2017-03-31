@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" />
+=======
+  <component name="ApiDebugger">
+    <method />
+  </component>
+>>>>>>> a8c557a0557ce9996777b98b8ac63e9dfbf49a45
 </project>
