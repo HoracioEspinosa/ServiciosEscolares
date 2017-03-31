@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="162274ac-d07f-4406-a048-0edc34f4b1e0" name="Default" comment="vista, controlador cliente y API para calificaciones de alumno" />
+    <list default="true" id="162274ac-d07f-4406-a048-0edc34f4b1e0" name="Default" comment="vista, controlador cliente y API para calificaciones de alumno">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,8 +54,8 @@
       <file leaf-file-name="ModuleGradesController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/Grades/ModuleGradesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+            <state relative-caret-position="493">
+              <caret line="87" column="49" lean-forward="true" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
               <folding>
                 <element signature="e#439#1169#0#PHP" expanded="false" />
                 <element signature="e#1175#1771#0#PHP" expanded="false" />
@@ -942,7 +944,7 @@
       <workItem from="1490541929466" duration="31185000" />
       <workItem from="1490619061437" duration="3125000" />
       <workItem from="1490656817547" duration="5572000" />
-      <workItem from="1490930426553" duration="9439000" />
+      <workItem from="1490930426553" duration="9957000" />
     </task>
     <task id="LOCAL-00001" summary="vista, controlador cliente y API para calificaciones de alumno">
       <created>1490930757076</created>
@@ -976,7 +978,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96493000" />
+    <option name="totallyTimeSpent" value="97011000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -988,7 +990,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
+    <frame x="-7" y="0" width="1378" height="735" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21775417" sideWeight="0.4513889" order="2" side_tool="true" content_ui="tabs" />
@@ -1355,8 +1357,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API/app/Http/Controllers/Grades/ModuleGradesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+        <state relative-caret-position="493">
+          <caret line="87" column="49" lean-forward="true" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
           <folding>
             <element signature="e#439#1169#0#PHP" expanded="false" />
             <element signature="e#1175#1771#0#PHP" expanded="false" />
