@@ -23,6 +23,11 @@ Route::put('/users/update', 'ModuleUsersController@update');
 Route::delete('/users/delete', 'ModuleUsersController@delete');
 Route::put('/users/restore', 'ModuleUsersController@restore');
 
+Route::get('/users/get/all', 'ModuleUsersController@getAllUsersInformation')->middleware('jwt.auth');
+Route::get('/profesors/get/table', 'modules\profesores\ProfesorController@getAllProfesorsInformation');
+Route::get('/profesors/get/tablebyid/{idProfesor}', 'modules\profesores\ProfesorController@getInformationByIdProfesor');
+Route::post('/profesors/get/update', 'modules\profesores\ProfesorController@update');
+
 Route::post('/login', 'ModuleUsersController@login')->middleware('jwt.auth');
 
 Route::post('auth', 'Api\AuthController@authenticate');
@@ -31,6 +36,7 @@ Route::get('auth/me', 'Api\AuthController@getAuthenticatedUser');
 Route::post('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
 
+<<<<<<< HEAD
 Route::get('/horarios/get', 'Modules\Horarios\HorarioController@getInformation');
 Route::get('/horarios/{id$}/get', 'Modules\Horarios\HorarioController@getInformationByIdProfesor');
 Route::resource('/horarios', 'Modules\Horarios\HorarioController');
@@ -40,6 +46,11 @@ Route::post('/carreras/create', 'Modules\Carreras\CarrerasController@create');
 Route::delete('/carreras/delete', 'Modules\Carreras\CarrerasController@delete');
 Route::resource('/carreras', 'Modules\Carreras\CarrerasController');
 
+=======
+
+
+Route::post('profesor/create', 'modules\profesores\ProfesorController@create');
+>>>>>>> origin/profesores
 //Route::get('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
 
 //Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
