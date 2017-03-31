@@ -48,29 +48,29 @@ class ModuleUsersController extends Controller
      */
     public function getAllUserInformationByUsername(Request $request)
     {
-        $username = $request->input('username');
+            $username = $request->input('username');
 
-        if ($username == null) {
-            $user = AuthController::getAuthenticatedUserWithParameter($request);
-            $id = $user["id_users"];
-            $information = DB::table('users')
-                ->join('user_information', 'users.user_information_iduser_information', '=', 'user_information.iduser_information')
-                ->join('departments', 'users.Departments_id_departments','=','departments.id_departments')
-                ->join('users_levels', 'users.Users_levels_idUsers_levels', '=', 'users_levels.idUsers_levels')
-                ->select("users.username", "users.deleted", "users.id_users", "users.uname AS name", "users.lastname", "users.status AS status", "users.email", "user_information.code", "user_information.photo", "user_information.extra_phones", "user_information.address", "user_information.age", "user_information.gender", "departments.id_departments", "departments.name AS department_name", "users_levels.name AS level_name")
-                ->where('users.id_users', '=', $id)
-                ->get();
-        } else {
-            $information = DB::table('users')
-                ->join('user_information', 'users.user_information_iduser_information', '=', 'user_information.iduser_information')
-                ->join('departments', 'users.Departments_id_departments','=','departments.id_departments')
-                ->join('users_levels', 'users.Users_levels_idUsers_levels', '=', 'users_levels.idUsers_levels')
-                ->select("users.username", "users.deleted", "users.id_users", "users.uname AS name", "users.lastname", "users.status AS status", "users.email", "user_information.code", "user_information.photo", "user_information.extra_phones", "user_information.address", "user_information.age", "user_information.gender", "departments.id_departments", "departments.name AS department_name", "users_levels.name AS level_name")
-                ->where('users.username', '=', $username)
-                ->get();
-        }
-        $information = json_encode($information[0], true);
-        return json_decode($information, JSON_PRETTY_PRINT);
+            if ($username == null) {
+                $user = AuthController::getAuthenticatedUserWithParameter($request);
+                $id = $user["id_users"];
+                $information = DB::table('users')
+                    ->join('user_information', 'users.user_information_iduser_information', '=', 'user_information.iduser_information')
+                    ->join('departments', 'users.Departments_id_departments','=','departments.id_departments')
+                    ->join('users_levels', 'users.Users_levels_idUsers_levels', '=', 'users_levels.idUsers_levels')
+                    ->select("users.username", "users.deleted", "users.id_users", "users.uname AS name", "users.lastname", "users.status AS status", "users.email", "user_information.code", "user_information.photo", "user_information.extra_phones", "user_information.address", "user_information.age", "user_information.gender", "departments.id_departments", "departments.name AS department_name", "users_levels.name AS level_name")
+                    ->where('users.id_users', '=', $id)
+                    ->get();
+            } else {
+                $information = DB::table('users')
+                    ->join('user_information', 'users.user_information_iduser_information', '=', 'user_information.iduser_information')
+                    ->join('departments', 'users.Departments_id_departments','=','departments.id_departments')
+                    ->join('users_levels', 'users.Users_levels_idUsers_levels', '=', 'users_levels.idUsers_levels')
+                    ->select("users.username", "users.deleted", "users.id_users", "users.uname AS name", "users.lastname", "users.status AS status", "users.email", "user_information.code", "user_information.photo", "user_information.extra_phones", "user_information.address", "user_information.age", "user_information.gender", "departments.id_departments", "departments.name AS department_name", "users_levels.name AS level_name")
+                    ->where('users.username', '=', $username)
+                    ->get();
+            }
+            $information = json_encode($information[0], true);
+            return json_decode($information, JSON_PRETTY_PRINT);
     }
 
     /**

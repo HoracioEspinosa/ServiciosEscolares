@@ -35,3 +35,10 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 
 //Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
 //Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+
+Route::post('/calificaciones/info','Grades\ModuleGradesController@getStudentInfo');
+Route::post('/calificaciones/infoGroup','Grades\ModuleGradesController@getStudentGroup');
+Route::post('/calificaciones/infoCareer','Grades\ModuleGradesController@getStudentCareer');
+Route::post('/calificaciones/infoGrades','Grades\ModuleGradesController@getStudentGrades');
+Route::post('/calificaciones/infoGradesUnit','Grades\ModuleGradesController@getStudentGradesUnit');
+//Route::resource('/calificaciones','Grades\ModuleGradesController');

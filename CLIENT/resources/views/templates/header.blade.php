@@ -232,6 +232,13 @@ Contact: admin@cloudftog.com.mx
                         <span class="selected"></span>
                     </a>
                 </li>
+                <li class="nav-item active">
+                    <a href="/calificaciones" class="nav-link nav-toggle">
+                        <i class="fa fa-book"></i>
+                        <span class="title">Calificaciones</span>
+                        <span class="selected"></span>
+                    </a>
+                </li>
             </ul>
             <!-- END SIDEBAR MENU -->
         </div>
