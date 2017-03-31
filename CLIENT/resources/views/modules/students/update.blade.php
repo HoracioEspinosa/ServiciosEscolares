@@ -171,26 +171,26 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="portlet light bordered" style="height:280px;">
-                            <div class="form-body">
-                                <div class="mt-element-overlay">
-                                    <div class="mt-overlay-1" style="height:250px;">
-                                        <img src="/public/global/img/portfolio/600x600/2.jpg" />
-                                        <div class="mt-overlay">
-                                            <ul class="mt-info">
-                                                <li>
-                                                    <div class="form-group">
-                                                        <input type="file" id="exampleInputFile1">
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!--<div class="col-md-4">
+                       <div class="portlet light bordered" style="height:280px;">
+                           <div class="form-body">
+                               <div class="mt-element-overlay">
+                                   <div class="mt-overlay-1" style="height:250px;">
+                                       <img src="/public/global/img/portfolio/600x600/2.jpg" />
+                                       <div class="mt-overlay">
+                                           <ul class="mt-info">
+                                               <li>
+                                                   <div class="form-group">
+                                                       <input type="file" id="exampleInputFile1">
+                                                   </div>
+                                               </li>
+                                           </ul>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>-->
                     <div class="col-md-12">
                         <input type="submit" class="btn btn-primary">
                     </div>

@@ -84,7 +84,7 @@
                                             <i class="fa fa-pencil"></i> Editar
                                         </a>
                                     </li>
-                                    <li>
+                                    <!--<li>
                                         <a href="javascript:;">
                                             <i class="fa fa-trash-o"></i> Eliminar
                                         </a>
@@ -94,7 +94,7 @@
                                         <a href="javascript:;">
                                             <i class="fa fa-ban"></i> Desactivar
                                         </a>
-                                    </li>
+                                    </li>-->
                                 </ul>
                             </div>
                         </td>

@@ -136,7 +136,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <!--<div class="col-md-4">
                         <div class="portlet light bordered" style="height:280px;">
                             <div class="form-body">
                                 <div class="mt-element-overlay">
@@ -155,7 +155,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <div class="col-md-12">
                         <input type="submit" class="btn btn-primary">
                     </div>
