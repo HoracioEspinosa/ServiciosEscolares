@@ -22,16 +22,23 @@ class ModuleGradesController extends Controller
             $result = $this->result;
             $users = ModuleUsersController::getAllUsersInformation();
             //dd($result);
-            $userInf=$this->getStudentInfobyId($result['idUsuarios']);
-            //dd($userInf);
-            $studentGroup=$this->getStudentGroupbyId($userInf[0]);
-            //dd($studentGroup);
-            $studentCareer=$this->getStudentCareerbyId($studentGroup[0]);
-            //dd($studentCareer);
-            $studentSubject=$this->getStudentSubjectbyId($userInf[0]);
-            //dd($studentSubject);
-            $studentGrades=$this->getStudentGrades($userInf[0]);
-            return view('modules.grades.calif', compact('result', 'users','userInf','studentGroup','studentCareer','studentSubject','studentGrades'));
+            if($result['tipo']==3){
+                $userInf=$this->getStudentInfobyId($result['idUsuarios']);
+                //dd($userInf);
+                $studentGroup=$this->getStudentGroupbyId($userInf[0]);
+                //dd($studentGroup);
+                $studentCareer=$this->getStudentCareerbyId($studentGroup[0]);
+                //dd($studentCareer);
+                $studentSubject=$this->getStudentSubjectbyId($userInf[0]);
+                //dd($studentSubject);
+                $studentGrades=$this->getStudentGrades($userInf[0]);
+                return view('modules.grades.calif', compact('result', 'users','userInf','studentGroup','studentCareer','studentSubject','studentGrades'));
+            }
+            elseif ($result['tipo']==2){
+                return view('modules.grades.califprof',compact('result', 'users'));
+            }
+
+
         } catch (\Exception $ex) {
             return $ex;
         }

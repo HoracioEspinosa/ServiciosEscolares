@@ -61,10 +61,11 @@
                     <tr>
                         <th width="5%"> Clave </th>
                         <th width="30%"> Materia </th>
+                        <th width="30%"> Promedio </th>
                         <?php $var = 0; ?>
                         @foreach($studentGrades as $sub1)
                             @if($sub1['numeroUnidad']>$var)
-                                <th width="30%"> Unidad  {{$var+1}}</th>
+                                <th width="30%"> Unidad{{$var+1}}</th>
                                 <?php $var = $var+1; ?>
                             @endif
                         @endforeach
@@ -76,6 +77,7 @@
                         <tr>
                         <td width="5%"> {{$subject['idMaterias']}} </td>
                         <td width="30%"> {{$subject['nombre']}} </td>
+                            <td width="30%">  </td>
                             @foreach($studentGrades as $sub1)
                                 @if($sub1['idMaterias']==$subject['idMaterias'])
                                     @if($sub1['calificacion']==0)
@@ -86,8 +88,6 @@
 
                                 @endif
                             @endforeach
-
-
                         </tr>
                         @endif
                     @endforeach
