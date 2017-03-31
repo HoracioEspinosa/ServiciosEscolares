@@ -48,15 +48,15 @@
                             <tbody style="background: #F9F9F9;">
                               <tr>
                                 <th> cedula: </th>
-                                <td>{{$informacion[$id]['curp']}}</td>
+                                <td>{{$informacion['curp']}}</td>
                               </tr>
                               <tr>
                                   <th>Apellidos: </th>
-                                  <td>{{$informacion[$id]['apellido']}}</td>
+                                  <td>{{$informacion['apellido']}}</td>
                               </tr>
                               <tr>
                                   <th>Nombres: </th>
-                                  <td>{{$informacion[$id]['nombre']}}</td>
+                                  <td>{{$informacion['nombre']}}</td>
                               </tr>
                             </tbody>
                           </table>

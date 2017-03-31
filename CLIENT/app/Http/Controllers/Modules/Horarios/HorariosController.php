@@ -27,18 +27,40 @@ class HorariosController extends Controller
 
 
     }
-    public function disponible($id = null)
+    public function disponible($id)
     {
         $this->setUserHeader();
         $users=ModuleUsersController::getAllUsersInformation();
 
 
-        $informacion=$this->getInformation();
+        $informacion=$this->getInformationByIdProfesor($id);
         //dd($informacion);
         //$profesores=$this->getProfesores();
 
         $result=$this->result;
         return view('modules.horarios.TiempoDisponible', compact('result','users','informacion','id'));//,'profesores'));
+    }
+
+    public function getInformationByIdProfesor($idProfesor) {
+        if (cookie::get('token') == "" || cookie::get('token') == null){
+            return redirect('/login');
+        }
+        else{
+            try{
+                try{
+                    $client = new GuzzleHttp\Client( ['base_uri' => env('SERVER_API')]  );
+                    $result = $client->get( 'api/horarios/get', [ 'headers' => $headers ] );
+                    $result = $client->getBody()->getContents();
+                    $result = json_decode($result, JSON_PRETTY_PRINT);
+                    //dd($result);
+                    return $result;
+                }catch (ClientException $exception){
+                    return json_decode($exception->getResponse()->getBody()->getContents(), JSON_PRETTY_PRINT);
+                }
+            }catch (ServerException $serverException) {
+                return redirect('/logout');
+            }
+        }
     }
 
     public function setUserHeader(){

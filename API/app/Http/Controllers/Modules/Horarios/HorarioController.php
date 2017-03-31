@@ -20,6 +20,11 @@ class HorarioController extends Controller
         return json_decode($informacion, JSON_PRETTY_PRINT);
 
     }
+    public function getInformationByIdProfesor($idProfesor, Request $request){
+        $info = DB::select('SELECT * FROM Profesores INNER JOIN informacion ON Profesores.idInformacion=informacion.idInformacion WHERE Profesores.idProfesores='.$idProfesor);
+        $info = json_encode($info, true);
+        return json_decode($info, JSON_PRETTY_PRINT);
+    }
     public function getProfesores()
     {
         $profesores= DB::table('profesores')->get();
