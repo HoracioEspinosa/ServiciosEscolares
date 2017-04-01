@@ -20493,3 +20493,6 @@ Stack trace:
 [2017-03-31 08:20:49] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in C:\xampp\htdocs\ServiciosEscolares\API\app\Http\Controllers\ModuleUsersController.php:138
 Stack trace:
 #0 {main}  
+[2017-03-31 08:36:06] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in C:\xampp\htdocs\ServiciosEscolares\API\app\Http\Controllers\ModuleUsersController.php:138
+Stack trace:
+#0 {main}  
