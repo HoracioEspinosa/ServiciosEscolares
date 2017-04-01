@@ -5,6 +5,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group form-md-line-input form-md-floating-label">
+                        <input type="hidden" name="id" value="" id="idPeriodos">
                         <select class="form-control" id="inPeriodo" name="periodo">
                             <option value="1">Enero - Abril</option>
                             <option value="2">Mayo - Agosto </option>

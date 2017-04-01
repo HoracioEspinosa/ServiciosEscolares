@@ -169,20 +169,17 @@
                                                                 </a>
                                                             </li>
                                                             <li>
-                                                                <a href="javascript:;">
+                                                                <a href="javascript:deletePeriod({{$periodo['idPeriodos']}});">
                                                                     <i class="fa fa-trash-o"></i> Eliminar
                                                                 </a>
                                                             </li>
                                                             <li class="divider"> </li>
                                                             <li>
-                                                                <a href="javascript:;">
                                                                     @if($periodo['status'] == "0")
-                                                                        <i class="fa fa-ban"></i> Activar
+                                                                    <a href="javascript:changeStatus({{$periodo['idPeriodos']}});"><i class="fa fa-ban"></i> Activar</a>
                                                                     @else
-                                                                        <i class="fa fa-ban" style="color: red"></i> Desactivar
+                                                                        <a href="javascript:changeStatus({{$periodo['idPeriodos']}});"><i class="fa fa-ban" style="color: red"></i> Desactivar</a>
                                                                     @endif
-
-                                                                </a>
                                                             </li>
                                                         </ul>
                                                     </div>
