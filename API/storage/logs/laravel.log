@@ -19193,6 +19193,7 @@ Stack trace:
 #38 /Applications/MAMP/htdocs/ServiciosEscolares/API/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #39 /Applications/MAMP/htdocs/ServiciosEscolares/API/index.php(21): require_once('/Applications/M...')
 #40 {main}  
+<<<<<<< HEAD
 >>>>>>> origin/periodos
 >>>>>>> 949b3005c5f3cb236e39a4135408410795493dcd
 =======
@@ -20491,6 +20492,146 @@ Stack trace:
 Stack trace:
 #0 {main}  
 [2017-03-31 08:20:49] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in C:\xampp\htdocs\ServiciosEscolares\API\app\Http\Controllers\ModuleUsersController.php:138
+=======
+[2017-03-31 15:41:05] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined function App\Http\Controllers\Modules\Periodos\update()' in /Applications/MAMP/htdocs/ServiciosEscolares/API/app/Http/Controllers/Modules/Periodos/PeriodosController.php:48
+Stack trace:
+#0 {main}  
+[2017-03-31 15:43:12] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined function App\Http\Controllers\Modules\Periodos\update()' in /Applications/MAMP/htdocs/ServiciosEscolares/API/app/Http/Controllers/Modules/Periodos/PeriodosController.php:48
+>>>>>>> periodos
+Stack trace:
+#0 {main}  
+[2017-04-01 11:27:27] local.ERROR: exception 'Tymon\JWTAuth\Exceptions\TokenExpiredException' with message 'Token has expired' in /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/tymon/jwt-auth/src/Validators/PayloadValidator.php:83
+Stack trace:
+#0 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/tymon/jwt-auth/src/Validators/PayloadValidator.php(41): Tymon\JWTAuth\Validators\PayloadValidator->validateTimestamps(Array)
+#1 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/tymon/jwt-auth/src/Payload.php(38): Tymon\JWTAuth\Validators\PayloadValidator->check(Array)
+#2 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/tymon/jwt-auth/src/PayloadFactory.php(77): Tymon\JWTAuth\Payload->__construct(Array, Object(Tymon\JWTAuth\Validators\PayloadValidator), false)
+#3 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/tymon/jwt-auth/src/JWTManager.php(81): Tymon\JWTAuth\PayloadFactory->make(Array)
+#4 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/tymon/jwt-auth/src/JWTAuth.php(190): Tymon\JWTAuth\JWTManager->decode(Object(Tymon\JWTAuth\Token))
+#5 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/tymon/jwt-auth/src/JWTAuth.php(124): Tymon\JWTAuth\JWTAuth->getPayload(false)
+#6 /Applications/MAMP/htdocs/ServiciosEscolares/API/app/Http/Controllers/Api/AuthController.php(34): Tymon\JWTAuth\JWTAuth->authenticate()
+#7 [internal function]: App\Http\Controllers\Api\AuthController->getAuthenticatedUser()
+#8 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(9584): call_user_func_array(Array, Array)
+#9 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(9611): Illuminate\Routing\Controller->callAction('getAuthenticate...', Array)
+#10 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(8665): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Api\AuthController), 'getAuthenticate...')
+#11 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(8646): Illuminate\Routing\Route->runController()
+#12 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(8355): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#13 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#14 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10177): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10069): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#17 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10069): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#19 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10054): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#21 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(8356): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#22 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(8347): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#23 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(8338): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#24 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(2575): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#25 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#26 /Applications/MAMP/htdocs/ServiciosEscolares/API/app/Http/Middleware/APIResponseHeaderMiddleware.php(20): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10069): App\Http\Middleware\APIResponseHeaderMiddleware->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/barryvdh/laravel-cors/src/HandleCors.php(34): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10069): Barryvdh\Cors\HandleCors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(3374): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#33 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10069): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10054): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#36 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(2519): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#37 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(2503): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#38 /Applications/MAMP/htdocs/ServiciosEscolares/API/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#39 /Applications/MAMP/htdocs/ServiciosEscolares/API/index.php(21): require_once('/Applications/M...')
+#40 {main}  
+[2017-04-01 11:28:35] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in /Applications/MAMP/htdocs/ServiciosEscolares/API/app/Http/Controllers/ModuleUsersController.php:138
+Stack trace:
+#0 {main}  
+[2017-04-01 11:28:50] local.ERROR: exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'undefined' for column 'status' at row 1' in /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Database/Connection.php:505
+Stack trace:
+#0 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Database/Connection.php(505): PDOStatement->execute()
+#1 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Database/Connection.php(763): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'update `periodo...', Array)
+#2 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Database/Connection.php(726): Illuminate\Database\Connection->runQueryCallback('update `periodo...', Array, Object(Closure))
+#3 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Database/Connection.php(508): Illuminate\Database\Connection->run('update `periodo...', Array, Object(Closure))
+#4 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Database/Connection.php(447): Illuminate\Database\Connection->affectingStatement('update `periodo...', Array)
+#5 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2169): Illuminate\Database\Connection->update('update `periodo...', Array)
+#6 /Applications/MAMP/htdocs/ServiciosEscolares/API/app/Http/Controllers/Modules/Periodos/PeriodosController.php(71): Illuminate\Database\Query\Builder->update(Array)
+#7 [internal function]: App\Http\Controllers\Modules\Periodos\PeriodosController->changeStatus(Object(Illuminate\Http\Request))
+#8 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(9584): call_user_func_array(Array, Array)
+#9 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(9611): Illuminate\Routing\Controller->callAction('changeStatus', Array)
+#10 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(8665): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Modules\Periodos\PeriodosController), 'changeStatus')
+#11 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(8646): Illuminate\Routing\Route->runController()
+#12 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(8355): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#13 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#14 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10177): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10069): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#17 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10069): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#19 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10054): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#21 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(8356): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#22 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(8347): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#23 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(8338): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#24 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(2575): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#25 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#26 /Applications/MAMP/htdocs/ServiciosEscolares/API/app/Http/Middleware/APIResponseHeaderMiddleware.php(20): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10069): App\Http\Middleware\APIResponseHeaderMiddleware->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/barryvdh/laravel-cors/src/HandleCors.php(34): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10069): Barryvdh\Cors\HandleCors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(3374): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#33 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10069): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10054): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#36 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(2519): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#37 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(2503): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#38 /Applications/MAMP/htdocs/ServiciosEscolares/API/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#39 /Applications/MAMP/htdocs/ServiciosEscolares/API/index.php(21): require_once('/Applications/M...')
+#40 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'undefined' for column 'status' at row 1 (SQL: update `periodos` set `status` = undefined where `idPeriodos` = 12)' in /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Database/Connection.php:770
+Stack trace:
+#0 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Database/Connection.php(726): Illuminate\Database\Connection->runQueryCallback('update `periodo...', Array, Object(Closure))
+#1 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Database/Connection.php(508): Illuminate\Database\Connection->run('update `periodo...', Array, Object(Closure))
+#2 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Database/Connection.php(447): Illuminate\Database\Connection->affectingStatement('update `periodo...', Array)
+#3 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2169): Illuminate\Database\Connection->update('update `periodo...', Array)
+#4 /Applications/MAMP/htdocs/ServiciosEscolares/API/app/Http/Controllers/Modules/Periodos/PeriodosController.php(71): Illuminate\Database\Query\Builder->update(Array)
+#5 [internal function]: App\Http\Controllers\Modules\Periodos\PeriodosController->changeStatus(Object(Illuminate\Http\Request))
+#6 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(9584): call_user_func_array(Array, Array)
+#7 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(9611): Illuminate\Routing\Controller->callAction('changeStatus', Array)
+#8 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(8665): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Modules\Periodos\PeriodosController), 'changeStatus')
+#9 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(8646): Illuminate\Routing\Route->runController()
+#10 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(8355): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#11 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10177): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10069): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#14 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10069): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#17 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10054): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#19 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(8356): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#20 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(8347): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#21 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(8338): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#22 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(2575): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#23 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#24 /Applications/MAMP/htdocs/ServiciosEscolares/API/app/Http/Middleware/APIResponseHeaderMiddleware.php(20): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#25 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10069): App\Http\Middleware\APIResponseHeaderMiddleware->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/barryvdh/laravel-cors/src/HandleCors.php(34): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10069): Barryvdh\Cors\HandleCors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(3374): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10069): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 /Applications/MAMP/htdocs/ServiciosEscolares/API/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(10054): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#34 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(2519): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#35 /Applications/MAMP/htdocs/ServiciosEscolares/API/bootstrap/cache/compiled.php(2503): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#36 /Applications/MAMP/htdocs/ServiciosEscolares/API/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#37 /Applications/MAMP/htdocs/ServiciosEscolares/API/index.php(21): require_once('/Applications/M...')
+#38 {main}  
+[2017-04-01 11:29:01] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in /Applications/MAMP/htdocs/ServiciosEscolares/API/app/Http/Controllers/ModuleUsersController.php:138
 Stack trace:
 #0 {main}  
 [2017-03-31 08:36:06] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in C:\xampp\htdocs\ServiciosEscolares\API\app\Http\Controllers\ModuleUsersController.php:138

@@ -50,8 +50,11 @@ Route::get('/calificaciones','Modules\Grades\ModuleGradesController@index');
 
 Route::get('/periodos', 'Modules\Periodos\PeriodosController@index');
 Route::get('/periodos/information', 'Modules\Periodos\PeriodosController@getInformation');
-Route::post('/periodos/update', 'Modules\Periodos\PeriodosController@update');
+Route::get('/periodos/update/{id}', 'Modules\Periodos\PeriodosController@getInformationByID');
 Route::post('/periodos/create', 'Modules\Periodos\PeriodosController@create');
+Route::post('/periodos/update', 'Modules\Periodos\PeriodosController@update');
+Route::post('/periodos/delete', 'Modules\Periodos\PeriodosController@delete');
+Route::post('/periodos/changeStatus', 'Modules\Periodos\PeriodosController@changeStatus');
 
 
 

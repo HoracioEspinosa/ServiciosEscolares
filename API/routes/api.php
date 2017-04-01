@@ -64,6 +64,9 @@ Route::get('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')
 Route::get('/periodos', 'Modules\Periodos\PeriodosController@getInfo');
 Route::post('/periodos/getByID', 'Modules\Periodos\PeriodosController@getInfoByID');
 Route::post('/periodos/create', 'Modules\Periodos\PeriodosController@create');
+Route::post('/periodos/update', 'Modules\Periodos\PeriodosController@update');
+Route::post('/periodos/delete', 'Modules\Periodos\PeriodosController@delete');
+Route::post('/periodos/changeStatus', 'Modules\Periodos\PeriodosController@changeStatus');
 
 
 
