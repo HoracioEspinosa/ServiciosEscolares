@@ -51,9 +51,9 @@ function createPeriodo(){
 function getPeriodosByID(idPeriodo) {
     $.ajax(
         {
-            method: "POST",
-            url: "/periodos/update",
-            data: {"id":idPeriodo},
+            method: "GET",
+            url: "/periodos/update/"+idPeriodo,
+            data: {},
         }
     ).done(function (data) {
         if(data[0].inicio == "enero"){
@@ -64,7 +64,9 @@ function getPeriodosByID(idPeriodo) {
         }else{
             $('#inPeriodo').val(3);
         }
-
+        $('#idPeriodos').val(data[0].idPeriodos);
+        elemento = document.getElementById('inAnio').className;
+        $('#inAnio').removeClass(elemento).addClass('form-control edited');
         $('#inAnio').val(data[0].anio);
         //$('#log').html(data);
         console.log(data[0].inicio);
@@ -72,5 +74,61 @@ function getPeriodosByID(idPeriodo) {
 }
 
 function update() {
-    alert("hola");
+    var options = {
+        element: $("#formPeriodos"),
+        background: $("body"),
+        message: 'Procesando...'
+    };
+    App.myStartPageLoading(options);
+    $.ajax(
+        {
+            method: "POST",
+            url: "/periodos/update",
+            data: $("#formPeriodosEditar").serialize(),
+        }
+    ).done(function (data) {
+        App.mystopPageLoading();
+        location.reload();
+        //console.log(data)
+    });
+}
+
+function deletePeriod(id) {
+    var options = {
+        element: $("#formPeriodos"),
+        background: $("body"),
+        message: 'Procesando...'
+    };
+   // App.myStartPageLoading(options);
+    $.ajax(
+        {
+            method: "POST",
+            url: "/periodos/delete",
+            data: 'id='+id,
+        }
+    ).done(function (data) {
+        App.mystopPageLoading();
+        location.reload();
+        //console.log(data)
+    });
+}
+
+function changeStatus(id, status) {
+    var options = {
+        element: $("#formPeriodos"),
+        background: $("body"),
+        message: 'Procesando...'
+    };
+    // App.myStartPageLoading(options);
+    $.ajax(
+        {
+            method: "POST",
+            url: "/periodos/changeStatus",
+            data: 'id='+id+'&status='+status,
+        }
+    ).done(function (data) {
+        //App.mystopPageLoading();
+        //location.reload();
+        //console.log(data)
+    });
 }

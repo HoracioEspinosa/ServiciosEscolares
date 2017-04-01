@@ -8920,3 +8920,9 @@ Stack trace:
 #38 /Applications/MAMP/htdocs/ServiciosEscolares/API/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #39 /Applications/MAMP/htdocs/ServiciosEscolares/API/index.php(21): require_once('/Applications/M...')
 #40 {main}  
+[2017-03-31 15:41:05] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined function App\Http\Controllers\Modules\Periodos\update()' in /Applications/MAMP/htdocs/ServiciosEscolares/API/app/Http/Controllers/Modules/Periodos/PeriodosController.php:48
+Stack trace:
+#0 {main}  
+[2017-03-31 15:43:12] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined function App\Http\Controllers\Modules\Periodos\update()' in /Applications/MAMP/htdocs/ServiciosEscolares/API/app/Http/Controllers/Modules/Periodos/PeriodosController.php:48
+Stack trace:
+#0 {main}  
